@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Play, ArrowDown, ExternalLink, Github, Twitter, Disc, MonitorPlay } from 'lucide-react';
+import { Play, ArrowDown, ExternalLink, Github, Twitter, Disc } from 'lucide-react';
 import { TRACK_LIST, ALBUM_COVER_URL } from './constants';
 import GlitchHeader from './components/GlitchHeader';
 import TrackItem from './components/TrackItem';
