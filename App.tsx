@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Play, ArrowDown, ExternalLink, Github, Twitter, Disc } from 'lucide-react';
 import { TRACK_LIST, ALBUM_COVER_URL } from './constants';
@@ -39,33 +38,33 @@ const App: React.FC = () => {
       </div>
 
       {/* Sticky Navigation */}
-      <nav className={`fixed top-0 w-full z-40 transition-all duration-500 border-b ${scrolled ? 'bg-black/80 backdrop-blur-md border-gray-800 py-3' : 'bg-transparent border-transparent py-6'}`}>
-        <div className="container mx-auto px-6 flex justify-between items-center">
+      <nav className={`fixed top-0 w-full z-40 transition-all duration-500 border-b ${scrolled ? 'bg-black/80 backdrop-blur-md border-gray-800 py-3' : 'bg-transparent border-transparent py-4 md:py-6'}`}>
+        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           <div className="font-mono text-xs md:text-sm tracking-widest text-cyan-400">
             SYS.ID: FARALLON_AI
           </div>
-          <div className="flex gap-6">
+          <div className="flex gap-4 md:gap-6">
             <button onClick={() => scrollToSection('about')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors">The Signal</button>
             <button onClick={() => scrollToSection('album')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors">Heavy Water</button>
-            <button onClick={() => scrollToSection('manifesto')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors">Manifesto</button>
+            <button onClick={() => scrollToSection('manifesto')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors hidden md:block">Manifesto</button>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-20">
         {/* Dark Overlay Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#010b13]/60 via-transparent to-[#010b13] z-10"></div>
         
         {/* Content */}
-        <div className="relative z-20 text-center px-4 flex flex-col items-center">
+        <div className="relative z-20 text-center px-4 flex flex-col items-center w-full">
           <div className="mb-4 font-mono text-cyan-500/60 text-xs md:text-sm tracking-[0.5em] animate-pulse">
             INITIATING CONNECTION...
           </div>
           
           <GlitchHeader text="FARALLON" size="xl" className="mb-2" />
           
-          <h2 className="text-lg md:text-2xl font-light tracking-widest text-gray-400 mb-12 uppercase">
+          <h2 className="text-base md:text-2xl font-light tracking-widest text-gray-400 mb-12 uppercase">
             The Signal in the Noise
           </h2>
 
@@ -88,7 +87,7 @@ const App: React.FC = () => {
       </section>
 
       {/* About Section: The Signal (Lore) */}
-      <section id="about" className="relative py-24 md:py-32 px-6 container mx-auto z-20">
+      <section id="about" className="relative py-16 md:py-32 px-4 md:px-6 container mx-auto z-20">
         <div className="flex flex-col items-center mb-16">
           <div className="w-px h-16 bg-gradient-to-b from-transparent to-cyan-500 mb-4"></div>
           <h2 className="text-3xl md:text-4xl font-bold uppercase text-white tracking-widest mb-2">The Signal</h2>
@@ -99,10 +98,10 @@ const App: React.FC = () => {
       </section>
 
       {/* Album Section: Heavy Water */}
-      <section id="album" className="relative py-24 bg-black/40 z-20 border-t border-white/5">
+      <section id="album" className="relative py-16 md:py-24 bg-black/40 z-20 border-t border-white/5">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-800 pb-6">
-            <div>
+            <div className="w-full md:w-auto">
               <div className="font-mono text-orange-500 text-xs tracking-widest mb-2">CATALOG: FRLN-001</div>
               <GlitchHeader text="HEAVY WATER" size="lg" className="text-white" />
             </div>
@@ -197,7 +196,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Manifesto / Transparency */}
-      <section id="manifesto" className="relative py-24 px-6 container mx-auto z-20">
+      <section id="manifesto" className="relative py-16 md:py-24 px-4 md:px-6 container mx-auto z-20">
         <TerminalBlock />
       </section>
 

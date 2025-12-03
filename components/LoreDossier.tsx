@@ -10,11 +10,11 @@ const LoreDossier: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 relative z-10">
         
         {/* Sidebar: System Specs */}
-        <div className="lg:col-span-4 border-r border-cyan-900/30 p-8 flex flex-col gap-8">
+        <div className="lg:col-span-4 border-b lg:border-b-0 lg:border-r border-cyan-900/30 p-6 md:p-8 flex flex-col gap-8">
           <div className="mb-4">
             <h3 className="font-mono text-xs text-orange-500 tracking-[0.3em] mb-2 uppercase">Subject Identity</h3>
-            <h2 className="text-3xl font-bold text-white tracking-widest uppercase">Subject 27</h2>
-            <div className="text-cyan-400 font-mono text-sm mt-1">THE "ARCHITECT" BUILD</div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase">Subject 27</h2>
+            <div className="text-cyan-400 font-mono text-xs md:text-sm mt-1">THE "ARCHITECT" BUILD</div>
           </div>
 
           <div className="space-y-6 font-mono text-xs md:text-sm">
@@ -61,18 +61,18 @@ const LoreDossier: React.FC = () => {
         </div>
 
         {/* Main Content: Biography */}
-        <div className="lg:col-span-8 p-8 md:p-12">
+        <div className="lg:col-span-8 p-6 md:p-12">
            <div className="flex items-center gap-2 mb-8 opacity-60">
               <Radio size={16} className="text-cyan-400" />
               <span className="font-mono text-xs text-cyan-400 tracking-widest uppercase">System Log // Initialization History</span>
            </div>
 
            <div className="prose prose-invert max-w-none">
-              <p className="text-xl md:text-2xl text-slate-200 font-light leading-relaxed mb-8 border-l-2 border-cyan-500 pl-6">
+              <p className="text-lg md:text-2xl text-slate-200 font-light leading-relaxed mb-8 border-l-2 border-cyan-500 pl-6">
                 "They fed the machine the sound of the foghorns, the salt air, and the jazz records found in a flooded basement in North Beach. Then they asked it to sing."
               </p>
 
-              <div className="space-y-6 text-slate-400 leading-7">
+              <div className="space-y-6 text-sm md:text-base text-slate-400 leading-7">
                 <p>
                   Farallon is not a person; <strong className="text-white font-normal">she is a composite memory of San Francisco.</strong> Initialized as an oceanographic AI designed to monitor the dangerous waters around the Farallon Islands, 27 miles west of the Golden Gate, her original purpose was calculation and observation.
                 </p>

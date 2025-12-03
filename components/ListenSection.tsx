@@ -55,7 +55,7 @@ const ListenSection: React.FC<ListenSectionProps> = ({ className = "" }) => {
           <h4 className="font-mono text-sm tracking-[0.2em] text-cyan-400 uppercase">Input Stream: Direct Uplinks</h4>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
         {platforms.map((platform) => (
           <a
             key={platform.name}
@@ -63,7 +63,7 @@ const ListenSection: React.FC<ListenSectionProps> = ({ className = "" }) => {
             target="_blank"
             rel="noopener noreferrer"
             className={`
-              group relative flex items-center justify-between p-6
+              group relative flex items-center justify-between p-4 md:p-6
               bg-black/40 border border-gray-800 backdrop-blur-sm
               transition-all duration-300 hover:bg-black/60
               ${platform.colorClass}
@@ -75,13 +75,13 @@ const ListenSection: React.FC<ListenSectionProps> = ({ className = "" }) => {
             <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-gray-700 group-hover:border-current transition-colors"></div>
             <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-gray-700 group-hover:border-current transition-colors"></div>
 
-            <div className="flex items-center gap-4">
-              <div className="w-8 h-8 fill-current opacity-80 group-hover:opacity-100 transition-opacity">
+            <div className="flex items-center gap-3 md:gap-4">
+              <div className="w-6 h-6 md:w-8 md:h-8 fill-current opacity-80 group-hover:opacity-100 transition-opacity">
                 <svg viewBox="0 0 24 24" className="w-full h-full">
                   {platform.iconPath}
                 </svg>
               </div>
-              <span className="font-mono text-sm uppercase tracking-wider text-gray-400 group-hover:text-white transition-colors">
+              <span className="font-mono text-xs md:text-sm uppercase tracking-wider text-gray-400 group-hover:text-white transition-colors">
                 {platform.name}
               </span>
             </div>
