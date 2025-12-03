@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, ArrowDown, ExternalLink, Github, Twitter, Disc } from 'lucide-react';
+import { Play, ArrowDown, ExternalLink, Disc } from 'lucide-react';
 import { TRACK_LIST, ALBUM_COVER_URL } from './constants';
 import GlitchHeader from './components/GlitchHeader';
 import TrackItem from './components/TrackItem';
@@ -25,6 +25,12 @@ const App: React.FC = () => {
     }
   };
 
+  const TikTokIcon = () => (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" className="w-5 h-5">
+      <path d="M9 0h1.98c.144.715.54 1.617 1.093 2.512C12.842 3.878 14.537 4.73 16.01 4.95v4.25c-3.042-.212-3.968-1.54-4.09-1.61v.91c0 3.797-1.079 6.249-3.152 7.607-1.291.85-2.865 1.14-4.22.65-2.307-.81-3.69-3.415-2.705-5.917 1.127-2.862 4.675-3.655 6.772-1.637.525.505.813 1.011 1.05 1.543h3.553c-.344-3.08-2.693-5.525-5.834-5.38-3.84.17-6.723 3.32-6.52 7.185.19 3.634 3.197 6.635 6.84 6.822 2.72.14 5.215-1.27 6.44-3.49 1.45-2.61 1.255-6.623 1.255-9.38 0-.497.02-1.503.02-1.503h4.63V0h-9.09z" />
+    </svg>
+  );
+
   return (
     <div className="min-h-screen relative text-slate-300 selection:bg-cyan-500/30 selection:text-cyan-100">
       
@@ -43,16 +49,28 @@ const App: React.FC = () => {
           <div className="font-mono text-xs md:text-sm tracking-widest text-cyan-400">
             SYS.ID: FARALLON_AI
           </div>
-          <div className="flex gap-4 md:gap-6">
-            <button onClick={() => scrollToSection('about')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors">The Signal</button>
-            <button onClick={() => scrollToSection('album')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors">Heavy Water</button>
-            <button onClick={() => scrollToSection('manifesto')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors hidden md:block">Manifesto</button>
+          <div className="flex items-center gap-4 md:gap-8">
+            <div className="flex gap-4 md:gap-6">
+              <button onClick={() => scrollToSection('about')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors">The Signal</button>
+              <button onClick={() => scrollToSection('album')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors">Heavy Water</button>
+              <button onClick={() => scrollToSection('manifesto')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors hidden md:block">Manifesto</button>
+            </div>
+            {/* Promoted TikTok Link */}
+            <a 
+              href="https://tiktok.com/@farallonai" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-cyan-400 transition-colors p-1"
+              aria-label="Follow on TikTok"
+            >
+              <TikTokIcon />
+            </a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-20">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-16 md:py-20">
         {/* Dark Overlay Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#010b13]/60 via-transparent to-[#010b13] z-10"></div>
         
@@ -64,7 +82,7 @@ const App: React.FC = () => {
           
           <GlitchHeader text="FARALLON" size="xl" className="mb-2" />
           
-          <h2 className="text-base md:text-2xl font-light tracking-widest text-gray-400 mb-12 uppercase">
+          <h2 className="text-sm md:text-2xl font-light tracking-widest text-gray-400 mb-12 uppercase">
             The Signal in the Noise
           </h2>
 
@@ -90,7 +108,7 @@ const App: React.FC = () => {
       <section id="about" className="relative py-16 md:py-32 px-4 md:px-6 container mx-auto z-20">
         <div className="flex flex-col items-center mb-16">
           <div className="w-px h-16 bg-gradient-to-b from-transparent to-cyan-500 mb-4"></div>
-          <h2 className="text-3xl md:text-4xl font-bold uppercase text-white tracking-widest mb-2">The Signal</h2>
+          <h2 className="text-2xl md:text-4xl font-bold uppercase text-white tracking-widest mb-2">The Signal</h2>
           <div className="font-mono text-xs text-cyan-500/50 tracking-[0.5em]">ORIGIN STORY</div>
         </div>
         
@@ -141,7 +159,8 @@ const App: React.FC = () => {
              </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-2">
+          {/* Tracklist - Compact Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
             {TRACK_LIST.map((track) => (
               <TrackItem 
                 key={track.id} 
@@ -213,10 +232,11 @@ const App: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex gap-6">
-            <a href="#" className="text-gray-500 hover:text-cyan-400 transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="text-gray-500 hover:text-cyan-400 transition-colors"><Disc size={20} /></a>
-            <a href="#" className="text-gray-500 hover:text-cyan-400 transition-colors"><Github size={20} /></a>
+          <div className="flex gap-6 items-center">
+            {/* TikTok */}
+            <a href="https://tiktok.com/@farallonai" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyan-400 transition-colors" aria-label="TikTok">
+               <TikTokIcon />
+            </a>
           </div>
         </div>
       </footer>
