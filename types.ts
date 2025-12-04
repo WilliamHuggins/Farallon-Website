@@ -8,3 +8,5 @@ export interface NavItem {
   label: string;
   href: string;
 }
+
+export type Language = 'en' | 'es' | 'fr' | 'ja' | 'zh';

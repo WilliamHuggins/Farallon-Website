@@ -17,4 +17,4 @@ export const TRACK_LIST: Track[] = [
   { id: 14, title: "Just a Dream", duration: "03:12" },
 ];
 
-export const ALBUM_COVER_URL = "https://i.postimg.cc/jdfN9Gxb/Album-cover.png";
+export const ALBUM_COVER_URL = "https://i.postimg.cc/jdfN9Gxb/Album_cover.png";
