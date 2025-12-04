@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Play, ArrowDown, Globe } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Play, ArrowDown, Globe, Volume2, VolumeX } from 'lucide-react';
 import { TRACK_LIST, ALBUM_COVER_URL } from './constants';
 import GlitchHeader from './components/GlitchHeader';
 import TrackItem from './components/TrackItem';
@@ -13,6 +13,8 @@ const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [currentLang, setCurrentLang] = useState<Language>('en');
   const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,13 @@ const App: React.FC = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
     }
   };
 
@@ -195,7 +204,7 @@ const App: React.FC = () => {
           {/* Featured Listen Section */}
           <ListenSection title={t.album.inputStream} className="mb-16" />
 
-          {/* Featured Video Embed */}
+          {/* Featured Video Embed - Native Player */}
           <div className="w-full max-w-5xl mx-auto mb-20 relative">
              <div className="flex items-center justify-between mb-4 pl-1">
                 <div className="flex items-center gap-2">
@@ -204,19 +213,34 @@ const App: React.FC = () => {
                 </div>
              </div>
              
-             <div className="relative w-full aspect-video border border-gray-800 bg-black/50 shadow-2xl group">
+             <div className="relative w-full aspect-video border border-gray-800 bg-black/50 shadow-2xl group overflow-hidden">
                 {/* Cyber decorative corners */}
                 <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-cyan-500/50 z-20 pointer-events-none"></div>
                 <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-cyan-500/50 z-20 pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-cyan-500/50 z-20 pointer-events-none"></div>
                 <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-cyan-500/50 z-20 pointer-events-none"></div>
                 
-                <iframe 
-                  src="https://drive.google.com/file/d/1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu/preview?usp=sharing&cc_load_policy=0" 
-                  className="w-full h-full object-cover relative z-10"
-                  allow="autoplay; picture-in-picture"
-                  title="Heavy Water Music Video"
-                ></iframe>
+                {/* Native Video Element */}
+                <video
+                  ref={videoRef}
+                  src="https://drive.google.com/uc?export=download&id=1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu"
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  disablePictureInPicture
+                  poster="https://i.postimg.cc/YCPMSPxB/Hero-image.png"
+                />
+
+                {/* Custom Mute Toggle - The only interaction */}
+                <button 
+                  onClick={toggleMute}
+                  className="absolute bottom-6 right-6 z-30 p-3 bg-black/80 border border-cyan-500/50 text-cyan-400 hover:bg-cyan-900/50 hover:text-white transition-all rounded-full backdrop-blur-sm shadow-[0_0_15px_rgba(0,255,255,0.2)]"
+                  aria-label={isMuted ? "Unmute video" : "Mute video"}
+                >
+                  {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+                </button>
              </div>
           </div>
 
