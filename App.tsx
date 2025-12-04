@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Play, ArrowDown, Globe } from 'lucide-react';
 import { TRACK_LIST, ALBUM_COVER_URL } from './constants';
 import GlitchHeader from './components/GlitchHeader';
@@ -220,7 +220,7 @@ const App: React.FC = () => {
                 <div className="absolute top-0 left-0 w-full h-[80px] z-30 bg-transparent"></div>
 
                 <iframe 
-                  src="https://drive.google.com/file/d/1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu/preview?autoplay=1&muted=1" 
+                  src="https://drive.google.com/file/d/1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu/preview?autoplay=1&muted=1&loop=1&playlist=1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu&cc_load_policy=0" 
                   className="w-full h-full" 
                   allow="autoplay; encrypted-media"
                   sandbox="allow-scripts allow-same-origin allow-presentation"
