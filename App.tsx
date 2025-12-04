@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, ArrowDown, Globe } from 'lucide-react';
+import { Play, ArrowDown, Globe, RefreshCw } from 'lucide-react';
 import { TRACK_LIST, ALBUM_COVER_URL } from './constants';
 import GlitchHeader from './components/GlitchHeader';
 import TrackItem from './components/TrackItem';
@@ -13,6 +13,7 @@ const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [currentLang, setCurrentLang] = useState<Language>('en');
   const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const [videoKey, setVideoKey] = useState(0); // Used to force iframe reload
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +28,10 @@ const App: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const reloadVideo = () => {
+    setVideoKey(prev => prev + 1);
   };
 
   const t = translations[currentLang];
@@ -202,6 +207,13 @@ const App: React.FC = () => {
                     <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
                     <span className="font-mono text-xs text-red-500 tracking-widest">{t.album.visualTransmission}</span>
                 </div>
+                <button 
+                  onClick={reloadVideo}
+                  className="flex items-center gap-1 text-[10px] text-gray-600 hover:text-cyan-400 transition-colors uppercase font-mono"
+                >
+                  <RefreshCw size={10} />
+                  Retry Signal
+                </button>
              </div>
              
              <div className="relative w-full aspect-video border border-gray-800 bg-black/50 shadow-2xl group overflow-hidden">
@@ -220,9 +232,10 @@ const App: React.FC = () => {
                 <div className="absolute top-0 left-0 w-full h-[80px] z-30 bg-transparent"></div>
 
                 <iframe 
+                  key={videoKey}
                   src="https://drive.google.com/file/d/1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu/preview?autoplay=1&muted=1&loop=1&playlist=1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu&cc_load_policy=0" 
                   className="w-full h-full" 
-                  allow="autoplay; encrypted-media"
+                  allow="autoplay; encrypted-media; picture-in-picture"
                   sandbox="allow-scripts allow-same-origin allow-presentation"
                   title="Heavy Water Music Video"
                 ></iframe>
