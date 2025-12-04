@@ -229,7 +229,7 @@ const App: React.FC = () => {
                   the "Pop-out" button and the Video Title, effectively locking the user 
                   into the site's experience.
                 */}
-                <div className="absolute top-0 left-0 w-full h-[80px] z-30 bg-transparent"></div>
+                <div className="absolute top-0 left-0 w-full h-[60px] z-30 bg-transparent"></div>
 
                 <iframe 
                   key={videoKey}
