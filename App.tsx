@@ -6,6 +6,7 @@ import TrackItem from './components/TrackItem';
 import TerminalBlock from './components/TerminalBlock';
 import LoreDossier from './components/LoreDossier';
 import ListenSection from './components/ListenSection';
+import Gallery from './components/Gallery';
 import { translations } from './translations';
 import { Language } from './types';
 
@@ -67,6 +68,7 @@ const App: React.FC = () => {
             <div className="flex gap-4 md:gap-6">
               <button onClick={() => scrollToSection('about')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors hidden md:block">{t.nav.theSignal}</button>
               <button onClick={() => scrollToSection('album')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors hidden md:block">{t.nav.heavyWater}</button>
+              <button onClick={() => scrollToSection('gallery')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors hidden md:block">{t.nav.gallery}</button>
               <button onClick={() => scrollToSection('manifesto')} className="text-xs uppercase tracking-widest hover:text-orange-500 transition-colors hidden md:block">{t.nav.manifesto}</button>
             </div>
             
@@ -236,6 +238,11 @@ const App: React.FC = () => {
           </div>
 
         </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section id="gallery" className="relative py-16 md:py-24 px-4 md:px-6 container mx-auto z-20 border-t border-white/5 bg-black/20">
+        <Gallery content={t.gallery} />
       </section>
 
       {/* Manifesto / Transparency */}

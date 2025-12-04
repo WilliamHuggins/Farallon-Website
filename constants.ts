@@ -1,3 +1,4 @@
+
 import { Track } from './types';
 
 export const TRACK_LIST: Track[] = [
@@ -18,3 +19,9 @@ export const TRACK_LIST: Track[] = [
 ];
 
 export const ALBUM_COVER_URL = "https://i.postimg.cc/jdfN9Gxb/Album_cover.png";
+
+export const GALLERY_IMAGES = [
+  { id: 1, url: "https://i.postimg.cc/05D7KPvz/Golden-Gate-Bridge.png", caption: "SECTOR_01 // GOLDEN_GATE_BRIDGE", alt: "Golden Gate Bridge in Fog" },
+  { id: 2, url: "https://i.postimg.cc/651694P5/North-Beach.png", caption: "SECTOR_02 // NORTH_BEACH_ARCHIVE", alt: "North Beach Street Scene" },
+  { id: 4, url: "https://i.postimg.cc/Yqy2pLPj/twin-peaks.png", caption: "SECTOR_04 // TWIN_PEAKS_OVERLOOK", alt: "Twin Peaks View" },
+];

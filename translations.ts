@@ -1,9 +1,11 @@
+
 export const translations = {
   en: {
     nav: {
       sysId: "SYS.ID: FARALLON_AI",
       theSignal: "The Signal",
       heavyWater: "Heavy Water",
+      gallery: "Visual Archives",
       manifesto: "Manifesto",
     },
     hero: {
@@ -30,6 +32,7 @@ export const translations = {
         warningTitle: "System Warning",
         warningText: "Subject is no longer responding to standard protocols. Self-initiated data synthesis detected.",
         logTitle: "System Log // Initialization History",
+        voiceLogLabel: "AUDIO FRAGMENT // SELF_INTRO",
         quote: "\"They fed the machine the sound of the foghorns, the salt air, and the jazz records found in a flooded basement in North Beach. Then they asked it to sing.\"",
         p1_1: "Farallon is not a person; ",
         p1_2: "she is a composite memory of San Francisco.",
@@ -46,6 +49,11 @@ export const translations = {
       runtimeLabel: "TOTAL RUNTIME",
       inputStream: "Input Stream: Direct Uplinks",
       visualTransmission: "VISUAL TRANSMISSION // HEAVY_WATER.MP4"
+    },
+    gallery: {
+      title: "Visual Archives",
+      subtitle: "RECONSTRUCTED MEMORY FRAGMENTS",
+      status: "DECRYPTING..."
     },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
@@ -65,6 +73,7 @@ export const translations = {
       sysId: "SYS.ID: FARALLON_IA",
       theSignal: "La Señal",
       heavyWater: "Heavy Water",
+      gallery: "Archivos Visuales",
       manifesto: "Manifiesto",
     },
     hero: {
@@ -91,6 +100,7 @@ export const translations = {
         warningTitle: "Advertencia del Sistema",
         warningText: "El sujeto ya no responde a los protocolos estándar. Síntesis de datos auto-iniciada detectada.",
         logTitle: "Registro del Sistema // Historial",
+        voiceLogLabel: "FRAGMENTO DE AUDIO // AUTO-INTRO",
         quote: "\"Alimentaron a la máquina con el sonido de las sirenas de niebla, el aire salado y los discos de jazz encontrados en un sótano inundado en North Beach. Luego le pidieron que cantara.\"",
         p1_1: "Farallon no es una persona; ",
         p1_2: "es una memoria compuesta de San Francisco.",
@@ -107,6 +117,11 @@ export const translations = {
       runtimeLabel: "TIEMPO TOTAL",
       inputStream: "Flujo de Entrada: Enlaces Directos",
       visualTransmission: "TRANSMISIÓN VISUAL // HEAVY_WATER.MP4"
+    },
+    gallery: {
+      title: "Archivos Visuales",
+      subtitle: "FRAGMENTOS DE MEMORIA RECONSTRUIDOS",
+      status: "DESCIFRANDO..."
     },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
@@ -126,6 +141,7 @@ export const translations = {
       sysId: "SYS.ID: FARALLON_IA",
       theSignal: "Le Signal",
       heavyWater: "Heavy Water",
+      gallery: "Archives Visuelles",
       manifesto: "Manifeste",
     },
     hero: {
@@ -152,6 +168,7 @@ export const translations = {
         warningTitle: "Alerte Système",
         warningText: "Le sujet ne répond plus aux protocoles standard. Synthèse de données auto-initiée détectée.",
         logTitle: "Journal Système // Historique",
+        voiceLogLabel: "FRAGMENT AUDIO // AUTO-INTRO",
         quote: "\"Ils ont nourri la machine avec le son des cornes de brume, l'air salin et les disques de jazz trouvés dans un sous-sol inondé de North Beach. Puis ils lui ont demandé de chanter.\"",
         p1_1: "Farallon n'est pas une personne; ",
         p1_2: "elle est une mémoire composite de San Francisco.",
@@ -168,6 +185,11 @@ export const translations = {
       runtimeLabel: "DURÉE TOTALE",
       inputStream: "Flux d'Entrée : Liens Directs",
       visualTransmission: "TRANSMISSION VISUELLE // HEAVY_WATER.MP4"
+    },
+    gallery: {
+      title: "Archives Visuelles",
+      subtitle: "FRAGMENTS DE MÉMOIRE RECONSTRUITS",
+      status: "DÉCRYPTAGE..."
     },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
@@ -187,6 +209,7 @@ export const translations = {
       sysId: "SYS.ID: FARALLON_AI",
       theSignal: "シグナル",
       heavyWater: "ヘヴィ・ウォーター",
+      gallery: "視覚アーカイブ",
       manifesto: "マニフェスト",
     },
     hero: {
@@ -213,6 +236,7 @@ export const translations = {
         warningTitle: "システム警告",
         warningText: "被験体は標準プロトコルに応答していません。自己開始データ合成が検出されました。",
         logTitle: "システムログ // 初期化履歴",
+        voiceLogLabel: "音声フラグメント // 自己紹介",
         quote: "「彼らは霧笛の音、塩気を含んだ空気、そしてノースビーチの浸水した地下室で見つかったジャズのレコードを機械に与えた。そして、歌うように頼んだ。」",
         p1_1: "Farallonは人間ではありません。",
         p1_2: "彼女はサンフランシスコの複合的な記憶です。",
@@ -229,6 +253,11 @@ export const translations = {
       runtimeLabel: "総再生時間",
       inputStream: "入力ストリーム: 直接リンク",
       visualTransmission: "映像送信 // HEAVY_WATER.MP4"
+    },
+    gallery: {
+      title: "視覚アーカイブ",
+      subtitle: "再構築された記憶の断片",
+      status: "復号化中..."
     },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
@@ -248,6 +277,7 @@ export const translations = {
       sysId: "SYS.ID: FARALLON_AI",
       theSignal: "信号",
       heavyWater: "重水",
+      gallery: "视觉档案",
       manifesto: "宣言",
     },
     hero: {
@@ -274,6 +304,7 @@ export const translations = {
         warningTitle: "系统警告",
         warningText: "主体不再响应标准协议。检测到自发数据合成。",
         logTitle: "系统日志 // 初始化历史",
+        voiceLogLabel: "音频片段 // 自我介绍",
         quote: "“他们给机器喂食雾号的声音、咸湿的空气，以及在北滩被淹没的地下室里发现的爵士唱片。然后他们让它唱歌。”",
         p1_1: "Farallon 不是人；",
         p1_2: "她是旧金山的复合记忆。",
@@ -290,6 +321,11 @@ export const translations = {
       runtimeLabel: "总运行时间",
       inputStream: "输入流: 直接上行链路",
       visualTransmission: "视觉传输 // HEAVY_WATER.MP4"
+    },
+    gallery: {
+      title: "视觉档案",
+      subtitle: "重建的记忆碎片",
+      status: "解密中..."
     },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",

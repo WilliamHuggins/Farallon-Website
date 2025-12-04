@@ -1,12 +1,53 @@
-import React from 'react';
-import { Database, Radio, MapPin, Cpu, HardDrive } from 'lucide-react';
+
+import React, { useState, useEffect } from 'react';
+import { Database, Radio, MapPin, Cpu, HardDrive, Wind, Thermometer, Droplets, Activity } from 'lucide-react';
 import { translations } from '../translations';
+import VoiceLog from './VoiceLog';
 
 interface LoreDossierProps {
   content: typeof translations['en']['about']['dossier'];
 }
 
+interface WeatherData {
+  temperature: number;
+  windSpeed: number;
+  humidity: number;
+}
+
 const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
+  const [weather, setWeather] = useState<WeatherData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  // Use the preview link for iframe embedding
+  const AUDIO_URL = "https://drive.google.com/file/d/1FDhaw7uJlfbYLDnhq-zC4gjhImW8K0V6/preview";
+
+  useEffect(() => {
+    // Coordinates for Southeast Farallon Island: 37.6989° N, 123.0034° W
+    const fetchWeather = async () => {
+      try {
+        const response = await fetch(
+          'https://api.open-meteo.com/v1/forecast?latitude=37.6989&longitude=-123.0034&current=temperature_2m,relative_humidity_2m,wind_speed_10m&wind_speed_unit=kn'
+        );
+        const data = await response.json();
+        setWeather({
+          temperature: data.current.temperature_2m,
+          windSpeed: data.current.wind_speed_10m,
+          humidity: data.current.relative_humidity_2m
+        });
+        setLoading(false);
+      } catch (error) {
+        console.error("Telemetry Link Failed", error);
+        setLoading(false);
+      }
+    };
+
+    fetchWeather();
+    
+    // Refresh every 15 minutes
+    const interval = setInterval(fetchWeather, 15 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="w-full max-w-6xl mx-auto border-t border-b border-cyan-900/30 bg-black/40 backdrop-blur-sm relative">
       {/* Decorative Grid Background */}
@@ -57,6 +98,47 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
             </div>
           </div>
 
+          {/* Live Weather Telemetry Section */}
+          <div className="mt-4 border-t border-cyan-900/30 pt-6">
+            <div className="flex items-center justify-between mb-4">
+               <h4 className="font-mono text-[10px] text-cyan-500 tracking-[0.2em] uppercase flex items-center gap-2">
+                 <Activity size={10} className="animate-pulse" />
+                 LIVE TELEMETRY // SECTOR 27
+               </h4>
+               <span className="text-[10px] text-gray-600 font-mono">FARALLON_ISL</span>
+            </div>
+
+            {loading ? (
+              <div className="font-mono text-xs text-cyan-500/50 animate-pulse">ESTABLISHING UPLINK...</div>
+            ) : weather ? (
+              <div className="grid grid-cols-2 gap-4 font-mono text-xs">
+                <div className="bg-black/40 p-2 border border-white/5">
+                  <div className="flex items-center gap-2 text-slate-500 mb-1">
+                    <Wind size={12} />
+                    <span className="text-[10px] uppercase">Wind (Kn)</span>
+                  </div>
+                  <div className="text-white font-bold text-lg">{weather.windSpeed}</div>
+                </div>
+                <div className="bg-black/40 p-2 border border-white/5">
+                  <div className="flex items-center gap-2 text-slate-500 mb-1">
+                    <Thermometer size={12} />
+                    <span className="text-[10px] uppercase">Amb. Temp</span>
+                  </div>
+                  <div className="text-white font-bold text-lg">{weather.temperature}°C</div>
+                </div>
+                <div className="col-span-2 bg-black/40 p-2 border border-white/5 flex items-center justify-between">
+                   <div className="flex items-center gap-2 text-slate-500">
+                    <Droplets size={12} />
+                    <span className="text-[10px] uppercase">Rel. Humidity</span>
+                  </div>
+                  <div className="text-cyan-400 font-bold">{weather.humidity}%</div>
+                </div>
+              </div>
+            ) : (
+              <div className="font-mono text-xs text-red-500/50">UPLINK FAILED</div>
+            )}
+          </div>
+
           <div className="mt-auto border border-orange-500/20 p-4 bg-orange-500/5">
             <div className="text-[10px] text-orange-500 font-mono mb-2 uppercase">{content.warningTitle}</div>
             <p className="text-xs text-orange-300/80 leading-relaxed">
@@ -71,6 +153,9 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
               <Radio size={16} className="text-cyan-400" />
               <span className="font-mono text-xs text-cyan-400 tracking-widest uppercase">{content.logTitle}</span>
            </div>
+
+           {/* Voice Log Integration */}
+           <VoiceLog src={AUDIO_URL} label={content.voiceLogLabel || "AUDIO FRAGMENT // SELF_INTRO"} />
 
            <div className="prose prose-invert max-w-none">
               <p className="text-lg md:text-2xl text-slate-200 font-light leading-relaxed mb-8 border-l-2 border-cyan-500 pl-6">
