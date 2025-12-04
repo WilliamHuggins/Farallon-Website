@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, ArrowDown, Globe, RefreshCw } from 'lucide-react';
+import { Play, ArrowDown, Globe } from 'lucide-react';
 import { TRACK_LIST, ALBUM_COVER_URL } from './constants';
 import GlitchHeader from './components/GlitchHeader';
 import TrackItem from './components/TrackItem';
@@ -13,7 +13,6 @@ const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [currentLang, setCurrentLang] = useState<Language>('en');
   const [langMenuOpen, setLangMenuOpen] = useState(false);
-  const [videoKey, setVideoKey] = useState(0); // Used to force iframe reload
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,10 +27,6 @@ const App: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const reloadVideo = () => {
-    setVideoKey(prev => prev + 1);
   };
 
   const t = translations[currentLang];
@@ -200,20 +195,11 @@ const App: React.FC = () => {
           {/* Featured Listen Section */}
           <ListenSection title={t.album.inputStream} className="mb-16" />
 
-          {/* Featured Video Embed - Iframe with Shield */}
+          {/* Featured Video Embed - Basic Iframe without extra restrictions */}
           <div className="w-full max-w-5xl mx-auto mb-20 relative">
-             <div className="flex items-center justify-between mb-4 pl-1">
-                <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                    <span className="font-mono text-xs text-red-500 tracking-widest">{t.album.visualTransmission}</span>
-                </div>
-                <button 
-                  onClick={reloadVideo}
-                  className="flex items-center gap-1 text-[10px] text-gray-600 hover:text-cyan-400 transition-colors uppercase font-mono"
-                >
-                  <RefreshCw size={10} />
-                  Retry Signal
-                </button>
+             <div className="flex items-center gap-2 mb-4 pl-1">
+                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                <span className="font-mono text-xs text-red-500 tracking-widest">{t.album.visualTransmission}</span>
              </div>
              
              <div className="relative w-full aspect-video border border-gray-800 bg-black/50 shadow-2xl group overflow-hidden">
@@ -223,20 +209,10 @@ const App: React.FC = () => {
                 <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-cyan-500/50 z-20 pointer-events-none"></div>
                 <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-cyan-500/50 z-20 pointer-events-none"></div>
                 
-                {/* 
-                  Iframe Shield - Top Bar Blocker 
-                  This invisible div covers the top 60px of the iframe, preventing clicks on 
-                  the "Pop-out" button and the Video Title, effectively locking the user 
-                  into the site's experience.
-                */}
-                <div className="absolute top-0 left-0 w-full h-[60px] z-30 bg-transparent"></div>
-
                 <iframe 
-                  key={videoKey}
-                  src="https://drive.google.com/file/d/1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu/preview?autoplay=1&muted=1&loop=1&playlist=1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu&cc_load_policy=0" 
+                  src="https://drive.google.com/file/d/1THB_liUyDIyi2iNnpm6fa_18rk1mPEdu/preview?cc_load_policy=0" 
                   className="w-full h-full" 
                   allow="autoplay; encrypted-media; picture-in-picture"
-                  sandbox="allow-scripts allow-same-origin allow-presentation"
                   title="Heavy Water Music Video"
                 ></iframe>
              </div>
