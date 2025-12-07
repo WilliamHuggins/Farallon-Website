@@ -18,6 +18,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, currentLang, setCurre
   const navigate = useNavigate();
   const location = useLocation();
   const t = translations[currentLang];
+  
+  // Disable scanlines (glitch effect) on the Store page for a cleaner look
+  const isStorePage = location.pathname === '/store';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,8 +57,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, currentLang, setCurre
   return (
     <div className="relative min-h-screen bg-[var(--deep-ocean)] text-slate-200 selection:bg-cyan-500/30">
       
-      {/* Scanline Overlay */}
-      <div className="scanlines"></div>
+      {/* Scanline Overlay - Conditional Rendering */}
+      {!isStorePage && <div className="scanlines"></div>}
       
       {/* Fog Background */}
       <div className="fog-container">
@@ -84,6 +87,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, currentLang, setCurre
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => handleNavClick('album')} className="text-xs font-mono text-slate-400 hover:text-cyan-400 tracking-wider uppercase transition-colors">{t.nav.heavyWater}</button>
             <button onClick={() => handleNavClick('about')} className="text-xs font-mono text-slate-400 hover:text-cyan-400 tracking-wider uppercase transition-colors">{t.nav.theSignal}</button>
+            <Link to="/store" className="text-xs font-mono text-slate-400 hover:text-cyan-400 tracking-wider uppercase transition-colors">{t.nav.store}</Link>
             <Link to="/visual-archives" className="text-xs font-mono text-slate-400 hover:text-cyan-400 tracking-wider uppercase transition-colors">{t.nav.gallery}</Link>
             <button onClick={() => handleNavClick('manifesto')} className="text-xs font-mono text-slate-400 hover:text-cyan-400 tracking-wider uppercase transition-colors">{t.nav.manifesto}</button>
             <Link to="/about-project" className="text-xs font-mono text-slate-400 hover:text-cyan-400 tracking-wider uppercase transition-colors">{t.nav.credits}</Link>
@@ -152,6 +156,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, currentLang, setCurre
          <div className="flex flex-col gap-8 text-center">
             <button onClick={() => handleNavClick('album')} className="text-xl font-mono text-slate-300 hover:text-cyan-400 tracking-widest uppercase">{t.nav.heavyWater}</button>
             <button onClick={() => handleNavClick('about')} className="text-xl font-mono text-slate-300 hover:text-cyan-400 tracking-widest uppercase">{t.nav.theSignal}</button>
+            <Link to="/store" onClick={() => setMobileMenuOpen(false)} className="text-xl font-mono text-slate-300 hover:text-cyan-400 tracking-widest uppercase">{t.nav.store}</Link>
             <Link to="/visual-archives" onClick={() => setMobileMenuOpen(false)} className="text-xl font-mono text-slate-300 hover:text-cyan-400 tracking-widest uppercase">{t.nav.gallery}</Link>
             <button onClick={() => handleNavClick('manifesto')} className="text-xl font-mono text-slate-300 hover:text-cyan-400 tracking-widest uppercase">{t.nav.manifesto}</button>
             <Link to="/about-project" onClick={() => setMobileMenuOpen(false)} className="text-xl font-mono text-slate-300 hover:text-cyan-400 tracking-widest uppercase">{t.nav.credits}</Link>

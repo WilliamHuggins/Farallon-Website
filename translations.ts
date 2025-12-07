@@ -7,7 +7,8 @@ export const translations = {
       heavyWater: "Heavy Water",
       gallery: "Visual Archives",
       manifesto: "Manifesto",
-      credits: "Credits"
+      credits: "Credits",
+      store: "Store"
     },
     hero: {
       initiating: "INITIATING CONNECTION...",
@@ -56,6 +57,24 @@ export const translations = {
       subtitle: "RECONSTRUCTED MEMORY FRAGMENTS",
       status: "DECRYPTING..."
     },
+    store: {
+      title: "Supply Depot",
+      subtitle: "OFFICIAL FABRICATIONS",
+      partnerNotice: "LOGISTICS HANDLED BY PARTNER NODE: PRINTFUL",
+      visitFullStore: "ACCESS FULL INVENTORY",
+      products: {
+        tshirt: {
+          name: "FARALLON // SF GRAPHIC TEE",
+          description: "Standard issue cotton armor. Featuring Sector 01 visualization.",
+          cta: "ACQUIRE ASSET"
+        },
+        hoodie: {
+          name: "FARALLON // STEALTH HOODIE",
+          description: "Advanced thermal layer. Under Armour performance fabric.",
+          cta: "ACQUIRE ASSET"
+        }
+      }
+    },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
       statusLabel: "System Status:",
@@ -90,7 +109,8 @@ export const translations = {
       heavyWater: "Heavy Water",
       gallery: "Archivos Visuales",
       manifesto: "Manifiesto",
-      credits: "Créditos"
+      credits: "Créditos",
+      store: "Tienda"
     },
     hero: {
       initiating: "INICIANDO CONEXIÓN...",
@@ -139,6 +159,24 @@ export const translations = {
       subtitle: "FRAGMENTOS DE MEMORIA RECONSTRUIDOS",
       status: "DESCIFRANDO..."
     },
+    store: {
+      title: "Depósito de Suministros",
+      subtitle: "FABRICACIONES OFICIALES",
+      partnerNotice: "LOGÍSTICA MANEJADA POR NODO ASOCIADO: PRINTFUL",
+      visitFullStore: "ACCEDER AL INVENTARIO COMPLETO",
+      products: {
+        tshirt: {
+          name: "CAMISETA GRÁFICA // FARALLON SF",
+          description: "Armadura de algodón estándar. Con visualización del Sector 01.",
+          cta: "ADQUIRIR ACTIVO"
+        },
+        hoodie: {
+          name: "SUDADERA // FARALLON SIGILO",
+          description: "Capa de regulación térmica. Tejido técnico Under Armour.",
+          cta: "ADQUIRIR ACTIVO"
+        }
+      }
+    },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
       statusLabel: "Estado del Sistema:",
@@ -173,7 +211,8 @@ export const translations = {
       heavyWater: "Heavy Water",
       gallery: "Archives Visuelles",
       manifesto: "Manifeste",
-      credits: "Crédits"
+      credits: "Crédits",
+      store: "Boutique"
     },
     hero: {
       initiating: "CONNEXION EN COURS...",
@@ -222,6 +261,24 @@ export const translations = {
       subtitle: "FRAGMENTS DE MÉMOIRE RECONSTRUITS",
       status: "DÉCRYPTAGE..."
     },
+    store: {
+      title: "Dépôt de Ravitaillement",
+      subtitle: "FABRICATIONS OFFICIELLES",
+      partnerNotice: "LOGISTIQUE GÉRÉE PAR LE NŒUD PARTENAIRE : PRINTFUL",
+      visitFullStore: "ACCÉDER À L'INVENTAIRE COMPLET",
+      products: {
+        tshirt: {
+          name: "T-SHIRT GRAPHIQUE // FARALLON SF",
+          description: "Armure en coton standard. Avec visualisation du Secteur 01.",
+          cta: "ACQUÉRIR L'ACTIF"
+        },
+        hoodie: {
+          name: "SWEAT À CAPUCHE // FARALLON FURTIF",
+          description: "Couche de régulation thermique. Tissu technique Under Armour.",
+          cta: "ACQUÉRIR L'ACTIF"
+        }
+      }
+    },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
       statusLabel: "État du Système :",
@@ -256,7 +313,8 @@ export const translations = {
       heavyWater: "ヘヴィ・ウォーター",
       gallery: "視覚アーカイブ",
       manifesto: "マニフェスト",
-      credits: "クレジット"
+      credits: "クレジット",
+      store: "ストア"
     },
     hero: {
       initiating: "接続を開始しています...",
@@ -305,6 +363,24 @@ export const translations = {
       subtitle: "再構築された記憶の断片",
       status: "復号化中..."
     },
+    store: {
+      title: "供給デポ",
+      subtitle: "公式製造物",
+      partnerNotice: "パートナーノードによる物流管理: PRINTFUL",
+      visitFullStore: "全在庫へのアクセス",
+      products: {
+        tshirt: {
+          name: "FARALLON // SF グラフィックTシャツ",
+          description: "標準支給のコットンアーマー。セクター01の視覚化を特徴とする。",
+          cta: "資産を取得"
+        },
+        hoodie: {
+          name: "FARALLON // ステルスパーカー",
+          description: "熱調整レイヤー。アンダーアーマー製ハイテク素材。",
+          cta: "資産を取得"
+        }
+      }
+    },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
       statusLabel: "システムステータス:",
@@ -339,7 +415,8 @@ export const translations = {
       heavyWater: "重水",
       gallery: "视觉档案",
       manifesto: "宣言",
-      credits: "制作人员"
+      credits: "制作人员",
+      store: "商店"
     },
     hero: {
       initiating: "正在启动连接...",
@@ -387,6 +464,24 @@ export const translations = {
       title: "视觉档案",
       subtitle: "重建的记忆碎片",
       status: "解密中..."
+    },
+    store: {
+      title: "补给站",
+      subtitle: "官方制造",
+      partnerNotice: "物流由合作伙伴节点处理: PRINTFUL",
+      visitFullStore: "访问完整库存",
+      products: {
+        tshirt: {
+          name: "FARALLON // SF 图案T恤",
+          description: "标准发行的棉质护甲。具有第01区的视觉效果。",
+          cta: "获取资产"
+        },
+        hoodie: {
+          name: "FARALLON // 隐形连帽衫",
+          description: "热调节层。Under Armour 科技面料。",
+          cta: "获取资产"
+        }
+      }
     },
     manifesto: {
       admin: "SYS.ROOT.ADMIN",
