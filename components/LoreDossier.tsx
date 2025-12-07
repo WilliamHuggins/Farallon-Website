@@ -98,7 +98,7 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
             </div>
           </div>
 
-          {/* Live Weather Telemetry Section */}
+          {/* Live Telemetry Section (Weather Only) */}
           <div className="mt-4 border-t border-cyan-900/30 pt-6">
             <div className="flex items-center justify-between mb-4">
                <h4 className="font-mono text-[10px] text-cyan-500 tracking-[0.2em] uppercase flex items-center gap-2">
@@ -108,35 +108,39 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
                <span className="text-[10px] text-gray-600 font-mono">FARALLON_ISL</span>
             </div>
 
-            {loading ? (
-              <div className="font-mono text-xs text-cyan-500/50 animate-pulse">ESTABLISHING UPLINK...</div>
-            ) : weather ? (
-              <div className="grid grid-cols-2 gap-4 font-mono text-xs">
-                <div className="bg-black/40 p-2 border border-white/5">
-                  <div className="flex items-center gap-2 text-slate-500 mb-1">
-                    <Wind size={12} />
-                    <span className="text-[10px] uppercase">Wind (Kn)</span>
+            {/* Weather Data Grid - Expanded to fill space */}
+            <div className="grid grid-cols-3 gap-2">
+              {loading ? (
+                <div className="col-span-3 font-mono text-xs text-cyan-500/50 animate-pulse">ESTABLISHING UPLINK...</div>
+              ) : weather ? (
+                <>
+                  <div className="bg-black/40 p-2 border border-white/5 flex flex-col items-center justify-center text-center">
+                    <div className="flex items-center gap-1 text-slate-500 mb-1">
+                      <Wind size={10} />
+                      <span className="text-[8px] uppercase">Wind</span>
+                    </div>
+                    <div className="text-white font-bold text-xs">{weather.windSpeed} kn</div>
                   </div>
-                  <div className="text-white font-bold text-lg">{weather.windSpeed}</div>
-                </div>
-                <div className="bg-black/40 p-2 border border-white/5">
-                  <div className="flex items-center gap-2 text-slate-500 mb-1">
-                    <Thermometer size={12} />
-                    <span className="text-[10px] uppercase">Amb. Temp</span>
+                  <div className="bg-black/40 p-2 border border-white/5 flex flex-col items-center justify-center text-center">
+                    <div className="flex items-center gap-1 text-slate-500 mb-1">
+                      <Thermometer size={10} />
+                      <span className="text-[8px] uppercase">Temp</span>
+                    </div>
+                    <div className="text-white font-bold text-xs">{weather.temperature}°C</div>
                   </div>
-                  <div className="text-white font-bold text-lg">{weather.temperature}°C</div>
-                </div>
-                <div className="col-span-2 bg-black/40 p-2 border border-white/5 flex items-center justify-between">
-                   <div className="flex items-center gap-2 text-slate-500">
-                    <Droplets size={12} />
-                    <span className="text-[10px] uppercase">Rel. Humidity</span>
+                  <div className="bg-black/40 p-2 border border-white/5 flex flex-col items-center justify-center text-center">
+                    <div className="flex items-center gap-1 text-slate-500 mb-1">
+                      <Droplets size={10} />
+                      <span className="text-[8px] uppercase">Hum</span>
+                    </div>
+                    <div className="text-cyan-400 font-bold text-xs">{weather.humidity}%</div>
                   </div>
-                  <div className="text-cyan-400 font-bold">{weather.humidity}%</div>
-                </div>
-              </div>
-            ) : (
-              <div className="font-mono text-xs text-red-500/50">UPLINK FAILED</div>
-            )}
+                </>
+              ) : (
+                <div className="col-span-3 font-mono text-xs text-red-500/50">UPLINK FAILED</div>
+              )}
+            </div>
+
           </div>
 
           <div className="mt-auto border border-orange-500/20 p-4 bg-orange-500/5">

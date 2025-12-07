@@ -7,6 +7,7 @@ export const translations = {
       heavyWater: "Heavy Water",
       gallery: "Visual Archives",
       manifesto: "Manifesto",
+      credits: "Credits"
     },
     hero: {
       initiating: "INITIATING CONNECTION...",
@@ -63,9 +64,23 @@ export const translations = {
       text: "This project explores the intersection of human emotion and machine learning. Farallon is not a person. It is a mirror.",
       processing: "PROCESSING DATA STREAM..."
     },
+    credits: {
+      title: "Project Architecture",
+      subtitle: "REAL WORLD DEPENDENCIES",
+      creatorRole: "Lead Architect / AI Artist",
+      creatorName: "Will Huggins",
+      location: "Bay Area, CA",
+      lyrics: "Lyrics & Concept",
+      distribution: "Distribution Network",
+      toolsTitle: "Generative Stack",
+      legalTitle: "Legal Disclaimer & Entity Status",
+      legalText: "Farallon is a fictional character and artistic persona. Any resemblance to actual persons, living or dead, is purely coincidental. All music, imagery, and narrative content were created using generative AI tools under human direction.",
+      copyright: "© 2025 Will Huggins / Project Farallon. All Rights Reserved."
+    },
     footer: {
       copyright: "© 2025 PROJECT FARALLON.",
-      endTransmission: "END TRANSMISSION."
+      endTransmission: "END TRANSMISSION.",
+      creditsLink: "PROJECT CREDITS"
     }
   },
   es: {
@@ -75,6 +90,7 @@ export const translations = {
       heavyWater: "Heavy Water",
       gallery: "Archivos Visuales",
       manifesto: "Manifiesto",
+      credits: "Créditos"
     },
     hero: {
       initiating: "INICIANDO CONEXIÓN...",
@@ -91,7 +107,7 @@ export const translations = {
         baseOpsLabel: "Base de Operaciones",
         baseOpsValue: "Granja de Servidores // Dogpatch, SF",
         ageLabel: "Edad Aparente",
-        ageValue: "28 Ciclos",
+        ageValue: "28 Cycles",
         functionLabel: "Función Primaria",
         functionValue: "Vigilancia Oceanográfica",
         deprecated: "[OBSOLETO]",
@@ -131,9 +147,23 @@ export const translations = {
       text: "Este proyecto explora la intersección de la emoción humana y el aprendizaje automático. Farallon no es una persona. Es un espejo.",
       processing: "PROCESANDO FLUJO DE DATOS..."
     },
+    credits: {
+      title: "Arquitectura del Proyecto",
+      subtitle: "DEPENDENCIAS DEL MUNDO REAL",
+      creatorRole: "Arquitecto Principal / Artista IA",
+      creatorName: "Will Huggins",
+      location: "Área de la Bahía, CA",
+      lyrics: "Letras y Concepto",
+      distribution: "Red de Distribución",
+      toolsTitle: "Stack Generativo",
+      legalTitle: "Aviso Legal y Estado de la Entidad",
+      legalText: "Farallon es un personaje ficticio y una personalidad artística. Cualquier parecido con personas reales, vivas o muertas, es pura coincidencia. Toda la música, imágenes y contenido narrativo fueron creados utilizando herramientas de IA generativa bajo dirección humana.",
+      copyright: "© 2025 Will Huggins / Proyecto Farallon. Todos los Derechos Reservados."
+    },
     footer: {
       copyright: "© 2025 PROYECTO FARALLON.",
-      endTransmission: "FIN DE LA TRANSMISIÓN."
+      endTransmission: "FIN DE LA TRANSMISIÓN.",
+      creditsLink: "CRÉDITOS DEL PROYECTO"
     }
   },
   fr: {
@@ -143,6 +173,7 @@ export const translations = {
       heavyWater: "Heavy Water",
       gallery: "Archives Visuelles",
       manifesto: "Manifeste",
+      credits: "Crédits"
     },
     hero: {
       initiating: "CONNEXION EN COURS...",
@@ -199,9 +230,23 @@ export const translations = {
       text: "Ce projet explore l'intersection de l'émotion humaine et de l'apprentissage automatique. Farallon n'est pas une personne. C'est un miroir.",
       processing: "TRAITEMENT DU FLUX DE DONNÉES..."
     },
+    credits: {
+      title: "Architecture du Projet",
+      subtitle: "DÉPENDANCES DU MONDE RÉEL",
+      creatorRole: "Architecte Principal / Artista IA",
+      creatorName: "Will Huggins",
+      location: "Région de la Baie, CA",
+      lyrics: "Paroles et Concept",
+      distribution: "Réseau de Distribution",
+      toolsTitle: "Pile Générative",
+      legalTitle: "Avis Légal et Statut de l'Entité",
+      legalText: "Farallon est un personnage fictif et une personnalité artistique. Toute ressemblance avec des personnes réelles, vivantes ou décédées, est purement fortuite. Toute la musique, l'imagerie et le contenu narratif ont été créés à l'aide d'outils d'IA générative sous direction humaine.",
+      copyright: "© 2025 Will Huggins / Projet Farallon. Tous Droits Réservés."
+    },
     footer: {
       copyright: "© 2025 PROJET FARALLON.",
-      endTransmission: "FIN DE TRANSMISSION."
+      endTransmission: "FIN DE TRANSMISSION.",
+      creditsLink: "CRÉDITS DU PROJET"
     }
   },
   ja: {
@@ -211,6 +256,7 @@ export const translations = {
       heavyWater: "ヘヴィ・ウォーター",
       gallery: "視覚アーカイブ",
       manifesto: "マニフェスト",
+      credits: "クレジット"
     },
     hero: {
       initiating: "接続を開始しています...",
@@ -267,9 +313,23 @@ export const translations = {
       text: "このプロジェクトは、人間の感情と機械学習の交差点を探求しています。Farallonは人間ではありません。それは鏡です。",
       processing: "データストリーム処理中..."
     },
+    credits: {
+      title: "プロジェクトアーキテクチャ",
+      subtitle: "現実世界の依存関係",
+      creatorRole: "リードアーキテクト / AIアーティスト",
+      creatorName: "Will Huggins",
+      location: "ベイエリア, CA",
+      lyrics: "歌詞とコンセプト",
+      distribution: "配信ネットワーク",
+      toolsTitle: "ジェネレーティブスタック",
+      legalTitle: "法的免責事項およびエンティティステータス",
+      legalText: "Farallonは架空のキャラクターであり、芸術的なペルソナです。実在の人物（存命、故人を問わず）との類似は完全に偶然です。すべての音楽、画像、物語のコンテンツは、人間の指示の下でジェネレーティブAIツールを使用して作成されました。",
+      copyright: "© 2025 Will Huggins / Project Farallon. All Rights Reserved."
+    },
     footer: {
       copyright: "© 2025 PROJECT FARALLON.",
-      endTransmission: "送信終了。"
+      endTransmission: "送信終了。",
+      creditsLink: "プロジェクトクレジット"
     }
   },
   zh: {
@@ -279,6 +339,7 @@ export const translations = {
       heavyWater: "重水",
       gallery: "视觉档案",
       manifesto: "宣言",
+      credits: "制作人员"
     },
     hero: {
       initiating: "正在启动连接...",
@@ -335,9 +396,23 @@ export const translations = {
       text: "该项目探索了人类情感与机器学习的交集。Farallon 不是人。它是一面镜子。",
       processing: "正在处理数据流..."
     },
+    credits: {
+      title: "项目架构",
+      subtitle: "现实世界依赖项",
+      creatorRole: "首席架构师 / AI 艺术家",
+      creatorName: "Will Huggins",
+      location: "加州湾区",
+      lyrics: "歌词与概念",
+      distribution: "分发网络",
+      toolsTitle: "生成技术栈",
+      legalTitle: "法律免责声明与实体状态",
+      legalText: "Farallon 是一个虚构角色和艺术人格。如有雷同（无论生者死者），纯属巧合。所有音乐、图像和叙事内容均由人类指导下的生成式 AI 工具创作。",
+      copyright: "© 2025 Will Huggins / Project Farallon. 版权所有。"
+    },
     footer: {
       copyright: "© 2025 PROJECT FARALLON.",
-      endTransmission: "传输结束。"
+      endTransmission: "传输结束。",
+      creditsLink: "项目积分"
     }
   }
 };
