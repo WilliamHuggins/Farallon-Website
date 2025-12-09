@@ -18,7 +18,26 @@ export const TRACK_LIST: Track[] = [
   { id: 14, title: "Just a Dream", duration: "03:12" },
 ];
 
+export const OFFLINE_TRACK_LIST: Track[] = [
+  { id: 1, title: "Protocol Intro (Offline)", duration: "Heavy Water" },
+  { id: 2, title: "The Current (Offline)", duration: "Unreleased" },
+  { id: 3, title: "Get Down (Offline)", duration: "Heavy Water" },
+  { id: 4, title: "Paper Thin (Offline)", duration: "Heavy Water" },
+  { id: 5, title: "Overexposed (Offline)", duration: "Unreleased" },
+  { id: 6, title: "Heavy Water (Offline)", duration: "Heavy Water" },
+  { id: 7, title: "Live Wire (Offline)", duration: "Unreleased" },
+  { id: 8, title: "Sodium Glare (Offline)", duration: "Heavy Water" },
+  { id: 9, title: "Twin Peaks (Offline)", duration: "Unreleased" },
+  { id: 10, title: "The Architect (Offline)", duration: "Heavy Water" },
+  { id: 11, title: "Velocity (Offline)", duration: "Heavy Water" },
+  { id: 12, title: "Silhouette (Offline)", duration: "Heavy Water" },
+  { id: 13, title: "Suspension (Offline)", duration: "Heavy Water" },
+  { id: 14, title: "Just a Dream (Offline)", duration: "Heavy Water" },
+];
+
 export const ALBUM_COVER_URL = "https://i.postimg.cc/jdfN9Gxb/Album_cover.png";
+export const LATEST_SINGLE_COVER_URL = "https://i.postimg.cc/SRWTNpFc/Midnight-Meridian.png";
+export const OFFLINE_SESSION_COVER_URL = "https://i.postimg.cc/DZQLSfZB/FARALLON-OFFLINE-SESSION.png";
 
 export const GALLERY_IMAGES = [
   { id: 1, url: "https://i.postimg.cc/05D7KPvz/Golden-Gate-Bridge.png", caption: "SECTOR_01 // GOLDEN_GATE_BRIDGE", alt: "Golden Gate Bridge in Fog" },

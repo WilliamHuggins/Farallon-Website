@@ -1,8 +1,9 @@
 
+
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Play, ArrowDown, ChevronDown, ChevronUp } from 'lucide-react';
-import { TRACK_LIST, ALBUM_COVER_URL } from '../constants';
+import { Play, ArrowDown, ChevronDown, ChevronUp, ImageOff } from 'lucide-react';
+import { TRACK_LIST, OFFLINE_TRACK_LIST, ALBUM_COVER_URL, LATEST_SINGLE_COVER_URL, OFFLINE_SESSION_COVER_URL } from '../constants';
 import GlitchHeader from '../components/GlitchHeader';
 import TrackItem from '../components/TrackItem';
 import TerminalBlock from '../components/TerminalBlock';
@@ -19,6 +20,7 @@ const Home: React.FC<HomeProps> = ({ currentLang }) => {
   const t = translations[currentLang];
   const location = useLocation();
   const [showTracklist, setShowTracklist] = useState(false);
+  const [offlineImageError, setOfflineImageError] = useState(false);
 
   useEffect(() => {
     if (location.state && (location.state as any).scrollTo) {
@@ -88,15 +90,44 @@ const Home: React.FC<HomeProps> = ({ currentLang }) => {
         </div>
       </section>
 
-      {/* Album Section: Heavy Water */}
+      {/* Album Section: Discography */}
       <section id="album" className="relative py-16 md:py-24 bg-black/40 z-20 border-t border-white/5">
         <div className="container mx-auto px-4 md:px-6">
+
+          {/* Latest Release Banner - NEW YEAR SPECIAL */}
+          <div className="w-full max-w-5xl mx-auto mb-20 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/20 to-purple-900/20 blur-xl"></div>
+              <div className="relative border border-white/10 bg-black/60 backdrop-blur-md p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+                  {/* Decorative corner */}
+                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cyan-500"></div>
+                  
+                  <div className="relative group shrink-0">
+                       <div className="absolute -inset-1 bg-gradient-to-br from-cyan-400 to-purple-500 opacity-30 blur-sm group-hover:opacity-60 transition-opacity duration-500"></div>
+                       <img 
+                         src={LATEST_SINGLE_COVER_URL} 
+                         alt="Midnight Meridian Cover" 
+                         className="relative w-64 h-64 object-cover shadow-2xl border border-white/10" 
+                       />
+                  </div>
+                  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                      <div className="flex items-center gap-2 mb-2">
+                          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                          <span className="font-mono text-xs text-cyan-400 tracking-[0.2em] uppercase">{t.latest.label}</span>
+                      </div>
+                      <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-widest mb-2 font-mono">{t.latest.title}</h2>
+                      <p className="font-mono text-sm text-purple-300 uppercase tracking-widest mb-6">{t.latest.type}</p>
+                      <div className="font-mono text-xs text-gray-400 max-w-md leading-relaxed">
+                         {t.latest.description}
+                      </div>
+                  </div>
+              </div>
+          </div>
           
-          {/* Featured Listen Section (Moved to Top) */}
+          {/* Featured Listen Section */}
           <ListenSection title={t.album.inputStream} className="mb-16" />
 
-          {/* Album Wrapper */}
-          <div className="w-full max-w-lg mx-auto mb-20">
+          {/* Album 1: Heavy Water */}
+          <div className="w-full max-w-lg mx-auto mb-24">
             
             {/* Album Cover - Clickable */}
             <button 
@@ -147,8 +178,65 @@ const Home: React.FC<HomeProps> = ({ currentLang }) => {
             )}
           </div>
 
-          {/* Official Visuals Section */}
-          <div className="w-full max-w-5xl mx-auto mt-20">
+          {/* Album 2: Offline Session Preview */}
+          <div className="w-full max-w-5xl mx-auto mb-24 border-t border-gray-800 pt-12">
+              <div className="flex flex-col md:flex-row gap-12 items-start">
+                  {/* Cover */}
+                  <div className="w-full md:w-1/3">
+                      <div className="relative group">
+                          {offlineImageError ? (
+                              <div className="w-full aspect-square bg-black border border-red-900/50 flex flex-col items-center justify-center text-center p-4 shadow-lg">
+                                  <ImageOff size={48} className="text-red-900 mb-4 opacity-50" />
+                                  <span className="font-mono text-xs text-red-500 tracking-widest uppercase">NO SIGNAL // IMAGE OFF-LINE</span>
+                                  <span className="font-mono text-[10px] text-red-900 mt-2">ERR_CODE: 404_NOT_FOUND</span>
+                              </div>
+                          ) : (
+                              <img 
+                                  src={OFFLINE_SESSION_COVER_URL} 
+                                  alt="The Offline Session Cover" 
+                                  className="w-full h-auto shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700" 
+                                  onError={() => setOfflineImageError(true)}
+                              />
+                          )}
+                          <div className="absolute top-2 left-2 bg-black/80 px-2 py-1 border border-white/20">
+                              <span className="font-mono text-[10px] text-white tracking-widest uppercase">
+                                  {t.offline.status}
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+
+                  {/* Info & Tracks */}
+                  <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl md:text-4xl font-bold text-white uppercase tracking-widest mb-2">
+                          {t.offline.title}
+                      </h3>
+                      <p className="font-mono text-cyan-500 text-xs tracking-[0.2em] mb-6 uppercase">
+                          {t.offline.subtitle}
+                      </p>
+                      <p className="font-mono text-sm text-gray-400 mb-8 leading-relaxed border-l-2 border-gray-700 pl-4">
+                          {t.offline.description}
+                      </p>
+
+                      <div className="bg-black/40 border border-gray-800 p-6">
+                          <h4 className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-4 border-b border-gray-800 pb-2">
+                              Session Tracks
+                          </h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+                              {OFFLINE_TRACK_LIST.map((track) => (
+                                  <div key={track.id} className="flex justify-between items-center text-xs py-1 border-b border-gray-800/50 hover:bg-white/5">
+                                      <span className="text-gray-300 font-mono">{String(track.id).padStart(2, '0')}. {track.title}</span>
+                                      <span className="text-gray-600 font-mono text-[10px] uppercase">{track.duration}</span>
+                                  </div>
+                              ))}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          {/* Official Visuals Section (Moved to Bottom of Discography) */}
+          <div className="w-full max-w-5xl mx-auto mt-24 pt-12 border-t border-gray-800">
             <div className="flex items-center gap-2 mb-8 justify-center opacity-80">
                 <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
                 <h4 className="font-mono text-sm tracking-[0.2em] text-cyan-400 uppercase">Official Visuals</h4>
@@ -192,7 +280,7 @@ const Home: React.FC<HomeProps> = ({ currentLang }) => {
                 </div>
             </div>
           </div>
-
+          
         </div>
       </section>
 

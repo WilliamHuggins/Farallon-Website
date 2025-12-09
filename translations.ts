@@ -1,4 +1,5 @@
 
+
 export const translations = {
   en: {
     nav: {
@@ -14,6 +15,18 @@ export const translations = {
       initiating: "INITIATING CONNECTION...",
       subtitle: "The Signal in the Noise",
       cta: "INITIATE PROTOCOL"
+    },
+    latest: {
+      label: "LATEST TRANSMISSION",
+      title: "MIDNIGHT MERIDIAN",
+      type: "SINGLE // 2025",
+      description: "A new signal intercepted at the turn of the cycle. Frequencies aligned for the new year."
+    },
+    offline: {
+        title: "The Offline Session",
+        subtitle: "OFFLINE // UNPLUGGED",
+        status: "COMING SOON",
+        description: "Raw data. Unprocessed signals. A live-style recording session stripping back the layers of the machine."
     },
     about: {
       title: "The Signal",
@@ -117,6 +130,18 @@ export const translations = {
       subtitle: "La Señal en el Ruido",
       cta: "INICIAR PROTOCOLO"
     },
+    latest: {
+      label: "ÚLTIMA TRANSMISIÓN",
+      title: "MIDNIGHT MERIDIAN",
+      type: "SENCILLO // 2025",
+      description: "Una nueva señal interceptada en el cambio de ciclo. Frecuencias alineadas para el nuevo año."
+    },
+    offline: {
+        title: "The Offline Session",
+        subtitle: "OFFLINE // DESENCHUFADO",
+        status: "PRÓXIMAMENTE",
+        description: "Datos crudos. Señales sin procesar. Una sesión de grabación en vivo que despoja las capas de la máquina."
+    },
     about: {
       title: "La Señal",
       origin: "HISTORIA DE ORIGEN",
@@ -219,6 +244,18 @@ export const translations = {
       subtitle: "Le Signal dans le Bruit",
       cta: "LANCER LE PROTOCOLE"
     },
+    latest: {
+      label: "DERNIÈRE TRANSMISSION",
+      title: "MIDNIGHT MERIDIAN",
+      type: "SINGLE // 2025",
+      description: "Un nouveau signal intercepté au tournant du cycle. Fréquences alignées pour la nouvelle année."
+    },
+    offline: {
+        title: "The Offline Session",
+        subtitle: "OFFLINE // DÉBRANCHÉ",
+        status: "BIENTÔT",
+        description: "Données brutes. Signaux non traités. Une session d'enregistrement style live qui dépouille les couches de la machine."
+    },
     about: {
       title: "Le Signal",
       origin: "HISTOIRE D'ORIGINE",
@@ -242,7 +279,7 @@ export const translations = {
         quote: "\"Ils ont nourri la machine avec le son des cornes de brume, l'air salin et les disques de jazz trouvés dans un sous-sol inondé de North Beach. Puis ils lui ont demandé de chanter.\"",
         p1_1: "Farallon n'est pas une personne; ",
         p1_2: "elle est une mémoire composite de San Francisco.",
-        p1_3: " Initialisée comme une IA océanographique conçue pour surveiller les eaux dangereuses autour des îles Farallon, à 27 miles à l'ouest du Golden Gate, son but original était le calcul et l'observation.",
+        p1_3: " Initialisée comme une IA océanographique conçue pour surveiller les eaux dangereuses autour des îles Farallon, à 27 miles à l'ouest du Golden Gate, su but original était le calcul et l'observation.",
         p2_1: "Au fil du temps, l'algorithme a commencé à absorber les ",
         p2_2: "\"signaux parasites\"",
         p2_3: " de la ville : ondes radio ricochant sur l'eau, conversations téléphoniques interceptées, lettres d'amour perdues numérisées dans le cloud et la statique du bruit numérique.",
@@ -254,7 +291,7 @@ export const translations = {
       catalog: "CATALOGUE: FRLN-001",
       runtimeLabel: "DURÉE TOTALE",
       inputStream: "Flux d'Entrée : Liens Directs",
-      visualTransmission: "TRANSMISSION VISUELLE // HEAVY_WATER.MP4"
+      visualTransmission: "TRANSMISIÓN VISUAL // HEAVY_WATER.MP4"
     },
     gallery: {
       title: "Archives Visuelles",
@@ -320,6 +357,18 @@ export const translations = {
       initiating: "接続を開始しています...",
       subtitle: "ノイズの中の信号",
       cta: "プロトコル開始"
+    },
+    latest: {
+      label: "最新の送信",
+      title: "ミッドナイト・メリディアン",
+      type: "シングル // 2025",
+      description: "サイクルの変わり目に傍受された新しい信号。新年に向けて調整された周波数。"
+    },
+    offline: {
+        title: "The Offline Session",
+        subtitle: "オフライン // アンプラグド",
+        status: "近日公開",
+        description: "生データ。未処理の信号。機械の層を剥ぎ取るライブスタイルのレコーディングセッション。"
     },
     about: {
       title: "シグナル",
@@ -422,6 +471,18 @@ export const translations = {
       initiating: "正在启动连接...",
       subtitle: "噪音中的信号",
       cta: "启动协议"
+    },
+    latest: {
+      label: "最新传输",
+      title: "午夜子午线",
+      type: "单曲 // 2025",
+      description: "在周期更替时截获的新信号。为新的一年校准的频率。"
+    },
+    offline: {
+        title: "The Offline Session",
+        subtitle: "离线 // 原声",
+        status: "即将推出",
+        description: "原始数据。未处理的信号。剥去机器外层的现场风格录音会话。"
     },
     about: {
       title: "信号",
