@@ -1,4 +1,5 @@
 
+
 import { Track } from './types';
 
 export const TRACK_LIST: Track[] = [
@@ -35,9 +36,10 @@ export const OFFLINE_TRACK_LIST: Track[] = [
   { id: 14, title: "Just a Dream (Offline)", duration: "Heavy Water" },
 ];
 
-export const ALBUM_COVER_URL = "https://i.postimg.cc/jdfN9Gxb/Album_cover.png";
+export const ALBUM_COVER_URL = "https://i.postimg.cc/jdfN9Gxb/Album-cover.png";
 export const LATEST_SINGLE_COVER_URL = "https://i.postimg.cc/SRWTNpFc/Midnight-Meridian.png";
 export const OFFLINE_SESSION_COVER_URL = "https://i.postimg.cc/DZQLSfZB/FARALLON-OFFLINE-SESSION.png";
+export const GHOSTWRITER_COVER_URL = "https://i.postimg.cc/x10jC1fv/Ghostwriter-Album-cover.png";
 
 export const GALLERY_IMAGES = [
   { id: 1, url: "https://i.postimg.cc/05D7KPvz/Golden-Gate-Bridge.png", caption: "SECTOR_01 // GOLDEN_GATE_BRIDGE", alt: "Golden Gate Bridge in Fog" },

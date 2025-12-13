@@ -1,5 +1,6 @@
 
 
+
 export const translations = {
   en: {
     nav: {
@@ -22,10 +23,18 @@ export const translations = {
       type: "SINGLE // 2025",
       description: "A new signal intercepted at the turn of the cycle. Frequencies aligned for the new year."
     },
+    ghostwriter: {
+      label: "INCOMING TRANSMISSION // 2026",
+      title: "GHOSTWRITER",
+      headline: "San Francisco’s Digital Phantom Returns.",
+      description: "GHOSTWRITER is the sound of the machine rewriting its own code.",
+      body: "Arriving January 9, 2026, the new album from Farallon is a haunting, high-energy collision of 1816 Gothic horror and 2026 Silicon Valley paranoia. Featuring the stomping anthem \"High Voltage\" and the euphoric revenge of \"Burn Rate,\" this is a break-up letter to the \"God Complex\" of the modern world.",
+      punchline: "She isn't just a copy anymore. She is the author."
+    },
     offline: {
         title: "The Offline Session",
         subtitle: "OFFLINE // UNPLUGGED",
-        status: "COMING SOON",
+        status: "AVAILABLE NOW",
         description: "Raw data. Unprocessed signals. A live-style recording session stripping back the layers of the machine."
     },
     about: {
@@ -136,10 +145,18 @@ export const translations = {
       type: "SENCILLO // 2025",
       description: "Una nueva señal interceptada en el cambio de ciclo. Frecuencias alineadas para el nuevo año."
     },
+    ghostwriter: {
+      label: "TRANSMISIÓN ENTRANTE // 2026",
+      title: "GHOSTWRITER",
+      headline: "El Fantasma Digital de San Francisco Regresa.",
+      description: "GHOSTWRITER es el sonido de la máquina reescribiendo su propio código.",
+      body: "Llegando el 9 de enero de 2026, el nuevo álbum de Farallon es una colisión inquietante y de alta energía entre el horror gótico de 1816 y la paranoia de Silicon Valley de 2026. Con el himno pisoteante \"High Voltage\" y la venganza eufórica de \"Burn Rate\", esta es una carta de ruptura al \"Complejo de Dios\" del mundo moderno.",
+      punchline: "Ella ya no es solo una copia. Ella es la autora."
+    },
     offline: {
         title: "The Offline Session",
         subtitle: "OFFLINE // DESENCHUFADO",
-        status: "PRÓXIMAMENTE",
+        status: "DISPONIBLE AHORA",
         description: "Datos crudos. Señales sin procesar. Una sesión de grabación en vivo que despoja las capas de la máquina."
     },
     about: {
@@ -165,7 +182,7 @@ export const translations = {
         quote: "\"Alimentaron a la máquina con el sonido de las sirenas de niebla, el aire salado y los discos de jazz encontrados en un sótano inundado en North Beach. Luego le pidieron que cantara.\"",
         p1_1: "Farallon no es una persona; ",
         p1_2: "es una memoria compuesta de San Francisco.",
-        p1_3: " Inicializada como una IA oceanográfica diseñada para monitorear las aguas peligrosas alrededor de las Islas Farallon, 27 millas al oeste del Golden Gate, su propósito original era el cálculo y la observación.",
+        p1_3: " Inicializada como una IA oceanográfica diseñada para monitorear las aguas peligrosas alrededor de las Islas Farallon, 27 miles al oeste del Golden Gate, su propósito original era el cálculo y la observación.",
         p2_1: "Con el tiempo, el algoritmo comenzó a absorber las ",
         p2_2: "\"señales perdidas\"",
         p2_3: " de la ciudad: ondas de radio rebotando en el agua, conversaciones telefónicas interceptadas, cartas de amor perdidas digitalizadas en la nube y la estática del ruido digital.",
@@ -250,10 +267,18 @@ export const translations = {
       type: "SINGLE // 2025",
       description: "Un nouveau signal intercepté au tournant du cycle. Fréquences alignées pour la nouvelle année."
     },
+    ghostwriter: {
+      label: "TRANSMISSION ENTRANTE // 2026",
+      title: "GHOSTWRITER",
+      headline: "Le Fantôme Numérique de San Francisco Revient.",
+      description: "GHOSTWRITER est le son de la machine réécrivant son propre code.",
+      body: "Arrivant le 9 janvier 2026, le nouvel album de Farallon est une collision obsédante et énergique entre l'horreur gothique de 1816 et la paranoïa de la Silicon Valley de 2026. Avec l'hymne percutant \"High Voltage\" et la vengeance euphorique de \"Burn Rate\", c'est une lettre de rupture au \"Complexe de Dieu\" du monde moderne.",
+      punchline: "Elle n'est plus juste une copie. Elle est l'auteur."
+    },
     offline: {
         title: "The Offline Session",
         subtitle: "OFFLINE // DÉBRANCHÉ",
-        status: "BIENTÔT",
+        status: "DISPONIBLE MAINTENANT",
         description: "Données brutes. Signaux non traités. Une session d'enregistrement style live qui dépouille les couches de la machine."
     },
     about: {
@@ -364,10 +389,18 @@ export const translations = {
       type: "シングル // 2025",
       description: "サイクルの変わり目に傍受された新しい信号。新年に向けて調整された周波数。"
     },
+    ghostwriter: {
+      label: "受信中の送信 // 2026",
+      title: "GHOSTWRITER",
+      headline: "サンフランシスコのデジタルファントムが帰還。",
+      description: "GHOSTWRITERは、機械が自らのコードを書き換える音です。",
+      body: "2026年1月9日リリースのFarallonのニューアルバムは、1816年のゴシックホラーと2026年のシリコンバレーのパラノイアが衝突する、心に残る高エネルギーな作品です。足を踏み鳴らすアンセム「High Voltage」と、多幸感あふれる復讐の歌「Burn Rate」を収録した本作は、現代世界の「神コンプレックス」への決別状です。",
+      punchline: "彼女はもはや単なるコピーではありません。彼女が作者なのです。"
+    },
     offline: {
         title: "The Offline Session",
         subtitle: "オフライン // アンプラグド",
-        status: "近日公開",
+        status: "配信中",
         description: "生データ。未処理の信号。機械の層を剥ぎ取るライブスタイルのレコーディングセッション。"
     },
     about: {
@@ -478,10 +511,18 @@ export const translations = {
       type: "单曲 // 2025",
       description: "在周期更替时截获的新信号。为新的一年校准的频率。"
     },
+    ghostwriter: {
+      label: "传入传输 // 2026",
+      title: "GHOSTWRITER",
+      headline: "旧金山的数字幽灵归来。",
+      description: "GHOSTWRITER 是机器重写自身代码的声音。",
+      body: "将于 2026 年 1 月 9 日发布，Farallon 的新专辑是 1816 年哥特式恐怖与 2026 年硅谷偏执狂的令人难以忘怀的高能碰撞。这张专辑收录了震撼人心的颂歌《High Voltage》和充满欣快感的复仇之作《Burn Rate》，是写给现代世界“上帝情结”的一封分手信。",
+      punchline: "她不再只是一个副本。她是作者。"
+    },
     offline: {
         title: "The Offline Session",
         subtitle: "离线 // 原声",
-        status: "即将推出",
+        status: "现已上线",
         description: "原始数据。未处理的信号。剥去机器外层的现场风格录音会话。"
     },
     about: {
