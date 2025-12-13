@@ -1,5 +1,4 @@
 
-
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Play, ArrowDown, ChevronDown, ChevronUp, ImageOff } from 'lucide-react';
@@ -349,7 +348,7 @@ const Home: React.FC<HomeProps> = ({ currentLang }) => {
                 <div className="group relative z-[60]">
                     <div className="aspect-video w-full bg-black border border-gray-800 relative overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
                          <iframe
-                            src="https://www.youtube.com/embed/am0Vvq9v16I?si=placeholder" 
+                            src="https://www.youtube.com/embed/BI-wn6cWm5E?si=kMy8dl34Tl_5o4ux" 
                             className="absolute inset-0 w-full h-full"
                             title="Get Down Official Video"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
