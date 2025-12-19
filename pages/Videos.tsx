@@ -15,16 +15,28 @@ const Videos: React.FC = () => {
       description: "Primary visual manifest for the Farallon Protocol. The origin signal."
     },
     {
-      id: "vid_02",
-      title: "SODIUM GLARE // VISUALIZER",
-      src: "https://www.youtube.com/embed/ENkZ7kc3qW4?controls=0", // Using hero video as placeholder
-      description: "Atmospheric interference patterns captured during the Sector 04 scan."
+      id: "vid_heavy_water_official",
+      title: "HEAVY WATER // OFFICIAL VIDEO",
+      src: "https://www.youtube.com/embed/am0Vvq9v16I?si=4uQe7ZWkJHO0twRB",
+      description: "Official music video for the title track of the debut album. A visual journey through the static."
     },
     {
-      id: "vid_03",
-      title: "THE ARCHITECT // LIVE UPLINK",
-      src: "https://www.youtube.com/embed/ENkZ7kc3qW4?controls=0", // Using hero video as placeholder
-      description: "Raw data stream from the neural network training session."
+      id: "vid_live_wire",
+      title: "LIVE WIRE // OFFICIAL VIDEO",
+      src: "https://www.youtube.com/embed/M5P1mdq64U4?si=fWI2ZvCASghcDLAK",
+      description: "Visual transmission for 'Live Wire' from the Ghostwriter album. High voltage processing."
+    },
+    {
+      id: "vid_get_down",
+      title: "GET DOWN // OFFICIAL VIDEO",
+      src: "https://www.youtube.com/embed/BI-wn6cWm5E?si=RijD0JpuOtBW9Ile",
+      description: "Official visualizer for the single 'Get Down'. Kinetic typography and signal distortion."
+    },
+    {
+      id: "vid_ghostwriter_promo",
+      title: "GHOSTWRITER // PROMO",
+      src: "https://www.youtube.com/embed/bnSS4opxsVY?si=-Klr6dDmYz8rj0K-",
+      description: "Teaser transmission for the upcoming Ghostwriter album release. The digital phantom returns."
     }
   ];
 
@@ -49,6 +61,7 @@ const Videos: React.FC = () => {
                     src={video.src}
                     className="w-full h-full opacity-90 transition-opacity duration-500 group-hover:opacity-100"
                     title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                   ></iframe>
                   
@@ -71,9 +84,10 @@ const Videos: React.FC = () => {
                   </p>
                   
                   <div className="flex flex-col gap-3 mt-4">
-                     <button className="flex items-center gap-3 h-14 px-8 bg-white text-black rounded-full font-bold hover:scale-105 transition-all shadow-glow w-fit">
-                        <Play size={18} fill="currentColor" /> Watch Now
-                     </button>
+                     {/* We remove the button since the video is embedded directly and play button is redundant/confusing if it doesn't control the iframe */}
+                     <div className="flex items-center gap-2 text-white/50 text-sm font-mono uppercase tracking-wider">
+                        <Play size={14} /> Official Visual
+                     </div>
                   </div>
                </div>
             </div>
