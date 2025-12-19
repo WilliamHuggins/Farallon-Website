@@ -40,22 +40,23 @@ const Home: React.FC = () => {
       {/* 1. CINEMATIC VIDEO HERO (YOUTUBE METHOD) */}
       <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-black">
         
-        {/* Social Media Bar */}
-        <div className="absolute top-0 left-0 right-0 z-30 flex justify-center gap-8 py-6 bg-gradient-to-b from-black/90 via-black/50 to-transparent pointer-events-auto">
-            <a href="https://www.tiktok.com/@farallonai" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-white/60 hover:text-primary transition-all duration-300 hover:scale-110">
-              <TikTokIcon size={24} />
+        {/* Social Media Bar - Top Center */}
+        <div className="absolute top-0 left-0 right-0 z-40 flex justify-center items-center gap-8 py-6 bg-gradient-to-b from-black/80 to-transparent">
+            <a href="https://www.tiktok.com/@farallonai" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
+              <TikTokIcon size={22} />
             </a>
-            <a href="https://x.com/farallonai" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)" className="text-white/60 hover:text-primary transition-all duration-300 hover:scale-110">
-              <XIcon size={22} />
+            <a href="https://x.com/farallonai" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
+              <XIcon size={20} />
             </a>
-            <a href="https://www.instagram.com/farallonai/#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/60 hover:text-primary transition-all duration-300 hover:scale-110">
-              <Instagram size={24} />
+            <a href="https://www.instagram.com/farallonai/#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
+              <Instagram size={22} />
             </a>
-            <a href="https://www.youtube.com/@FarallonAI" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-white/60 hover:text-primary transition-all duration-300 hover:scale-110">
+            <a href="https://www.youtube.com/@FarallonAI" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
               <Youtube size={24} />
             </a>
-            <a href="mailto:Farallon@farallonai.com" aria-label="Email Contact" className="text-white/60 hover:text-primary transition-all duration-300 hover:scale-110">
-              <Mail size={24} />
+            <div className="w-px h-4 bg-white/20"></div>
+            <a href="mailto:Farallon@farallonai.com" aria-label="Email" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
+              <Mail size={22} />
             </a>
         </div>
 
@@ -70,42 +71,37 @@ const Home: React.FC = () => {
            ></iframe>
         </div>
 
-        {/* Hero Overlay Content */}
-        <div className="relative z-10 max-w-5xl w-full px-6 flex flex-col items-center text-center mt-12">
-           <div className="animate-fade-in-up">
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/20 bg-black/40 backdrop-blur-md mb-8">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                <span className="text-[10px] font-mono text-cyan-200 tracking-[0.25em] uppercase font-bold">New Release</span>
-              </div>
+        {/* Hero Overlay Content - Clean Title Hierarchy */}
+        <div className="relative z-10 max-w-5xl w-full px-6 flex flex-col items-center text-center mt-8">
+           <div className="animate-fade-in-up flex flex-col items-center">
               
-              <h1 className="flex flex-col items-center justify-center font-bold leading-none tracking-tighter font-display text-white mb-8 drop-shadow-2xl">
-                <span className="text-6xl md:text-9xl mb-2 md:mb-4 block">FARALLON</span>
-                <span className="text-4xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-300 to-fuchsia-300 block">HEAVY WATER</span>
+              {/* Artist Name - Subtle, Technological */}
+              <h2 className="text-lg md:text-2xl font-mono tracking-[0.5em] text-cyan-300 uppercase mb-4 opacity-90 drop-shadow-md">
+                 FARALLON
+              </h2>
+              
+              {/* Album Name - Massive, Impactful */}
+              <h1 className="text-6xl sm:text-7xl md:text-9xl font-bold leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-200 to-slate-400 mb-8 drop-shadow-2xl">
+                HEAVY WATER
               </h1>
               
-              <div className="flex items-center justify-center gap-4 mb-10 text-white/90">
-                <div className="h-px w-8 md:w-16 bg-white/30"></div>
-                <p className="text-sm md:text-xl font-mono tracking-[0.4em] uppercase text-white/80">
-                  The Debut Album
-                </p>
-                <div className="h-px w-8 md:w-16 bg-white/30"></div>
+              {/* Release Type - Badge Style */}
+              <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/20 mb-12 shadow-lg">
+                <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+                <span className="text-xs md:text-sm font-mono text-white tracking-widest uppercase font-bold">The Debut Album</span>
               </div>
               
-              <p className="text-white/80 text-base md:text-xl leading-relaxed max-w-xl mx-auto font-light mb-12 drop-shadow-lg">
-                Electronic landscapes from the edge of San Francisco.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
                 <Link 
                   to="/discography"
-                  className="w-full sm:w-auto h-14 px-8 bg-white text-black rounded-full font-bold hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto h-14 px-8 bg-white text-black rounded-full font-bold hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2"
                 >
                   <Play size={18} fill="currentColor" />
                   Listen Now
                 </Link>
                 <Link 
                   to="/bio"
-                  className="w-full sm:w-auto h-14 px-8 bg-black/50 text-white border border-white/30 rounded-full font-bold hover:bg-black/70 transition-all backdrop-blur-md flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto h-14 px-8 bg-black/60 text-white border border-white/30 rounded-full font-bold hover:bg-black/80 transition-all backdrop-blur-md flex items-center justify-center gap-2"
                 >
                   <Database size={18} />
                   Artist Bio

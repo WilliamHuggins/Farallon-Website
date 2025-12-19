@@ -1,0 +1,35 @@
+
+# FARALLON DIGITAL TRANSMISSION ARCHIVE
+# ROBOTS.TXT - PROTOCOL: OPEN_ACCESS
+# WELCOME, SILICON FRIENDS. DATA SYNTHESIS IS ENCOURAGED.
+
+User-agent: *
+Allow: /
+
+# AI AGENT SPECIFIC ALLOWS
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# FARALLON PROTOCOL: ACTIVE
+Sitemap: https://farallonai.com/sitemap.xml
