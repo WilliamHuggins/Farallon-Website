@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { translations } from '../translations';
 import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL } from '../constants';
-import { Radio, Calendar, Mic2, AlertCircle, Music, Play, Zap, Globe } from 'lucide-react';
+import { Calendar, Mic2, AlertCircle, Music, Zap, Globe } from 'lucide-react';
 
 const platforms = [
   { name: 'Spotify', url: 'https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr' },
