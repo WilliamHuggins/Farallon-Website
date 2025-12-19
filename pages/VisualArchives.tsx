@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { GALLERY_IMAGES } from '../constants';
-import { Radio, ExternalLink, ShieldAlert, Maximize2, X } from 'lucide-react';
+import { Radio, ShieldAlert, Maximize2, X } from 'lucide-react';
 
 const VisualArchives: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<typeof GALLERY_IMAGES[0] | null>(null);
