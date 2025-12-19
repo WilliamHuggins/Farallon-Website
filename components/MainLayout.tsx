@@ -134,14 +134,17 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       {/* Footer */}
       <footer className="w-full bg-white dark:bg-black border-t border-slate-200 dark:border-white/10 py-16">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-           <div className="flex flex-col items-center md:items-start">
+           <div className="flex flex-col items-center md:items-start text-center md:text-left">
              <div className="flex items-center gap-2 mb-2">
                 <Radio className="text-primary size-5" />
                 <span className="font-bold font-display tracking-tight text-lg text-text-main-light dark:text-white">FARALLON</span>
              </div>
-             <p className="text-xs text-text-muted-light dark:text-text-muted-dark font-mono tracking-widest uppercase">
+             <p className="text-xs text-text-muted-light dark:text-text-muted-dark font-mono tracking-widest uppercase mb-4">
                Electronic Music Project // SF
              </p>
+             <a href="mailto:Farallon@farallonai.com" className="text-xs text-text-muted-light dark:text-text-muted-dark hover:text-primary font-mono transition-colors">
+                Farallon@farallonai.com
+             </a>
            </div>
            
            <div className="flex gap-8 text-sm font-bold text-text-muted-light dark:text-text-muted-dark uppercase tracking-wider">
