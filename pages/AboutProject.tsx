@@ -1,14 +1,10 @@
+
 import React, { useEffect } from 'react';
 import ProjectCredits from '../components/ProjectCredits';
 import { translations } from '../translations';
-import { Language } from '../types';
 
-interface AboutProjectProps {
-  currentLang: Language;
-}
-
-const AboutProject: React.FC<AboutProjectProps> = ({ currentLang }) => {
-  const t = translations[currentLang];
+const AboutProject: React.FC = () => {
+  const t = translations['en'];
 
   useEffect(() => {
     window.scrollTo(0, 0);
