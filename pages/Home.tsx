@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, ShoppingBag, Radio, Database, ArrowRight, Activity, Disc, Image } from 'lucide-react';
+import { Play, ShoppingBag, Database, ArrowRight, Disc, Image } from 'lucide-react';
 import { ALBUM_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
 import { Language } from '../types';

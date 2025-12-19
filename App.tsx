@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <MainLayout currentLang={currentLang} setCurrentLang={setCurrentLang}>
+      <MainLayout>
         <Routes>
           <Route path="/" element={<Home currentLang={currentLang} />} />
           <Route path="/about-project" element={<AboutProject currentLang={currentLang} />} />

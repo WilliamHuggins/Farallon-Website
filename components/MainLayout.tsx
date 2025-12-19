@@ -2,15 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { Sun, Moon, Radio, Menu, X, Home as HomeIcon } from 'lucide-react';
-import { Language } from '../types';
 
 interface MainLayoutProps {
   children: React.ReactNode;
-  currentLang: Language;
-  setCurrentLang: (lang: Language) => void;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children, currentLang, setCurrentLang }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
