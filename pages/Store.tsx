@@ -1,7 +1,6 @@
 
-
 import React, { useEffect } from 'react';
-import { ShoppingBag, ExternalLink, Printer, Package } from 'lucide-react';
+import { ShoppingBag, ExternalLink } from 'lucide-react';
 import { translations } from '../translations';
 import { Language } from '../types';
 
@@ -16,146 +15,75 @@ const Store: React.FC<StoreProps> = ({ currentLang }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const products = [
+    {
+      id: "TEE_01",
+      name: "FARALLON // SF GRAPHIC TEE",
+      price: "$32.00",
+      image: "https://i.postimg.cc/dtKwWfZn/Model-(Lower-quality).png",
+      link: "https://farallon.printful.me/product/womens-cotton-crew-neck-t-shirt"
+    },
+    {
+      id: "HOOD_01",
+      name: "FARALLON // STEALTH HOODIE",
+      price: "$65.00",
+      image: "https://i.postimg.cc/hG1WJ4tM/Hoodie-ad.png",
+      link: "https://farallon.printful.me/product/under-armour-hoodie"
+    }
+  ];
+
   return (
-    <div className="pt-24 min-h-screen">
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        
-        {/* Header */}
-        <div className="flex flex-col items-center mb-16 text-center">
-           <div className="flex items-center gap-3 mb-2 text-cyan-400">
-             <ShoppingBag size={24} />
-             <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-widest">
-               {t.store.title}
-             </h1>
-           </div>
-           <div className="w-24 h-1 bg-cyan-500 mb-4"></div>
-           <p className="font-mono text-xs md:text-sm text-cyan-500/60 tracking-[0.3em] uppercase">
-             {t.store.subtitle}
-           </p>
+    <div className="min-h-screen py-24">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="flex flex-col items-center text-center mb-20">
+          <div className="size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary mb-6 shadow-inner">
+            <ShoppingBag size={32} />
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold font-display mb-4">Fabrications</h1>
+          <p className="text-text-muted text-lg max-w-xl font-light">
+             Official physical artifacts from the Farallon signal. Standard issue cotton armor and performance layers.
+          </p>
         </div>
 
-        {/* Printful Partner Notice */}
-        <div className="max-w-3xl mx-auto mb-16 border border-gray-800 bg-black/40 p-4 md:p-6 backdrop-blur-sm flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-           <div className="p-3 bg-white/5 rounded-full">
-             <Printer size={24} className="text-gray-400" />
-           </div>
-           <div className="flex-1">
-             <p className="font-mono text-xs text-gray-300 uppercase tracking-wider">
-               {t.store.partnerNotice}
-             </p>
-             <p className="text-[10px] text-gray-500 mt-1 font-mono">
-               Global Fulfillment Network // On-Demand Fabrication
-             </p>
-           </div>
-           <div className="p-3 bg-white/5 rounded-full">
-             <Package size={24} className="text-gray-400" />
-           </div>
+        <div className="grid md:grid-cols-2 gap-12">
+          {products.map(product => (
+            <div key={product.id} className="group glass-card rounded-[2rem] p-6 hover:shadow-ethereal hover:-translate-y-2 transition-all duration-500">
+               <div className="aspect-[4/5] rounded-2xl overflow-hidden mb-8 relative">
+                  <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute top-4 left-4 glass-card px-3 py-1 rounded-full text-[10px] font-mono font-bold text-primary">
+                    {product.id}
+                  </div>
+               </div>
+               <div className="flex flex-col gap-4">
+                  <div className="flex justify-between items-start">
+                     <h2 className="text-2xl font-bold font-display text-text-main group-hover:text-primary transition-colors max-w-[200px]">{product.name}</h2>
+                     <span className="font-mono text-xl font-bold text-secondary">{product.price}</span>
+                  </div>
+                  <p className="text-text-muted text-sm leading-relaxed">
+                     Limited run fabrication using high-performance textiles. Logistics handled by Node: Printful.
+                  </p>
+                  <a 
+                    href={product.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 flex items-center justify-center gap-2 h-14 w-full bg-text-main text-white rounded-full font-bold hover:bg-primary transition-all shadow-lg"
+                  >
+                    Acquire Asset
+                    <ExternalLink size={16} />
+                  </a>
+               </div>
+            </div>
+          ))}
         </div>
 
-        {/* Product Grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
-           
-           {/* Product 1: T-Shirt */}
-           <div className="flex flex-col gap-6">
-              <div className="relative group aspect-[4/5] bg-gray-900 border border-gray-800 overflow-hidden">
-                <img 
-                  src="https://i.postimg.cc/dtKwWfZn/Model-(Lower-quality).png" 
-                  alt="Farallon SF Graphic Tee" 
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute top-4 left-4 border border-cyan-500/50 px-2 py-1 bg-black/60 backdrop-blur-sm">
-                   <span className="font-mono text-[10px] text-cyan-400">ITEM_ID: TEE_01</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                <div className="border-l-2 border-cyan-500 pl-4">
-                   <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wider mb-1">
-                     {t.store.products.tshirt.name}
-                   </h2>
-                   <p className="font-mono text-xs text-cyan-400/80 uppercase">
-                     Sector 01 // Limited Fabrication
-                   </p>
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed font-light">
-                   {t.store.products.tshirt.description}
-                </p>
-                <a 
-                   href="https://farallon.printful.me/product/womens-cotton-crew-neck-t-shirt" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   className="inline-flex items-center justify-center gap-3 bg-cyan-900/20 border border-cyan-500/50 hover:bg-cyan-500/20 hover:border-cyan-400 px-6 py-3 transition-all duration-300 group mt-2"
-                 >
-                    <span className="font-mono text-xs tracking-widest text-cyan-100 uppercase group-hover:text-white">
-                      {t.store.products.tshirt.cta}
-                    </span>
-                    <ExternalLink size={14} className="text-cyan-400 group-hover:text-white" />
-                 </a>
-              </div>
-           </div>
-
-           {/* Product 2: Hoodie */}
-           <div className="flex flex-col gap-6">
-              <div className="relative group aspect-[4/5] bg-gray-900 border border-gray-800 overflow-hidden">
-                <img 
-                  src="https://i.postimg.cc/hG1WJ4tM/Hoodie-ad.png" 
-                  alt="Farallon Stealth Hoodie" 
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute top-4 left-4 border border-cyan-500/50 px-2 py-1 bg-black/60 backdrop-blur-sm">
-                   <span className="font-mono text-[10px] text-cyan-400">ITEM_ID: HOOD_01</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                <div className="border-l-2 border-cyan-500 pl-4">
-                   <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wider mb-1">
-                     {t.store.products.hoodie.name}
-                   </h2>
-                   <p className="font-mono text-xs text-cyan-400/80 uppercase">
-                     Under Armour // Performance
-                   </p>
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed font-light">
-                   {t.store.products.hoodie.description}
-                </p>
-                <a 
-                   href="https://farallon.printful.me/product/under-armour-hoodie" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   className="inline-flex items-center justify-center gap-3 bg-cyan-900/20 border border-cyan-500/50 hover:bg-cyan-500/20 hover:border-cyan-400 px-6 py-3 transition-all duration-300 group mt-2"
-                 >
-                    <span className="font-mono text-xs tracking-widest text-cyan-100 uppercase group-hover:text-white">
-                      {t.store.products.hoodie.cta}
-                    </span>
-                    <ExternalLink size={14} className="text-cyan-400 group-hover:text-white" />
-                 </a>
-              </div>
-           </div>
-
+        <div className="mt-24 p-12 glass-card rounded-[3rem] text-center max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold font-display mb-4">Join the Neural Network</h3>
+          <p className="text-text-muted mb-8 text-sm">Subscribe for firmware updates, new dataset compilations, and fabrication drops.</p>
+          <div className="flex gap-2 flex-col sm:flex-row">
+             <input type="email" placeholder="uplink@signal.com" className="flex-1 px-6 py-3 rounded-full border border-border-light focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white/50" />
+             <button className="px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-glow">Connect</button>
+          </div>
         </div>
-
-        {/* Full Store CTA */}
-        <div className="flex justify-center">
-           <a 
-             href="https://farallon.printful.me" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="relative group px-12 py-6 bg-black border border-white/20 hover:border-orange-500 transition-colors duration-500 overflow-hidden"
-           >
-              <div className="absolute inset-0 bg-orange-500/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-              <div className="relative flex items-center gap-4">
-                 <ShoppingBag size={20} className="text-orange-500" />
-                 <span className="font-mono text-sm md:text-base tracking-[0.2em] text-white uppercase">
-                    {t.store.visitFullStore}
-                 </span>
-                 <ExternalLink size={16} className="text-orange-500 opacity-50 group-hover:opacity-100 transition-opacity" />
-              </div>
-           </a>
-        </div>
-
       </div>
     </div>
   );

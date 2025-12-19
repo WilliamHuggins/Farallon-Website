@@ -12,6 +12,7 @@ interface WeatherData {
   temperature: number;
   windSpeed: number;
   humidity: number;
+  isSynthetic?: boolean;
 }
 
 const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
@@ -26,17 +27,38 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
     const fetchWeather = async () => {
       try {
         const response = await fetch(
-          'https://api.open-meteo.com/v1/forecast?latitude=37.6989&longitude=-123.0034&current=temperature_2m,relative_humidity_2m,wind_speed_10m&wind_speed_unit=kn'
+          'https://api.open-meteo.com/v1/forecast?latitude=37.6989&longitude=-123.0034&current=temperature_2m,relative_humidity_2m,wind_speed_10m&wind_speed_unit=kn',
+          { method: 'GET', mode: 'cors' }
         );
+        
+        if (!response.ok) throw new Error("Network response was not ok");
+        
         const data = await response.json();
         setWeather({
           temperature: data.current.temperature_2m,
           windSpeed: data.current.wind_speed_10m,
-          humidity: data.current.relative_humidity_2m
+          humidity: data.current.relative_humidity_2m,
+          isSynthetic: false
         });
-        setLoading(false);
       } catch (error) {
-        console.error("Telemetry Link Failed", error);
+        console.warn("Telemetry Live Uplink Failed. Initiating Synthetic Reconstruction.", error);
+        
+        // Fallback: Generate realistic "cyber-noir" synthetic data for the Farallones
+        // Farallon Islands typical weather: 10-15°C, windy (15-25kn), high humidity (70-90%)
+        const now = new Date();
+        const hour = now.getHours();
+        
+        // Temperature fluctuates slightly based on hour (colder at night)
+        const baseTemp = 12;
+        const tempVariation = Math.sin((hour - 6) * (Math.PI / 12)) * 2;
+        
+        setWeather({
+          temperature: parseFloat((baseTemp + tempVariation).toFixed(1)),
+          windSpeed: parseFloat((18 + Math.random() * 10).toFixed(1)),
+          humidity: Math.floor(75 + Math.random() * 15),
+          isSynthetic: true
+        });
+      } finally {
         setLoading(false);
       }
     };
@@ -102,8 +124,8 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
           <div className="mt-4 border-t border-cyan-900/30 pt-6">
             <div className="flex items-center justify-between mb-4">
                <h4 className="font-mono text-[10px] text-cyan-500 tracking-[0.2em] uppercase flex items-center gap-2">
-                 <Activity size={10} className="animate-pulse" />
-                 LIVE TELEMETRY // SECTOR 27
+                 <Activity size={10} className={weather?.isSynthetic ? "text-orange-500/50" : "animate-pulse"} />
+                 {weather?.isSynthetic ? "RECONSTRUCTED TELEMETRY" : "LIVE TELEMETRY"} // SECTOR 27
                </h4>
                <span className="text-[10px] text-gray-600 font-mono">FARALLON_ISL</span>
             </div>
@@ -137,7 +159,7 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
                   </div>
                 </>
               ) : (
-                <div className="col-span-3 font-mono text-xs text-red-500/50">UPLINK FAILED</div>
+                <div className="col-span-3 font-mono text-xs text-red-500/50 uppercase tracking-tighter">Telemetery Link Failed</div>
               )}
             </div>
 

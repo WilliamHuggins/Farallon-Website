@@ -1,170 +1,118 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FARALLON | Heavy Water</title>
+    <title>FARALLON | Compiled from Starlight</title>
     <link rel="canonical" href="https://farallonai.com" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8b5cf6", 
+                        "secondary": "#06b6d4",
+                        "accent": "#f472b6",
+                        "surface": {
+                          light: "#fdfdff",
+                          dark: "#050508"
+                        },
+                        "text-main": {
+                          light: "#1e293b",
+                          dark: "#f8fafc"
+                        },
+                        "text-muted": {
+                          light: "#64748b",
+                          dark: "#94a3b8"
+                        }
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                        "mono": ["Space Mono", "monospace"]
+                    },
+                    boxShadow: {
+                        'ethereal': '0 25px 50px -12px rgba(139, 92, 246, 0.15)',
+                        'glow': '0 0 30px rgba(139, 92, 246, 0.3)'
+                    }
+                },
+            },
+        }
+    </script>
     <style>
-      /* Global Styles & Animations */
-      :root {
-        --deep-ocean: #010b13;
-        --sodium-orange: #ff8c00;
-        --terminal-cyan: #00ffff;
-        --fog-color: rgba(200, 210, 220, 0.1);
-      }
-      
       body {
-        background-color: var(--deep-ocean);
-        font-family: 'Montserrat', 'Noto Sans JP', 'Noto Sans SC', sans-serif;
-        color: #e2e8f0;
-        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
       }
-
-      .font-mono {
-        font-family: 'Space Mono', 'Noto Sans JP', 'Noto Sans SC', monospace;
+      .bg-aurora {
+          background: linear-gradient(135deg, #f3f4f6 0%, #fff 50%, #eff6ff 100%);
+          min-height: 100vh;
+          transition: background 0.5s ease;
       }
-
-      /* CRT Scanline Effect */
-      .scanlines {
-        background: linear-gradient(
-          to bottom,
-          rgba(255,255,255,0),
-          rgba(255,255,255,0) 50%,
-          rgba(0,0,0,0.2) 50%,
-          rgba(0,0,0,0.2)
-        );
-        background-size: 100% 4px;
-        animation: scanline 10s linear infinite;
-        pointer-events: none;
-        z-index: 50;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+      .dark .bg-aurora {
+          background: #020617;
       }
-
-      @keyframes scanline {
-        0% { background-position: 0 0; }
-        100% { background-position: 0 100%; }
+      .glass-nav {
+          background: rgba(255, 255, 255, 0.85);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       }
-
-      /* Fog Animation */
-      .fog-container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        z-index: 0;
-        pointer-events: none;
+      .dark .glass-nav {
+          background: rgba(5, 5, 10, 0.85);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       }
-      
-      .fog-img {
-        position: absolute;
-        height: 100vh;
-        width: 300vw;
-        background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png') repeat-x;
-        background-size: contain;
-        animation: fog 60s linear infinite;
-        opacity: 0.3;
+      /* Video Hero Scaling for YouTube Background */
+      .hero-video-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          pointer-events: none;
+          z-index: 0;
       }
-      
-      .fog-img-2 {
-        background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png') repeat-x;
-        background-size: contain;
-        animation: fog 40s linear infinite;
-        z-index: 1;
-        opacity: 0.2;
-        top: 30%;
+      .hero-video-iframe {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 300%; /* Massive width to ensure 16:9 covers all aspect ratios */
+          height: 150%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
       }
-
-      @keyframes fog {
-        0% { transform: translate3d(0, 0, 0); }
-        100% { transform: translate3d(-200vw, 0, 0); }
-      }
-
-      /* Glitch Text Effect */
-      .glitch-wrapper {
-        position: relative;
-        display: inline-block;
-      }
-      
-      .glitch {
-        position: relative;
-        z-index: 1;
-      }
-
-      .glitch::before,
-      .glitch::after {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--deep-ocean);
-      }
-
-      .glitch::before {
-        left: 2px;
-        text-shadow: -1px 0 var(--sodium-orange);
-        clip: rect(24px, 550px, 90px, 0);
-        animation: glitch-anim-2 3s infinite linear alternate-reverse;
-      }
-
-      .glitch::after {
-        left: -2px;
-        text-shadow: -1px 0 var(--terminal-cyan);
-        clip: rect(85px, 550px, 140px, 0);
-        animation: glitch-anim 2.5s infinite linear alternate-reverse;
-      }
-
-      @keyframes glitch-anim {
-        0% { clip: rect(14px, 9999px, 129px, 0); }
-        20% { clip: rect(66px, 9999px, 8px, 0); }
-        40% { clip: rect(32px, 9999px, 88px, 0); }
-        60% { clip: rect(93px, 9999px, 29px, 0); }
-        80% { clip: rect(44px, 9999px, 106px, 0); }
-        100% { clip: rect(10px, 9999px, 137px, 0); }
-      }
-
-      @keyframes glitch-anim-2 {
-        0% { clip: rect(109px, 9999px, 44px, 0); }
-        20% { clip: rect(38px, 9999px, 9px, 0); }
-        40% { clip: rect(122px, 9999px, 60px, 0); }
-        60% { clip: rect(81px, 9999px, 134px, 0); }
-        80% { clip: rect(24px, 9999px, 55px, 0); }
-        100% { clip: rect(143px, 9999px, 23px, 0); }
-      }
-      
-      /* Utilities */
-      .text-shadow-glow {
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-      }
-      .text-shadow-orange {
-        text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+      .crt-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.01));
+          z-index: 20;
+          background-size: 100% 2px, 3px 100%;
+          pointer-events: none;
       }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "vite": "https://aistudiocdn.com/vite@^7.2.6",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1"
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0?deps=react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?deps=react@18.2.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
-  <body>
+  <body class="bg-aurora text-text-main-light dark:text-text-main-dark font-body overflow-x-hidden selection:bg-primary/30">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

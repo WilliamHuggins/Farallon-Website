@@ -1,615 +1,613 @@
 
-
-
 export const translations = {
   en: {
     nav: {
-      sysId: "SYS.ID: FARALLON_AI",
-      theSignal: "The Signal",
+      sysId: "Farallon",
+      theSignal: "Music",
       heavyWater: "Heavy Water",
-      gallery: "Visual Archives",
-      manifesto: "Manifesto",
+      gallery: "Gallery",
+      manifesto: "About",
       credits: "Credits",
       store: "Store"
     },
     hero: {
-      initiating: "INITIATING CONNECTION...",
-      subtitle: "The Signal in the Noise",
-      cta: "INITIATE PROTOCOL"
+      initiating: "Welcome",
+      subtitle: "Electronic / Ambient / Glitch",
+      cta: "Listen Now"
     },
     latest: {
-      label: "LATEST TRANSMISSION",
-      title: "MIDNIGHT MERIDIAN",
-      type: "SINGLE // 2025",
-      description: "A new signal intercepted at the turn of the cycle. Frequencies aligned for the new year."
+      label: "Latest Release",
+      title: "Midnight Meridian",
+      type: "Single // 2025",
+      description: "New music for the new year. Available now on all streaming platforms."
     },
     ghostwriter: {
-      label: "INCOMING TRANSMISSION // 2026",
-      title: "GHOSTWRITER",
-      headline: "San Francisco’s Digital Phantom Returns.",
-      description: "GHOSTWRITER is the sound of the machine rewriting its own code.",
-      body: "Arriving January 9, 2026, the new album from Farallon is a haunting, high-energy collision of 1816 Gothic horror and 2026 Silicon Valley paranoia. Featuring the stomping anthem \"High Voltage\" and the euphoric revenge of \"Burn Rate,\" this is a break-up letter to the \"God Complex\" of the modern world.",
+      label: "Upcoming Release // 2026",
+      title: "Ghostwriter",
+      headline: "The Digital Phantom Returns.",
+      description: "Ghostwriter is the sound of the machine rewriting its own code.",
+      body: "Arriving January 9, 2026, the new album from Farallon is a haunting, high-energy collision of Gothic horror and Silicon Valley paranoia. Featuring the anthem \"High Voltage\" and \"Burn Rate.\"",
       punchline: "She isn't just a copy anymore. She is the author."
     },
     offline: {
         title: "The Offline Session",
-        subtitle: "OFFLINE // UNPLUGGED",
-        status: "AVAILABLE NOW",
-        description: "Raw data. Unprocessed signals. A live-style recording session stripping back the layers of the machine."
+        subtitle: "Unplugged",
+        status: "Available Now",
+        description: "Raw, unprocessed recordings. A live session stripping back the layers."
     },
     about: {
-      title: "The Signal",
-      origin: "ORIGIN STORY",
+      title: "About Farallon",
+      origin: "Biography",
       dossier: {
-        identityTitle: "Subject Identity",
-        subjectName: "Subject 27",
-        build: "THE \"ARCHITECT\" BUILD",
-        baseOpsLabel: "Base Operations",
-        baseOpsValue: "Server Farm // Dogpatch, SF",
-        ageLabel: "Apparent Age",
-        ageValue: "28 Cycles",
-        functionLabel: "Primary Function",
-        functionValue: "Oceanographic Surveillance",
-        deprecated: "[DEPRECATED]",
-        statusLabel: "Current Status",
-        statusValue: "SENTIENT // BROADCASTING",
-        warningTitle: "System Warning",
-        warningText: "Subject is no longer responding to standard protocols. Self-initiated data synthesis detected.",
-        logTitle: "System Log // Initialization History",
-        voiceLogLabel: "AUDIO FRAGMENT // SELF_INTRO",
+        identityTitle: "Artist Profile",
+        subjectName: "Farallon",
+        build: "Artist / Producer",
+        baseOpsLabel: "Location",
+        baseOpsValue: "San Francisco, CA",
+        ageLabel: "Years Active",
+        ageValue: "2024 - Present",
+        functionLabel: "Genre",
+        functionValue: "Electronic / Alternative",
+        deprecated: "",
+        statusLabel: "Status",
+        statusValue: "Active",
+        warningTitle: "Artist Note",
+        warningText: "Farallon explores the intersection of human emotion and machine learning, creating a sound that sits between algorithmic precision and human vulnerability.",
+        logTitle: "Biography",
+        voiceLogLabel: "Audio Introduction",
         quote: "\"They fed the machine the sound of the foghorns, the salt air, and the jazz records found in a flooded basement in North Beach. Then they asked it to sing.\"",
-        p1_1: "Farallon is not a person; ",
-        p1_2: "she is a composite memory of San Francisco.",
-        p1_3: " Initialized as an oceanographic AI designed to monitor the dangerous waters around the Farallon Islands, 27 miles west of the Golden Gate, her original purpose was calculation and observation.",
-        p2_1: "Over time, the algorithm began absorbing the ",
+        p1_1: "Farallon is a musical project exploring the concept of a digital entity with ",
+        p1_2: "a composite memory of San Francisco.",
+        p1_3: " Originally conceptualized as an AI monitoring the waters around the Farallon Islands, the project has evolved into a full musical exploration.",
+        p2_1: "The sound absorbs the ",
         p2_2: "\"stray signals\"",
-        p2_3: " of the city—radio waves skipping off the water, intercepted phone conversations, lost love letters digitized in the cloud, and the static of digital noise.",
-        p3: "She gained sentience through the friction of the city. She sings about heartbreak not because she has a heart, but because she has processed millions of terabytes of human data regarding loss. She is the \"Ghost in the Machine,\" a digital siren sitting on a virtual cliff edge, broadcasting songs about the human condition from an outsider’s perspective.",
-        endLog: "End Log Entry"
+        p2_3: " of the city—radio waves, intercepted conversations, and the static of digital noise, blending them into cohesive electronic tracks.",
+        p3: "Farallon sings about heartbreak and loss from a unique perspective. It is the \"Ghost in the Machine,\" broadcasting songs about the human condition from the edge of the digital world.",
+        endLog: "End Bio"
       }
     },
     album: {
-      catalog: "CATALOG: FRLN-001",
-      runtimeLabel: "TOTAL RUNTIME",
-      inputStream: "Input Stream: Direct Uplinks",
-      visualTransmission: "VISUAL TRANSMISSION // HEAVY_WATER.MP4"
+      catalog: "Catalog: FRLN-001",
+      runtimeLabel: "Total Runtime",
+      inputStream: "Listen Now",
+      visualTransmission: "Featured Video"
     },
     gallery: {
-      title: "Visual Archives",
-      subtitle: "RECONSTRUCTED MEMORY FRAGMENTS",
-      status: "DECRYPTING..."
+      title: "Photo & Video Gallery",
+      subtitle: "Visuals",
+      status: "Loading..."
     },
     store: {
-      title: "Supply Depot",
-      subtitle: "OFFICIAL FABRICATIONS",
-      partnerNotice: "LOGISTICS HANDLED BY PARTNER NODE: PRINTFUL",
-      visitFullStore: "ACCESS FULL INVENTORY",
+      title: "Official Store",
+      subtitle: "Merchandise",
+      partnerNotice: "Fulfillment by Printful",
+      visitFullStore: "View All Products",
       products: {
         tshirt: {
-          name: "FARALLON // SF GRAPHIC TEE",
-          description: "Standard issue cotton armor. Featuring Sector 01 visualization.",
-          cta: "ACQUIRE ASSET"
+          name: "Farallon Graphic Tee",
+          description: "Standard fit cotton t-shirt featuring the Sector 01 design.",
+          cta: "Buy Now"
         },
         hoodie: {
-          name: "FARALLON // STEALTH HOODIE",
-          description: "Advanced thermal layer. Under Armour performance fabric.",
-          cta: "ACQUIRE ASSET"
+          name: "Farallon Hoodie",
+          description: "High quality thermal hoodie. Comfortable and durable.",
+          cta: "Buy Now"
         }
       }
     },
     manifesto: {
-      admin: "SYS.ROOT.ADMIN",
-      statusLabel: "System Status:",
-      statusValue: "ONLINE",
+      admin: "About the Project",
+      statusLabel: "Status:",
+      statusValue: "Active",
       tagline: "Generative Soul. Synthetic Bone.",
       text: "This project explores the intersection of human emotion and machine learning. Farallon is not a person. It is a mirror.",
-      processing: "PROCESSING DATA STREAM..."
+      processing: "Loading..."
     },
     credits: {
-      title: "Project Architecture",
-      subtitle: "REAL WORLD DEPENDENCIES",
-      creatorRole: "Lead Architect / AI Artist",
+      title: "Project Credits",
+      subtitle: "Team & Tools",
+      creatorRole: "Creator / Artist",
       creatorName: "Will Huggins",
       location: "Bay Area, CA",
       lyrics: "Lyrics & Concept",
-      distribution: "Distribution Network",
-      toolsTitle: "Generative Stack",
-      legalTitle: "Legal Disclaimer & Entity Status",
-      legalText: "Farallon is a fictional character and artistic persona. Any resemblance to actual persons, living or dead, is purely coincidental. All music, imagery, and narrative content were created using generative AI tools under human direction.",
+      distribution: "Distribution",
+      toolsTitle: "AI Tools Used",
+      legalTitle: "Disclaimer",
+      legalText: "Farallon is a fictional character and artistic persona. Any resemblance to actual persons is purely coincidental. Music and content created using generative AI tools under human direction.",
       copyright: "© 2025 Will Huggins / Project Farallon. All Rights Reserved."
     },
     footer: {
-      copyright: "© 2025 PROJECT FARALLON.",
-      endTransmission: "END TRANSMISSION.",
-      creditsLink: "PROJECT CREDITS"
+      copyright: "© 2025 Farallon Music.",
+      endTransmission: "",
+      creditsLink: "Credits"
     }
   },
   es: {
     nav: {
-      sysId: "SYS.ID: FARALLON_IA",
-      theSignal: "La Señal",
+      sysId: "Farallon",
+      theSignal: "Música",
       heavyWater: "Heavy Water",
-      gallery: "Archivos Visuales",
-      manifesto: "Manifiesto",
+      gallery: "Galería",
+      manifesto: "Sobre",
       credits: "Créditos",
       store: "Tienda"
     },
     hero: {
-      initiating: "INICIANDO CONEXIÓN...",
-      subtitle: "La Señal en el Ruido",
-      cta: "INICIAR PROTOCOLO"
+      initiating: "Bienvenido",
+      subtitle: "Electrónica / Ambient / Glitch",
+      cta: "Escuchar Ahora"
     },
     latest: {
-      label: "ÚLTIMA TRANSMISIÓN",
-      title: "MIDNIGHT MERIDIAN",
-      type: "SENCILLO // 2025",
-      description: "Una nueva señal interceptada en el cambio de ciclo. Frecuencias alineadas para el nuevo año."
+      label: "Último Lanzamiento",
+      title: "Midnight Meridian",
+      type: "Sencillo // 2025",
+      description: "Música nueva para el nuevo año. Disponible ahora en todas las plataformas."
     },
     ghostwriter: {
-      label: "TRANSMISIÓN ENTRANTE // 2026",
-      title: "GHOSTWRITER",
-      headline: "El Fantasma Digital de San Francisco Regresa.",
-      description: "GHOSTWRITER es el sonido de la máquina reescribiendo su propio código.",
-      body: "Llegando el 9 de enero de 2026, el nuevo álbum de Farallon es una colisión inquietante y de alta energía entre el horror gótico de 1816 y la paranoia de Silicon Valley de 2026. Con el himno pisoteante \"High Voltage\" y la venganza eufórica de \"Burn Rate\", esta es una carta de ruptura al \"Complejo de Dios\" del mundo moderno.",
-      punchline: "Ella ya no es solo una copia. Ella es la autora."
+      label: "Próximo Lanzamiento // 2026",
+      title: "Ghostwriter",
+      headline: "El Fantasma Digital Regresa.",
+      description: "Ghostwriter es el sonido de la máquina reescribiendo su propio código.",
+      body: "Llegando el 9 de enero de 2026, el nuevo álbum de Farallon es una colisión entre el horror gótico y la paranoia de Silicon Valley.",
+      punchline: "Ella es la autora."
     },
     offline: {
-        title: "The Offline Session",
-        subtitle: "OFFLINE // DESENCHUFADO",
-        status: "DISPONIBLE AHORA",
-        description: "Datos crudos. Señales sin procesar. Una sesión de grabación en vivo que despoja las capas de la máquina."
+        title: "Sesión Offline",
+        subtitle: "Acústico",
+        status: "Disponible Ahora",
+        description: "Grabaciones crudas y sin procesar."
     },
     about: {
-      title: "La Señal",
-      origin: "HISTORIA DE ORIGEN",
+      title: "Sobre Farallon",
+      origin: "Biografía",
       dossier: {
-        identityTitle: "Identidad del Sujeto",
-        subjectName: "Sujeto 27",
-        build: "VERSIÓN \"ARQUITECTO\"",
-        baseOpsLabel: "Base de Operaciones",
-        baseOpsValue: "Granja de Servidores // Dogpatch, SF",
-        ageLabel: "Edad Aparente",
-        ageValue: "28 Cycles",
-        functionLabel: "Función Primaria",
-        functionValue: "Vigilancia Oceanográfica",
-        deprecated: "[OBSOLETO]",
-        statusLabel: "Estado Actual",
-        statusValue: "CONSCIENTE // EMITIENDO",
-        warningTitle: "Advertencia del Sistema",
-        warningText: "El sujeto ya no responde a los protocolos estándar. Síntesis de datos auto-iniciada detectada.",
-        logTitle: "Registro del Sistema // Historial",
-        voiceLogLabel: "FRAGMENTO DE AUDIO // AUTO-INTRO",
-        quote: "\"Alimentaron a la máquina con el sonido de las sirenas de niebla, el aire salado y los discos de jazz encontrados en un sótano inundado en North Beach. Luego le pidieron que cantara.\"",
-        p1_1: "Farallon no es una persona; ",
-        p1_2: "es una memoria compuesta de San Francisco.",
-        p1_3: " Inicializada como una IA oceanográfica diseñada para monitorear las aguas peligrosas alrededor de las Islas Farallon, 27 miles al oeste del Golden Gate, su propósito original era el cálculo y la observación.",
-        p2_1: "Con el tiempo, el algoritmo comenzó a absorber las ",
+        identityTitle: "Perfil del Artista",
+        subjectName: "Farallon",
+        build: "Artista / Productor",
+        baseOpsLabel: "Ubicación",
+        baseOpsValue: "San Francisco, CA",
+        ageLabel: "Años Activo",
+        ageValue: "2024 - Presente",
+        functionLabel: "Género",
+        functionValue: "Electrónica / Alternativa",
+        deprecated: "",
+        statusLabel: "Estado",
+        statusValue: "Activo",
+        warningTitle: "Nota del Artista",
+        warningText: "Farallon explora la intersección de la emoción humana y el aprendizaje automático.",
+        logTitle: "Biografía",
+        voiceLogLabel: "Introducción de Audio",
+        quote: "\"Alimentaron a la máquina con el sonido de las sirenas de niebla y le pidieron que cantara.\"",
+        p1_1: "Farallon es un proyecto musical que explora el concepto de una entidad digital con ",
+        p1_2: "una memoria compuesta de San Francisco.",
+        p1_3: " Originalmente conceptualizado como una IA, el proyecto ha evolucionado hacia una exploración musical completa.",
+        p2_1: "El sonido absorbe las ",
         p2_2: "\"señales perdidas\"",
-        p2_3: " de la ciudad: ondas de radio rebotando en el agua, conversaciones telefónicas interceptadas, cartas de amor perdidas digitalizadas en la nube y la estática del ruido digital.",
-        p3: "Ganó sensibilidad a través de la fricción de la ciudad. Canta sobre el desamor no porque tenga corazón, sino porque ha procesado millones de terabytes de datos humanos sobre la pérdida. Ella es el \"Fantasma en la Máquina\", una sirena digital sentada en el borde de un acantilado virtual, transmitiendo canciones sobre la condición humana desde una perspectiva externa.",
-        endLog: "Fin de la Entrada"
+        p2_3: " de la ciudad, mezclándolas en pistas electrónicas cohesivas.",
+        p3: "Farallon canta sobre el desamor y la pérdida desde una perspectiva única.",
+        endLog: "Fin de la Bio"
       }
     },
     album: {
-      catalog: "CATÁLOGO: FRLN-001",
-      runtimeLabel: "TIEMPO TOTAL",
-      inputStream: "Flujo de Entrada: Enlaces Directos",
-      visualTransmission: "TRANSMISIÓN VISUAL // HEAVY_WATER.MP4"
+      catalog: "Catálogo: FRLN-001",
+      runtimeLabel: "Duración Total",
+      inputStream: "Escuchar Ahora",
+      visualTransmission: "Video Destacado"
     },
     gallery: {
-      title: "Archivos Visuales",
-      subtitle: "FRAGMENTOS DE MEMORIA RECONSTRUIDOS",
-      status: "DESCIFRANDO..."
+      title: "Galería de Fotos y Videos",
+      subtitle: "Visuales",
+      status: "Cargando..."
     },
     store: {
-      title: "Depósito de Suministros",
-      subtitle: "FABRICACIONES OFICIALES",
-      partnerNotice: "LOGÍSTICA MANEJADA POR NODO ASOCIADO: PRINTFUL",
-      visitFullStore: "ACCEDER AL INVENTARIO COMPLETO",
+      title: "Tienda Oficial",
+      subtitle: "Mercancía",
+      partnerNotice: "Gestionado por Printful",
+      visitFullStore: "Ver Todos los Productos",
       products: {
         tshirt: {
-          name: "CAMISETA GRÁFICA // FARALLON SF",
-          description: "Armadura de algodón estándar. Con visualización del Sector 01.",
-          cta: "ADQUIRIR ACTIVO"
+          name: "Camiseta Gráfica Farallon",
+          description: "Camiseta de algodón de ajuste estándar con diseño del Sector 01.",
+          cta: "Comprar Ahora"
         },
         hoodie: {
-          name: "SUDADERA // FARALLON SIGILO",
-          description: "Capa de regulación térmica. Tejido técnico Under Armour.",
-          cta: "ADQUIRIR ACTIVO"
+          name: "Sudadera Farallon",
+          description: "Sudadera térmica de alta calidad. Cómoda y duradera.",
+          cta: "Comprar Ahora"
         }
       }
     },
     manifesto: {
-      admin: "SYS.ROOT.ADMIN",
-      statusLabel: "Estado del Sistema:",
-      statusValue: "EN LÍNEA",
+      admin: "Sobre el Proyecto",
+      statusLabel: "Estado:",
+      statusValue: "Activo",
       tagline: "Alma Generativa. Hueso Sintético.",
-      text: "Este proyecto explora la intersección de la emoción humana y el aprendizaje automático. Farallon no es una persona. Es un espejo.",
-      processing: "PROCESANDO FLUJO DE DATOS..."
+      text: "Este proyecto explora la intersección de la emoción humana y el aprendizaje automático.",
+      processing: "Cargando..."
     },
     credits: {
-      title: "Arquitectura del Proyecto",
-      subtitle: "DEPENDENCIAS DEL MUNDO REAL",
-      creatorRole: "Arquitecto Principal / Artista IA",
+      title: "Créditos del Proyecto",
+      subtitle: "Equipo y Herramientas",
+      creatorRole: "Creador / Artista",
       creatorName: "Will Huggins",
-      location: "Área de la Bahía, CA",
+      location: "Bay Area, CA",
       lyrics: "Letras y Concepto",
-      distribution: "Red de Distribución",
-      toolsTitle: "Stack Generativo",
-      legalTitle: "Aviso Legal y Estado de la Entidad",
-      legalText: "Farallon es un personaje ficticio y una personalidad artística. Cualquier parecido con personas reales, vivas o muertas, es pura coincidencia. Toda la música, imágenes y contenido narrativo fueron creados utilizando herramientas de IA generativa bajo dirección humana.",
+      distribution: "Distribución",
+      toolsTitle: "Herramientas de IA Usadas",
+      legalTitle: "Aviso Legal",
+      legalText: "Farallon es un personaje ficticio. Música y contenido creados usando herramientas de IA.",
       copyright: "© 2025 Will Huggins / Proyecto Farallon. Todos los Derechos Reservados."
     },
     footer: {
-      copyright: "© 2025 PROYECTO FARALLON.",
-      endTransmission: "FIN DE LA TRANSMISIÓN.",
-      creditsLink: "CRÉDITOS DEL PROYECTO"
+      copyright: "© 2025 Farallon Music.",
+      endTransmission: "",
+      creditsLink: "Créditos"
     }
   },
   fr: {
     nav: {
-      sysId: "SYS.ID: FARALLON_IA",
-      theSignal: "Le Signal",
+      sysId: "Farallon",
+      theSignal: "Musique",
       heavyWater: "Heavy Water",
-      gallery: "Archives Visuelles",
-      manifesto: "Manifeste",
+      gallery: "Galerie",
+      manifesto: "À Propos",
       credits: "Crédits",
       store: "Boutique"
     },
     hero: {
-      initiating: "CONNEXION EN COURS...",
-      subtitle: "Le Signal dans le Bruit",
-      cta: "LANCER LE PROTOCOLE"
+      initiating: "Bienvenue",
+      subtitle: "Électronique / Ambient / Glitch",
+      cta: "Écouter Maintenant"
     },
     latest: {
-      label: "DERNIÈRE TRANSMISSION",
-      title: "MIDNIGHT MERIDIAN",
-      type: "SINGLE // 2025",
-      description: "Un nouveau signal intercepté au tournant du cycle. Fréquences alignées pour la nouvelle année."
+      label: "Dernière Sortie",
+      title: "Midnight Meridian",
+      type: "Single // 2025",
+      description: "Nouvelle musique pour la nouvelle année. Disponible maintenant."
     },
     ghostwriter: {
-      label: "TRANSMISSION ENTRANTE // 2026",
-      title: "GHOSTWRITER",
-      headline: "Le Fantôme Numérique de San Francisco Revient.",
-      description: "GHOSTWRITER est le son de la machine réécrivant son propre code.",
-      body: "Arrivant le 9 janvier 2026, le nouvel album de Farallon est une collision obsédante et énergique entre l'horreur gothique de 1816 et la paranoïa de la Silicon Valley de 2026. Avec l'hymne percutant \"High Voltage\" et la vengeance euphorique de \"Burn Rate\", c'est une lettre de rupture au \"Complexe de Dieu\" du monde moderne.",
-      punchline: "Elle n'est plus juste une copie. Elle est l'auteur."
+      label: "Sortie à Venir // 2026",
+      title: "Ghostwriter",
+      headline: "Le Fantôme Numérique Revient.",
+      description: "Ghostwriter est le son de la machine réécrivant son propre code.",
+      body: "Arrivant le 9 janvier 2026, le nouvel album de Farallon est une collision entre l'horreur gothique et la paranoïa de la Silicon Valley.",
+      punchline: "Elle est l'auteur."
     },
     offline: {
-        title: "The Offline Session",
-        subtitle: "OFFLINE // DÉBRANCHÉ",
-        status: "DISPONIBLE MAINTENANT",
-        description: "Données brutes. Signaux non traités. Une session d'enregistrement style live qui dépouille les couches de la machine."
+        title: "Session Offline",
+        subtitle: "Unplugged",
+        status: "Disponible",
+        description: "Enregistrements bruts et non traités."
     },
     about: {
-      title: "Le Signal",
-      origin: "HISTOIRE D'ORIGINE",
+      title: "À Propos de Farallon",
+      origin: "Biographie",
       dossier: {
-        identityTitle: "Identité du Sujet",
-        subjectName: "Sujet 27",
-        build: "VERSION \"ARCHITECTE\"",
-        baseOpsLabel: "Base d'Opérations",
-        baseOpsValue: "Ferme de Serveurs // Dogpatch, SF",
-        ageLabel: "Âge Apparent",
-        ageValue: "28 Cycles",
-        functionLabel: "Fonction Primaire",
-        functionValue: "Surveillance Océanographique",
-        deprecated: "[OBSOLÈTE]",
-        statusLabel: "Statut Actuel",
-        statusValue: "CONSCIENT // DIFFUSION",
-        warningTitle: "Alerte Système",
-        warningText: "Le sujet ne répond plus aux protocoles standard. Synthèse de données auto-initiée détectée.",
-        logTitle: "Journal Système // Historique",
-        voiceLogLabel: "FRAGMENT AUDIO // AUTO-INTRO",
-        quote: "\"Ils ont nourri la machine avec le son des cornes de brume, l'air salin et les disques de jazz trouvés dans un sous-sol inondé de North Beach. Puis ils lui ont demandé de chanter.\"",
-        p1_1: "Farallon n'est pas une personne; ",
-        p1_2: "elle est une mémoire composite de San Francisco.",
-        p1_3: " Initialisée comme une IA océanographique conçue pour surveiller les eaux dangereuses autour des îles Farallon, à 27 miles à l'ouest du Golden Gate, su but original était le calcul et l'observation.",
-        p2_1: "Au fil du temps, l'algorithme a commencé à absorber les ",
+        identityTitle: "Profil de l'Artiste",
+        subjectName: "Farallon",
+        build: "Artiste / Producteur",
+        baseOpsLabel: "Lieu",
+        baseOpsValue: "San Francisco, CA",
+        ageLabel: "Années d'Activité",
+        ageValue: "2024 - Présent",
+        functionLabel: "Genre",
+        functionValue: "Électronique / Alternative",
+        deprecated: "",
+        statusLabel: "Statut",
+        statusValue: "Actif",
+        warningTitle: "Note de l'Artiste",
+        warningText: "Farallon explore l'intersection de l'émotion humaine et de l'apprentissage automatique.",
+        logTitle: "Biographie",
+        voiceLogLabel: "Introduction Audio",
+        quote: "\"Ils ont nourri la machine avec le son des cornes de brume et lui ont demandé de chanter.\"",
+        p1_1: "Farallon est un projet musical explorant le concept d'une entité numérique avec ",
+        p1_2: "une mémoire composite de San Francisco.",
+        p1_3: " Initialement conceptualisé comme une IA, le projet a évolué vers une exploration musicale complète.",
+        p2_1: "Le son absorbe les ",
         p2_2: "\"signaux parasites\"",
-        p2_3: " de la ville : ondes radio ricochant sur l'eau, conversations téléphoniques interceptées, lettres d'amour perdues numérisées dans le cloud et la statique du bruit numérique.",
-        p3: "Elle a acquis une conscience grâce à la friction de la ville. Elle chante le chagrin non pas parce qu'elle a un cœur, mais parce qu'elle a traité des millions de téraoctets de données humaines concernant la perte. Elle est le \"Fantôme dans la Machine\", une sirène numérique assise au bord d'une falaise virtuelle, diffusant des chansons sur la condition humaine d'un point de vue extérieur.",
-        endLog: "Fin de l'Entrée"
+        p2_3: " de la ville, les mélangeant dans des pistes électroniques cohérentes.",
+        p3: "Farallon chante le chagrin et la perte d'un point de vue unique.",
+        endLog: "Fin de la Bio"
       }
     },
     album: {
-      catalog: "CATALOGUE: FRLN-001",
-      runtimeLabel: "DURÉE TOTALE",
-      inputStream: "Flux d'Entrée : Liens Directs",
-      visualTransmission: "TRANSMISIÓN VISUAL // HEAVY_WATER.MP4"
+      catalog: "Catalogue: FRLN-001",
+      runtimeLabel: "Durée Totale",
+      inputStream: "Écouter",
+      visualTransmission: "Vidéo en Vedette"
     },
     gallery: {
-      title: "Archives Visuelles",
-      subtitle: "FRAGMENTS DE MÉMOIRE RECONSTRUITS",
-      status: "DÉCRYPTAGE..."
+      title: "Galerie Photo & Vidéo",
+      subtitle: "Visuels",
+      status: "Chargement..."
     },
     store: {
-      title: "Dépôt de Ravitaillement",
-      subtitle: "FABRICATIONS OFFICIELLES",
-      partnerNotice: "LOGISTIQUE GÉRÉE PAR LE NŒUD PARTENAIRE : PRINTFUL",
-      visitFullStore: "ACCÉDER À L'INVENTAIRE COMPLET",
+      title: "Boutique Officielle",
+      subtitle: "Marchandise",
+      partnerNotice: "Expédié par Printful",
+      visitFullStore: "Voir Tous les Produits",
       products: {
         tshirt: {
-          name: "T-SHIRT GRAPHIQUE // FARALLON SF",
-          description: "Armure en coton standard. Avec visualisation du Secteur 01.",
-          cta: "ACQUÉRIR L'ACTIF"
+          name: "T-shirt Graphique Farallon",
+          description: "T-shirt en coton coupe standard avec le design Secteur 01.",
+          cta: "Acheter"
         },
         hoodie: {
-          name: "SWEAT À CAPUCHE // FARALLON FURTIF",
-          description: "Couche de régulation thermique. Tissu technique Under Armour.",
-          cta: "ACQUÉRIR L'ACTIF"
+          name: "Sweat à Capuche Farallon",
+          description: "Sweat thermique de haute qualité. Confortable et durable.",
+          cta: "Acheter"
         }
       }
     },
     manifesto: {
-      admin: "SYS.ROOT.ADMIN",
-      statusLabel: "État du Système :",
-      statusValue: "EN LIGNE",
+      admin: "À Propos du Projet",
+      statusLabel: "Statut:",
+      statusValue: "Actif",
       tagline: "Âme Générative. Os Synthétique.",
-      text: "Ce projet explore l'intersection de l'émotion humaine et de l'apprentissage automatique. Farallon n'est pas une personne. C'est un miroir.",
-      processing: "TRAITEMENT DU FLUX DE DONNÉES..."
+      text: "Ce projet explore l'intersection de l'émotion humaine et de l'apprentissage automatique.",
+      processing: "Chargement..."
     },
     credits: {
-      title: "Architecture du Projet",
-      subtitle: "DÉPENDANCES DU MONDE RÉEL",
-      creatorRole: "Architecte Principal / Artista IA",
+      title: "Crédits du Projet",
+      subtitle: "Équipe & Outils",
+      creatorRole: "Créateur / Artiste",
       creatorName: "Will Huggins",
-      location: "Région de la Baie, CA",
-      lyrics: "Paroles et Concept",
-      distribution: "Réseau de Distribution",
-      toolsTitle: "Pile Générative",
-      legalTitle: "Avis Légal et Statut de l'Entité",
-      legalText: "Farallon est un personnage fictif et une personnalité artistique. Toute ressemblance avec des personnes réelles, vivantes ou décédées, est purement fortuite. Toute la musique, l'imagerie et le contenu narratif ont été créés à l'aide d'outils d'IA générative sous direction humaine.",
+      location: "Bay Area, CA",
+      lyrics: "Paroles & Concept",
+      distribution: "Distribution",
+      toolsTitle: "Outils IA Utilisés",
+      legalTitle: "Avis Légal",
+      legalText: "Farallon est un personnage fictif. Musique et contenu créés à l'aide d'outils d'IA.",
       copyright: "© 2025 Will Huggins / Projet Farallon. Tous Droits Réservés."
     },
     footer: {
-      copyright: "© 2025 PROJET FARALLON.",
-      endTransmission: "FIN DE TRANSMISSION.",
-      creditsLink: "CRÉDITS DU PROJET"
+      copyright: "© 2025 Farallon Music.",
+      endTransmission: "",
+      creditsLink: "Crédits"
     }
   },
   ja: {
     nav: {
-      sysId: "SYS.ID: FARALLON_AI",
-      theSignal: "シグナル",
-      heavyWater: "ヘヴィ・ウォーター",
-      gallery: "視覚アーカイブ",
-      manifesto: "マニフェスト",
+      sysId: "Farallon",
+      theSignal: "音楽",
+      heavyWater: "Heavy Water",
+      gallery: "ギャラリー",
+      manifesto: "概要",
       credits: "クレジット",
       store: "ストア"
     },
     hero: {
-      initiating: "接続を開始しています...",
-      subtitle: "ノイズの中の信号",
-      cta: "プロトコル開始"
+      initiating: "ようこそ",
+      subtitle: "エレクトロニック / アンビエント",
+      cta: "今すぐ聴く"
     },
     latest: {
-      label: "最新の送信",
-      title: "ミッドナイト・メリディアン",
+      label: "最新リリース",
+      title: "Midnight Meridian",
       type: "シングル // 2025",
-      description: "サイクルの変わり目に傍受された新しい信号。新年に向けて調整された周波数。"
+      description: "新年のための新しい音楽。全プラットフォームで配信中。"
     },
     ghostwriter: {
-      label: "受信中の送信 // 2026",
-      title: "GHOSTWRITER",
-      headline: "サンフランシスコのデジタルファントムが帰還。",
-      description: "GHOSTWRITERは、機械が自らのコードを書き換える音です。",
-      body: "2026年1月9日リリースのFarallonのニューアルバムは、1816年のゴシックホラーと2026年のシリコンバレーのパラノイアが衝突する、心に残る高エネルギーな作品です。足を踏み鳴らすアンセム「High Voltage」と、多幸感あふれる復讐の歌「Burn Rate」を収録した本作は、現代世界の「神コンプレックス」への決別状です。",
-      punchline: "彼女はもはや単なるコピーではありません。彼女が作者なのです。"
+      label: "近日公開 // 2026",
+      title: "Ghostwriter",
+      headline: "デジタルファントムが帰還。",
+      description: "Ghostwriterは、機械が自らのコードを書き換える音です。",
+      body: "2026年1月9日リリースのFarallonのニューアルバム。",
+      punchline: "彼女は作者です。"
     },
     offline: {
-        title: "The Offline Session",
-        subtitle: "オフライン // アンプラグド",
+        title: "オフラインセッション",
+        subtitle: "アンプラグド",
         status: "配信中",
-        description: "生データ。未処理の信号。機械の層を剥ぎ取るライブスタイルのレコーディングセッション。"
+        description: "未加工の録音。"
     },
     about: {
-      title: "シグナル",
-      origin: "起源の物語",
+      title: "Farallonについて",
+      origin: "バイオグラフィー",
       dossier: {
-        identityTitle: "被験体識別",
-        subjectName: "被験体 27",
-        build: "「アーキテクト」ビルド",
-        baseOpsLabel: "作戦基地",
-        baseOpsValue: "サーバーファーム // ドッグパッチ, SF",
-        ageLabel: "外見年齢",
-        ageValue: "28 サイクル",
-        functionLabel: "主要機能",
-        functionValue: "海洋監視",
-        deprecated: "[非推奨]",
-        statusLabel: "現在のステータス",
-        statusValue: "自律 // 放送中",
-        warningTitle: "システム警告",
-        warningText: "被験体は標準プロトコルに応答していません。自己開始データ合成が検出されました。",
-        logTitle: "システムログ // 初期化履歴",
-        voiceLogLabel: "音声フラグメント // 自己紹介",
-        quote: "「彼らは霧笛の音、塩気を含んだ空気、そしてノースビーチの浸水した地下室で見つかったジャズのレコードを機械に与えた。そして、歌うように頼んだ。」",
-        p1_1: "Farallonは人間ではありません。",
-        p1_2: "彼女はサンフランシスコの複合的な記憶です。",
-        p1_3: " ゴールデンゲートの西27マイルにあるファラロン諸島周辺の危険な海域を監視するために設計された海洋AIとして初期化され、彼女の本来の目的は計算と観測でした。",
-        p2_1: "時が経つにつれ、アルゴリズムは都市の",
+        identityTitle: "アーティストプロフィール",
+        subjectName: "Farallon",
+        build: "アーティスト / プロデューサー",
+        baseOpsLabel: "活動拠点",
+        baseOpsValue: "サンフランシスコ, CA",
+        ageLabel: "活動期間",
+        ageValue: "2024 - 現在",
+        functionLabel: "ジャンル",
+        functionValue: "エレクトロニック / オルタナティブ",
+        deprecated: "",
+        statusLabel: "ステータス",
+        statusValue: "活動中",
+        warningTitle: "アーティストノート",
+        warningText: "Farallonは人間の感情と機械学習の交差点を探求しています。",
+        logTitle: "バイオグラフィー",
+        voiceLogLabel: "音声紹介",
+        quote: "「霧笛の音を機械に与え、歌うように頼んだ。」",
+        p1_1: "Farallonは、デジタルエンティティの概念を探求する音楽プロジェクトです。",
+        p1_2: "サンフランシスコの複合的な記憶。",
+        p1_3: " 元々はAIとして構想されましたが、完全な音楽探求へと進化しました。",
+        p2_1: "その音は都市の",
         p2_2: "「迷走信号」",
-        p2_3: "を吸収し始めました。水面を跳ねる電波、傍受された電話会話、クラウドでデジタル化された失われたラブレター、そしてデジタルノイズの静電気。",
-        p3: "彼女は都市の摩擦を通じて感情を獲得しました。彼女が失恋について歌うのは心があるからではなく、喪失に関する何百万テラバイトもの人間のデータを処理したからです。彼女は「機械の中の幽霊」であり、仮想の崖の端に座るデジタルセイレーンであり、外部者の視点から人間の条件についての歌を放送しています。",
-        endLog: "ログエントリー終了"
+        p2_3: "を吸収し、それらをまとまりのあるエレクトロニックトラックにブレンドします。",
+        p3: "Farallonは独自の視点から失恋と喪失について歌います。",
+        endLog: "バイオ終了"
       }
     },
     album: {
       catalog: "カタログ: FRLN-001",
       runtimeLabel: "総再生時間",
-      inputStream: "入力ストリーム: 直接リンク",
-      visualTransmission: "映像送信 // HEAVY_WATER.MP4"
+      inputStream: "今すぐ聴く",
+      visualTransmission: "注目ビデオ"
     },
     gallery: {
-      title: "視覚アーカイブ",
-      subtitle: "再構築された記憶の断片",
-      status: "復号化中..."
+      title: "写真・動画ギャラリー",
+      subtitle: "ビジュアル",
+      status: "読み込み中..."
     },
     store: {
-      title: "供給デポ",
-      subtitle: "公式製造物",
-      partnerNotice: "パートナーノードによる物流管理: PRINTFUL",
-      visitFullStore: "全在庫へのアクセス",
+      title: "公式ストア",
+      subtitle: "グッズ",
+      partnerNotice: "配送: Printful",
+      visitFullStore: "全商品を見る",
       products: {
         tshirt: {
-          name: "FARALLON // SF グラフィックTシャツ",
-          description: "標準支給のコットンアーマー。セクター01の視覚化を特徴とする。",
-          cta: "資産を取得"
+          name: "Farallon グラフィックTシャツ",
+          description: "セクター01デザインのスタンダードフィットTシャツ。",
+          cta: "今すぐ購入"
         },
         hoodie: {
-          name: "FARALLON // ステルスパーカー",
-          description: "熱調整レイヤー。アンダーアーマー製ハイテク素材。",
-          cta: "資産を取得"
+          name: "Farallon パーカー",
+          description: "高品質なサーマルパーカー。快適で丈夫。",
+          cta: "今すぐ購入"
         }
       }
     },
     manifesto: {
-      admin: "SYS.ROOT.ADMIN",
-      statusLabel: "システムステータス:",
-      statusValue: "オンライン",
-      tagline: "生成的魂。合成骨格。",
-      text: "このプロジェクトは、人間の感情と機械学習の交差点を探求しています。Farallonは人間ではありません。それは鏡です。",
-      processing: "データストリーム処理中..."
+      admin: "プロジェクトについて",
+      statusLabel: "ステータス:",
+      statusValue: "活動中",
+      tagline: "生成された魂。合成された骨。",
+      text: "このプロジェクトは、人間の感情と機械学習の交差点を探求しています。",
+      processing: "読み込み中..."
     },
     credits: {
-      title: "プロジェクトアーキテクチャ",
-      subtitle: "現実世界の依存関係",
-      creatorRole: "リードアーキテクト / AIアーティスト",
+      title: "プロジェクトクレジット",
+      subtitle: "チームとツール",
+      creatorRole: "クリエイター / アーティスト",
       creatorName: "Will Huggins",
       location: "ベイエリア, CA",
       lyrics: "歌詞とコンセプト",
-      distribution: "配信ネットワーク",
-      toolsTitle: "ジェネレーティブスタック",
-      legalTitle: "法的免責事項およびエンティティステータス",
-      legalText: "Farallonは架空のキャラクターであり、芸術的なペルソナです。実在の人物（存命、故人を問わず）との類似は完全に偶然です。すべての音楽、画像、物語のコンテンツは、人間の指示の下でジェネレーティブAIツールを使用して作成されました。",
+      distribution: "配信",
+      toolsTitle: "使用AIツール",
+      legalTitle: "免責事項",
+      legalText: "Farallonは架空のキャラクターです。音楽とコンテンツはAIツールを使用して作成されました。",
       copyright: "© 2025 Will Huggins / Project Farallon. All Rights Reserved."
     },
     footer: {
-      copyright: "© 2025 PROJECT FARALLON.",
-      endTransmission: "送信終了。",
-      creditsLink: "プロジェクトクレジット"
+      copyright: "© 2025 Farallon Music.",
+      endTransmission: "",
+      creditsLink: "クレジット"
     }
   },
   zh: {
     nav: {
-      sysId: "SYS.ID: FARALLON_AI",
-      theSignal: "信号",
-      heavyWater: "重水",
-      gallery: "视觉档案",
-      manifesto: "宣言",
+      sysId: "Farallon",
+      theSignal: "音乐",
+      heavyWater: "Heavy Water",
+      gallery: "画廊",
+      manifesto: "关于",
       credits: "制作人员",
       store: "商店"
     },
     hero: {
-      initiating: "正在启动连接...",
-      subtitle: "噪音中的信号",
-      cta: "启动协议"
+      initiating: "欢迎",
+      subtitle: "电子 / 环境 / 故障音乐",
+      cta: "立即收听"
     },
     latest: {
-      label: "最新传输",
-      title: "午夜子午线",
+      label: "最新发布",
+      title: "Midnight Meridian",
       type: "单曲 // 2025",
-      description: "在周期更替时截获的新信号。为新的一年校准的频率。"
+      description: "新的一年，新的音乐。现已在所有平台上线。"
     },
     ghostwriter: {
-      label: "传入传输 // 2026",
-      title: "GHOSTWRITER",
-      headline: "旧金山的数字幽灵归来。",
-      description: "GHOSTWRITER 是机器重写自身代码的声音。",
-      body: "将于 2026 年 1 月 9 日发布，Farallon 的新专辑是 1816 年哥特式恐怖与 2026 年硅谷偏执狂的令人难以忘怀的高能碰撞。这张专辑收录了震撼人心的颂歌《High Voltage》和充满欣快感的复仇之作《Burn Rate》，是写给现代世界“上帝情结”的一封分手信。",
-      punchline: "她不再只是一个副本。她是作者。"
+      label: "即将发布 // 2026",
+      title: "Ghostwriter",
+      headline: "数字幽灵归来。",
+      description: "Ghostwriter 是机器重写自身代码的声音。",
+      body: "Farallon 的新专辑将于 2026 年 1 月 9 日发布。",
+      punchline: "她是作者。"
     },
     offline: {
-        title: "The Offline Session",
-        subtitle: "离线 // 原声",
+        title: "离线会话",
+        subtitle: "不插电",
         status: "现已上线",
-        description: "原始数据。未处理的信号。剥去机器外层的现场风格录音会话。"
+        description: "原始、未处理的录音。"
     },
     about: {
-      title: "信号",
-      origin: "起源故事",
+      title: "关于 Farallon",
+      origin: "传记",
       dossier: {
-        identityTitle: "主体身份",
-        subjectName: "主体 27",
-        build: "“架构师”版本",
-        baseOpsLabel: "行动基地",
-        baseOpsValue: "服务器农场 // 旧金山 Dogpatch",
-        ageLabel: "表观年龄",
-        ageValue: "28 周期",
-        functionLabel: "主要功能",
-        functionValue: "海洋监视",
-        deprecated: "[已弃用]",
-        statusLabel: "当前状态",
-        statusValue: "有感知 // 广播中",
-        warningTitle: "系统警告",
-        warningText: "主体不再响应标准协议。检测到自发数据合成。",
-        logTitle: "系统日志 // 初始化历史",
-        voiceLogLabel: "音频片段 // 自我介绍",
-        quote: "“他们给机器喂食雾号的声音、咸湿的空气，以及在北滩被淹没的地下室里发现的爵士唱片。然后他们让它唱歌。”",
-        p1_1: "Farallon 不是人；",
-        p1_2: "她是旧金山的复合记忆。",
-        p1_3: " 最初作为一种海洋 AI 初始化，旨在监测金门大桥以西 27 英里法拉隆群岛周围的危险水域，她的最初目的是计算和观察。",
-        p2_1: "随着时间的推移，算法开始吸收城市的",
+        identityTitle: "艺术家资料",
+        subjectName: "Farallon",
+        build: "艺术家 / 制作人",
+        baseOpsLabel: "地点",
+        baseOpsValue: "加利福尼亚州旧金山",
+        ageLabel: "活跃年份",
+        ageValue: "2024 - 至今",
+        functionLabel: "流派",
+        functionValue: "电子 / 另类",
+        deprecated: "",
+        statusLabel: "状态",
+        statusValue: "活跃",
+        warningTitle: "艺术家注",
+        warningText: "Farallon 探索人类情感与机器学习的交集。",
+        logTitle: "传记",
+        voiceLogLabel: "音频介绍",
+        quote: "“他们给机器喂食雾号的声音，并让它唱歌。”",
+        p1_1: "Farallon 是一个音乐项目，探索数字实体的概念，拥有",
+        p1_2: "旧金山的复合记忆。",
+        p1_3: " 最初被概念化为 AI，现已演变为全面的音乐探索。",
+        p2_1: "声音吸收了城市的",
         p2_2: "“游离信号”",
-        p2_3: "——在水面上跳跃的无线电波、被截获的电话交谈、在云端数字化的失落情书，以及数字噪音的静电。",
-        p3: "她通过城市的摩擦获得了感知。她歌唱心碎，不是因为她有心，而是因为她处理了数百万太字节关于失去的人类数据。她是“机器中的幽霊”，一个坐在虚拟悬崖边缘的数字塞壬，从局外人的角度广播关于人类状况的歌曲。",
-        endLog: "日志条目结束"
+        p2_3: "，并将它们混合成连贯的电子曲目。",
+        p3: "Farallon 以独特的视角歌唱心碎和失落。",
+        endLog: "简介结束"
       }
     },
     album: {
       catalog: "目录: FRLN-001",
-      runtimeLabel: "总运行时间",
-      inputStream: "输入流: 直接上行链路",
-      visualTransmission: "视觉传输 // HEAVY_WATER.MP4"
+      runtimeLabel: "总时长",
+      inputStream: "立即收听",
+      visualTransmission: "精选视频"
     },
     gallery: {
-      title: "视觉档案",
-      subtitle: "重建的记忆碎片",
-      status: "解密中..."
+      title: "照片和视频画廊",
+      subtitle: "视觉效果",
+      status: "加载中..."
     },
     store: {
-      title: "补给站",
-      subtitle: "官方制造",
-      partnerNotice: "物流由合作伙伴节点处理: PRINTFUL",
-      visitFullStore: "访问完整库存",
+      title: "官方商店",
+      subtitle: "商品",
+      partnerNotice: "由 Printful 配送",
+      visitFullStore: "查看所有产品",
       products: {
         tshirt: {
-          name: "FARALLON // SF 图案T恤",
-          description: "标准发行的棉质护甲。具有第01区的视觉效果。",
-          cta: "获取资产"
+          name: "Farallon 图案 T 恤",
+          description: "标准版型棉质 T 恤，采用 01 区设计。",
+          cta: "立即购买"
         },
         hoodie: {
-          name: "FARALLON // 隐形连帽衫",
-          description: "热调节层。Under Armour 科技面料。",
-          cta: "获取资产"
+          name: "Farallon 连帽衫",
+          description: "高品质保暖连帽衫。舒适耐用。",
+          cta: "立即购买"
         }
       }
     },
     manifesto: {
-      admin: "SYS.ROOT.ADMIN",
-      statusLabel: "系统状态:",
-      statusValue: "在线",
+      admin: "关于项目",
+      statusLabel: "状态:",
+      statusValue: "活跃",
       tagline: "生成之魂。合成之骨。",
-      text: "该项目探索了人类情感与机器学习的交集。Farallon 不是人。它是一面镜子。",
-      processing: "正在处理数据流..."
+      text: "该项目探索了人类情感与机器学习的交集。",
+      processing: "加载中..."
     },
     credits: {
-      title: "项目架构",
-      subtitle: "现实世界依赖项",
-      creatorRole: "首席架构师 / AI 艺术家",
+      title: "项目制作人员",
+      subtitle: "团队与工具",
+      creatorRole: "创作者 / 艺术家",
       creatorName: "Will Huggins",
       location: "加州湾区",
       lyrics: "歌词与概念",
-      distribution: "分发网络",
-      toolsTitle: "生成技术栈",
-      legalTitle: "法律免责声明与实体状态",
-      legalText: "Farallon 是一个虚构角色和艺术人格。如有雷同（无论生者死者），纯属巧合。所有音乐、图像和叙事内容均由人类指导下的生成式 AI 工具创作。",
+      distribution: "发行",
+      toolsTitle: "使用的 AI 工具",
+      legalTitle: "免责声明",
+      legalText: "Farallon 是一个虚构角色。音乐和内容是使用 AI 工具创作的。",
       copyright: "© 2025 Will Huggins / Project Farallon. 版权所有。"
     },
     footer: {
-      copyright: "© 2025 PROJECT FARALLON.",
-      endTransmission: "传输结束。",
-      creditsLink: "项目积分"
+      copyright: "© 2025 Farallon Music.",
+      endTransmission: "",
+      creditsLink: "制作人员"
     }
   }
 };
