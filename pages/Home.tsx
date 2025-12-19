@@ -40,14 +40,13 @@ const Home: React.FC = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a 
-                  href="https://open.spotify.com"
-                  target="_blank"
+                <Link 
+                  to="/discography"
                   className="w-full sm:w-auto h-14 px-8 bg-white text-black rounded-full font-bold hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2"
                 >
                   <Play size={18} fill="currentColor" />
                   Listen Now
-                </a>
+                </Link>
                 <Link 
                   to="/bio"
                   className="w-full sm:w-auto h-14 px-8 bg-black/50 text-white border border-white/30 rounded-full font-bold hover:bg-black/70 transition-all backdrop-blur-md flex items-center justify-center gap-2"

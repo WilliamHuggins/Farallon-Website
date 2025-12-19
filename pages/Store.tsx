@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { ShoppingBag, ExternalLink } from 'lucide-react';
+import { ShoppingBag, ExternalLink, Mail } from 'lucide-react';
 
 const Store: React.FC = () => {
   useEffect(() => {
@@ -71,9 +71,15 @@ const Store: React.FC = () => {
         <div className="mt-24 p-12 glass-card rounded-[3rem] text-center max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold font-display mb-4">Join the Neural Network</h3>
           <p className="text-text-muted mb-8 text-sm">Subscribe for firmware updates, new dataset compilations, and fabrication drops.</p>
-          <div className="flex gap-2 flex-col sm:flex-row">
+          <div className="flex gap-2 flex-col sm:flex-row mb-8">
              <input type="email" placeholder="uplink@signal.com" className="flex-1 px-6 py-3 rounded-full border border-border-light focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white/50" />
              <button className="px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-glow">Connect</button>
+          </div>
+          
+          <div className="flex items-center justify-center gap-2 text-text-muted text-xs">
+             <Mail size={14} />
+             <span>Support: </span>
+             <a href="mailto:Farallon@farallonai.com" className="text-primary hover:underline">Farallon@farallonai.com</a>
           </div>
         </div>
       </div>

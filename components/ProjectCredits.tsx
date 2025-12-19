@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { User, Code, Music, PenTool, ShieldAlert, Cpu } from 'lucide-react';
+import { User, Code, Music, PenTool, ShieldAlert, Cpu, Mail } from 'lucide-react';
 import { translations } from '../translations';
 
 interface ProjectCreditsProps {
@@ -61,6 +61,16 @@ const ProjectCredits: React.FC<ProjectCreditsProps> = ({ content }) => {
                 </div>
                 <div className="text-slate-300 pl-6 border-l border-cyan-500/20">
                    DistroKid
+                </div>
+             </div>
+
+             <div className="group">
+                <div className="flex items-center gap-2 text-cyan-400 mb-2">
+                   <Mail size={16} />
+                   <span className="font-mono text-xs tracking-widest uppercase">Contact</span>
+                </div>
+                <div className="text-slate-300 pl-6 border-l border-cyan-500/20">
+                   <a href="mailto:Farallon@farallonai.com" className="hover:text-cyan-300 transition-colors">Farallon@farallonai.com</a>
                 </div>
              </div>
           </div>
