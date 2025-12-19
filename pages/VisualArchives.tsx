@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { GALLERY_IMAGES } from '../constants';
 import { Radio, ExternalLink, Play } from 'lucide-react';
 
-const VisualArchives: React.FC<{ currentLang: string }> = () => {
+const VisualArchives: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -1,16 +1,11 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, ShoppingBag, Database, ArrowRight, Disc, Image } from 'lucide-react';
+import { Play, Database, ArrowRight, Disc, Image, ShoppingBag } from 'lucide-react';
 import { ALBUM_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
-import { Language } from '../types';
 
-interface HomeProps {
-  currentLang: Language;
-}
-
-const Home: React.FC<HomeProps> = () => {
+const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       

@@ -1,13 +1,8 @@
 
 import React, { useEffect } from 'react';
 import { ShoppingBag, ExternalLink } from 'lucide-react';
-import { Language } from '../types';
 
-interface StoreProps {
-  currentLang: Language;
-}
-
-const Store: React.FC<StoreProps> = () => {
+const Store: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

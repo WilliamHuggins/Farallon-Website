@@ -15,10 +15,10 @@ const App: React.FC = () => {
     <Router>
       <MainLayout>
         <Routes>
-          <Route path="/" element={<Home currentLang={currentLang} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about-project" element={<AboutProject currentLang={currentLang} />} />
-          <Route path="/visual-archives" element={<VisualArchives currentLang={currentLang} />} />
-          <Route path="/store" element={<Store currentLang={currentLang} />} />
+          <Route path="/visual-archives" element={<VisualArchives />} />
+          <Route path="/store" element={<Store />} />
           {/* Fallback route to prevent blank screens on 404 */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
