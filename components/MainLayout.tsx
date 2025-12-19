@@ -58,10 +58,22 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               <HomeIcon size={14} /> Home
             </Link>
             <Link 
-              to="/about-project" 
-              className={`text-sm font-bold uppercase tracking-wider transition-colors ${isActive('/about-project') ? 'text-primary' : 'text-text-muted-light dark:text-text-muted-dark hover:text-primary'}`}
+              to="/discography" 
+              className={`text-sm font-bold uppercase tracking-wider transition-colors ${isActive('/discography') ? 'text-primary' : 'text-text-muted-light dark:text-text-muted-dark hover:text-primary'}`}
             >
-              About
+              Music
+            </Link>
+            <Link 
+              to="/bio" 
+              className={`text-sm font-bold uppercase tracking-wider transition-colors ${isActive('/bio') ? 'text-primary' : 'text-text-muted-light dark:text-text-muted-dark hover:text-primary'}`}
+            >
+              Bio
+            </Link>
+            <Link 
+              to="/videos" 
+              className={`text-sm font-bold uppercase tracking-wider transition-colors ${isActive('/videos') ? 'text-primary' : 'text-text-muted-light dark:text-text-muted-dark hover:text-primary'}`}
+            >
+              Videos
             </Link>
             <Link 
               to="/visual-archives" 
@@ -88,7 +100,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             </button>
             
             <Link to="/about-project" className="hidden lg:flex h-10 px-6 items-center bg-text-main-light dark:bg-white text-white dark:text-black rounded-full text-xs font-bold uppercase tracking-wider hover:scale-105 transition-transform">
-              Connect
+              Credits
             </Link>
 
             {/* Mobile Menu Toggle */}
@@ -105,7 +117,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-black border-b border-slate-100 dark:border-white/10 p-6 flex flex-col gap-6 shadow-2xl animate-fade-in-down">
             <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-wider text-text-main-light dark:text-white">Home</Link>
-            <Link to="/about-project" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-wider text-text-main-light dark:text-white">About</Link>
+            <Link to="/discography" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-wider text-text-main-light dark:text-white">Music</Link>
+            <Link to="/bio" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-wider text-text-main-light dark:text-white">Bio</Link>
+            <Link to="/videos" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-wider text-text-main-light dark:text-white">Videos</Link>
             <Link to="/visual-archives" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-wider text-text-main-light dark:text-white">Gallery</Link>
             <Link to="/store" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-wider text-text-main-light dark:text-white">Store</Link>
           </div>

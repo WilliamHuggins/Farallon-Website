@@ -49,7 +49,7 @@ const Home: React.FC = () => {
                   Listen Now
                 </a>
                 <Link 
-                  to="/about-project"
+                  to="/bio"
                   className="w-full sm:w-auto h-14 px-8 bg-black/50 text-white border border-white/30 rounded-full font-bold hover:bg-black/70 transition-all backdrop-blur-md flex items-center justify-center gap-2"
                 >
                   <Database size={18} />
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* ABOUT CARD */}
-            <Link to="/about-project" className="group relative overflow-hidden rounded-[2.5rem] bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            <Link to="/bio" className="group relative overflow-hidden rounded-[2.5rem] bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Database size={100} className="text-primary" />
                </div>
@@ -101,9 +101,9 @@ const Home: React.FC = () => {
                   <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-6">
                      <Image size={24} />
                   </div>
-                  <h3 className="text-2xl font-bold font-display text-text-main-light dark:text-white mb-3">Photo & Video Gallery</h3>
+                  <h3 className="text-2xl font-bold font-display text-text-main-light dark:text-white mb-3">Photo Gallery</h3>
                   <p className="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-8">
-                     Watch music videos and view the photo collection.
+                     View the photo collection from the archives.
                   </p>
                   <span className="inline-flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
                      View Gallery <ArrowRight size={14} />
@@ -155,13 +155,27 @@ const Home: React.FC = () => {
                <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
                   The new 14-track album featuring "Sodium Glare" and "The Architect".
                </p>
+               
+               {/* Spotify Embed */}
+               <div className="mb-10 w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
+                 <iframe 
+                   data-testid="embed-iframe" 
+                   style={{borderRadius: '12px'}} 
+                   src="https://open.spotify.com/embed/album/5nQY0x78mVxlL2C5ORojKC?utm_source=generator" 
+                   width="100%" 
+                   height="352" 
+                   frameBorder="0" 
+                   allowFullScreen 
+                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                   loading="lazy"
+                   title="Spotify Album Embed"
+                 ></iframe>
+               </div>
+
                <div className="flex flex-wrap gap-4">
-                  <Link to="/about-project" className="h-12 px-8 bg-text-main-light dark:bg-white text-white dark:text-black rounded-full font-bold flex items-center justify-center hover:scale-105 transition-transform shadow-lg">
+                  <Link to="/discography" className="h-12 px-8 bg-text-main-light dark:bg-white text-white dark:text-black rounded-full font-bold flex items-center justify-center hover:scale-105 transition-transform shadow-lg">
                      Learn More
                   </Link>
-                  <a href="https://open.spotify.com" target="_blank" className="h-12 px-8 border border-slate-300 dark:border-white/20 text-text-main-light dark:text-white rounded-full font-bold flex items-center justify-center hover:bg-slate-50 dark:hover:bg-white/10 transition-colors">
-                     Spotify
-                  </a>
                </div>
             </div>
          </div>

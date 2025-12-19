@@ -3,7 +3,7 @@ export const translations = {
   en: {
     nav: {
       sysId: "Farallon",
-      theSignal: "Music",
+      theSignal: "Discography",
       heavyWater: "Heavy Water",
       gallery: "Gallery",
       manifesto: "About",
@@ -22,18 +22,18 @@ export const translations = {
       description: "New music for the new year. Available now on all streaming platforms."
     },
     ghostwriter: {
-      label: "Upcoming Release // 2026",
+      label: "Upcoming Release // 2025",
       title: "Ghostwriter",
       headline: "The Digital Phantom Returns.",
       description: "Ghostwriter is the sound of the machine rewriting its own code.",
-      body: "Arriving January 9, 2026, the new album from Farallon is a haunting, high-energy collision of Gothic horror and Silicon Valley paranoia. Featuring the anthem \"High Voltage\" and \"Burn Rate.\"",
+      body: "Arriving January 9, 2025, the new album from Farallon is a haunting, high-energy collision of Gothic horror and Silicon Valley paranoia. Featuring the anthem \"High Voltage\" and \"Burn Rate.\"",
       punchline: "She isn't just a copy anymore. She is the author."
     },
     offline: {
         title: "The Offline Session",
-        subtitle: "Unplugged",
+        subtitle: "Unplugged // Live",
         status: "Available Now",
-        description: "Raw, unprocessed recordings. A live session stripping back the layers."
+        description: "Raw, unprocessed recordings. A live session stripping back the layers to reveal the human ghost within the machine."
     },
     about: {
       title: "About Farallon",
@@ -125,7 +125,7 @@ export const translations = {
   es: {
     nav: {
       sysId: "Farallon",
-      theSignal: "Música",
+      theSignal: "Discografía",
       heavyWater: "Heavy Water",
       gallery: "Galería",
       manifesto: "Sobre",
@@ -144,11 +144,11 @@ export const translations = {
       description: "Música nueva para el nuevo año. Disponible ahora en todas las plataformas."
     },
     ghostwriter: {
-      label: "Próximo Lanzamiento // 2026",
+      label: "Próximo Lanzamiento // 2025",
       title: "Ghostwriter",
       headline: "El Fantasma Digital Regresa.",
       description: "Ghostwriter es el sonido de la máquina reescribiendo su propio código.",
-      body: "Llegando el 9 de enero de 2026, el nuevo álbum de Farallon es una colisión entre el horror gótico y la paranoia de Silicon Valley.",
+      body: "Llegando el 9 de enero de 2025, el nuevo álbum de Farallon es una colisión entre el horror gótico y la paranoia de Silicon Valley.",
       punchline: "Ella es la autora."
     },
     offline: {
@@ -247,7 +247,7 @@ export const translations = {
   fr: {
     nav: {
       sysId: "Farallon",
-      theSignal: "Musique",
+      theSignal: "Discographie",
       heavyWater: "Heavy Water",
       gallery: "Galerie",
       manifesto: "À Propos",
@@ -266,11 +266,11 @@ export const translations = {
       description: "Nouvelle musique pour la nouvelle année. Disponible maintenant."
     },
     ghostwriter: {
-      label: "Sortie à Venir // 2026",
+      label: "Sortie à Venir // 2025",
       title: "Ghostwriter",
       headline: "Le Fantôme Numérique Revient.",
       description: "Ghostwriter est le son de la machine réécrivant son propre code.",
-      body: "Arrivant le 9 janvier 2026, le nouvel album de Farallon est une collision entre l'horreur gothique et la paranoïa de la Silicon Valley.",
+      body: "Arrivant le 9 janvier 2025, le nouvel album de Farallon est une collision entre l'horreur gothique et la paranoïa de la Silicon Valley.",
       punchline: "Elle est l'auteur."
     },
     offline: {
@@ -369,7 +369,7 @@ export const translations = {
   ja: {
     nav: {
       sysId: "Farallon",
-      theSignal: "音楽",
+      theSignal: "ディスコグラフィー",
       heavyWater: "Heavy Water",
       gallery: "ギャラリー",
       manifesto: "概要",
@@ -388,11 +388,11 @@ export const translations = {
       description: "新年のための新しい音楽。全プラットフォームで配信中。"
     },
     ghostwriter: {
-      label: "近日公開 // 2026",
+      label: "近日公開 // 2025",
       title: "Ghostwriter",
       headline: "デジタルファントムが帰還。",
       description: "Ghostwriterは、機械が自らのコードを書き換える音です。",
-      body: "2026年1月9日リリースのFarallonのニューアルバム。",
+      body: "2025年1月9日リリースのFarallonのニューアルバム。",
       punchline: "彼女は作者です。"
     },
     offline: {
@@ -491,7 +491,7 @@ export const translations = {
   zh: {
     nav: {
       sysId: "Farallon",
-      theSignal: "音乐",
+      theSignal: "唱片集",
       heavyWater: "Heavy Water",
       gallery: "画廊",
       manifesto: "关于",
@@ -510,11 +510,11 @@ export const translations = {
       description: "新的一年，新的音乐。现已在所有平台上线。"
     },
     ghostwriter: {
-      label: "即将发布 // 2026",
+      label: "即将发布 // 2025",
       title: "Ghostwriter",
       headline: "数字幽灵归来。",
       description: "Ghostwriter 是机器重写自身代码的声音。",
-      body: "Farallon 的新专辑将于 2026 年 1 月 9 日发布。",
+      body: "Farallon 的新专辑将于 2025 年 1 月 9 日发布。",
       punchline: "她是作者。"
     },
     offline: {
