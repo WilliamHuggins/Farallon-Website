@@ -78,12 +78,20 @@ const Home: React.FC = () => {
                 <span className="text-[10px] font-mono text-cyan-200 tracking-[0.25em] uppercase font-bold">New Release</span>
               </div>
               
-              <h1 className="text-6xl md:text-9xl font-bold leading-none tracking-tighter font-display text-white mb-8 drop-shadow-2xl">
-                FARALLON <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-300 to-fuchsia-300">THE DEBUT ALBUM</span>
+              <h1 className="flex flex-col items-center justify-center font-bold leading-none tracking-tighter font-display text-white mb-8 drop-shadow-2xl">
+                <span className="text-6xl md:text-9xl mb-2 md:mb-4 block">FARALLON</span>
+                <span className="text-4xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-300 to-fuchsia-300 block">HEAVY WATER</span>
               </h1>
               
-              <p className="text-white/80 text-lg md:text-2xl leading-relaxed max-w-2xl mx-auto font-light mb-12 drop-shadow-lg">
+              <div className="flex items-center justify-center gap-4 mb-10 text-white/90">
+                <div className="h-px w-8 md:w-16 bg-white/30"></div>
+                <p className="text-sm md:text-xl font-mono tracking-[0.4em] uppercase text-white/80">
+                  The Debut Album
+                </p>
+                <div className="h-px w-8 md:w-16 bg-white/30"></div>
+              </div>
+              
+              <p className="text-white/80 text-base md:text-xl leading-relaxed max-w-xl mx-auto font-light mb-12 drop-shadow-lg">
                 Electronic landscapes from the edge of San Francisco.
               </p>
 
