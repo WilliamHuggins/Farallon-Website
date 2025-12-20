@@ -1,9 +1,9 @@
-
 import React, { useEffect } from 'react';
 import { translations } from '../translations';
 import { GALLERY_IMAGES } from '../constants';
 import { Mic2, MapPin, Waves, Cpu, Radio } from 'lucide-react';
 import ProjectCredits from '../components/ProjectCredits';
+import SEO from '../components/SEO';
 
 const Bio: React.FC = () => {
   const t = translations['en'];
@@ -15,8 +15,27 @@ const Bio: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Farallon",
+    "jobTitle": "AI Music Artist",
+    "url": "https://farallonai.com/bio",
+    "description": "A digital entity and musical project exploring the intersection of human emotion and machine learning.",
+    "image": portrait.url,
+    "knowsAbout": ["Generative AI", "Electronic Music", "Music Production"]
+  };
+
   return (
     <div className="min-h-screen py-24 bg-aurora dark:bg-black/90 transition-colors duration-500">
+      <SEO 
+        title="Biography - Farallon"
+        description="The story of a digital entity waking up in the fog of San Francisco. Read the biography of AI artist Farallon."
+        canonical="/bio"
+        type="profile"
+        image={portrait.url}
+        jsonLd={structuredData}
+      />
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header Section */}

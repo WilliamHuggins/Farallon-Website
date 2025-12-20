@@ -1,6 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { ShoppingBag, ExternalLink, Mail } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Store: React.FC = () => {
   useEffect(() => {
@@ -26,6 +26,11 @@ const Store: React.FC = () => {
 
   return (
     <div className="min-h-screen py-24">
+      <SEO 
+        title="Official Store - Merchandise"
+        description="Shop official Farallon merchandise, including graphic tees and hoodies."
+        canonical="/store"
+      />
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col items-center text-center mb-20">
           <div className="size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary mb-6 shadow-inner">

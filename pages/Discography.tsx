@@ -1,8 +1,8 @@
-
 import React, { useEffect } from 'react';
 import { translations } from '../translations';
-import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL } from '../constants';
+import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, TRACK_LIST } from '../constants';
 import { Calendar, Mic2, AlertCircle, Music, Zap, Globe } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const platforms = [
   { name: 'Spotify', url: 'https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr' },
@@ -18,8 +18,34 @@ const Discography: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    "name": "Heavy Water",
+    "byArtist": {
+      "@type": "MusicGroup",
+      "name": "Farallon"
+    },
+    "datePublished": "2024-12-01",
+    "image": ALBUM_COVER_URL,
+    "numTracks": TRACK_LIST.length,
+    "track": TRACK_LIST.map(track => ({
+      "@type": "MusicRecording",
+      "name": track.title,
+      "duration": `PT${track.duration.replace(':', 'M')}S`
+    }))
+  };
+
   return (
     <div className="min-h-screen py-24 bg-aurora dark:bg-black/80 transition-colors">
+      <SEO 
+        title="Discography - Farallon"
+        description="Catalog of Farallon releases including Heavy Water, Ghostwriter, and the Offline Sessions."
+        canonical="/discography"
+        type="music.album"
+        image={ALBUM_COVER_URL}
+        jsonLd={structuredData}
+      />
       <div className="max-w-[1200px] mx-auto px-6">
         
         {/* Header */}

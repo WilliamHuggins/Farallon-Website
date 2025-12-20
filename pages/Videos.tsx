@@ -1,6 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { Radio, Play } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Videos: React.FC = () => {
   useEffect(() => {
@@ -42,6 +42,11 @@ const Videos: React.FC = () => {
 
   return (
     <div className="min-h-screen py-24">
+      <SEO 
+        title="Visual Archives - Music Videos"
+        description="Watch official music videos and visual transmissions from Farallon."
+        canonical="/videos"
+      />
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col items-center text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-bold font-display mb-4">Visual Transmissions</h1>

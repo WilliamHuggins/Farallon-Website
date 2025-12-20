@@ -1,7 +1,7 @@
-
 import React, { useEffect, useState } from 'react';
 import { GALLERY_IMAGES } from '../constants';
 import { Radio, ShieldAlert, Maximize2, X } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const VisualArchives: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<typeof GALLERY_IMAGES[0] | null>(null);
@@ -12,6 +12,11 @@ const VisualArchives: React.FC = () => {
 
   return (
     <div className="min-h-screen py-24">
+      <SEO 
+        title="Visual Archives - Gallery"
+        description="Explore the visual memory fragments and generative art of Farallon."
+        canonical="/visual-archives"
+      />
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col items-center text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-bold font-display mb-4">Memory Fragments</h1>

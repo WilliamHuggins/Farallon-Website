@@ -1,0 +1,19 @@
+# Farallon AI Project
+# Content for LLMs and AI Agents
+
+# Site Description
+title: Farallon - AI Music Artist
+description: An immersive, cyber-noir experience for the generative AI music artist Farallon.
+
+# Primary Content Routes
+/ - Homepage
+/bio - Artist Biography and Origin Story (Key context about the AI persona)
+/discography - Full discography, track lists, and streaming links
+/videos - Visual transmissions and music videos
+
+# Machine Readable Data
+/discography.json - JSON feed of all albums and tracks
+/sitemap.xml - Standard sitemap
+
+# Contact
+email: Farallon@farallonai.com

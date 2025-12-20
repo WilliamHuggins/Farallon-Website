@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail } from 'lucide-react';
 import { ALBUM_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
+import SEO from '../components/SEO';
 
 // Custom X (Twitter) Icon
 const XIcon = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
@@ -34,8 +34,32 @@ const TikTokIcon = ({ size = 24, className = "" }: { size?: number, className?: 
 );
 
 const Home: React.FC = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Farallon",
+    "url": "https://farallonai.com",
+    "logo": "https://i.postimg.cc/jdfN9Gxb/Album-cover.png",
+    "image": "https://i.postimg.cc/jdfN9Gxb/Album-cover.png",
+    "sameAs": [
+      "https://x.com/farallonai",
+      "https://www.instagram.com/farallonai",
+      "https://www.youtube.com/@FarallonAI",
+      "https://www.tiktok.com/@farallonai",
+      "https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr"
+    ],
+    "description": "An immersive, cyber-noir experience for the generative AI music artist Farallon.",
+    "genre": ["Electronic", "Ambient", "Glitch"]
+  };
+
   return (
     <div className="flex flex-col w-full">
+      <SEO 
+        title="Heavy Water - Electronic / Ambient Music"
+        description="Official site of Farallon. Listen to the debut album Heavy Water. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning."
+        canonical="/"
+        jsonLd={structuredData}
+      />
       
       {/* 1. CINEMATIC VIDEO HERO (YOUTUBE METHOD) */}
       <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-black">
