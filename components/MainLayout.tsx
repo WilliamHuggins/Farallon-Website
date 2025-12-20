@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { Sun, Moon, Radio, Menu, X, Home as HomeIcon } from 'lucide-react';
@@ -148,9 +147,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
            </div>
            
            <div className="flex gap-8 text-sm font-bold text-text-muted-light dark:text-text-muted-dark uppercase tracking-wider">
-              <Link to="/about-project" className="hover:text-primary transition-colors">Credits</Link>
-              <Link to="/store" className="hover:text-primary transition-colors">Terms</Link>
-              <Link to="/" className="hover:text-primary transition-colors">Privacy</Link>
+              <Link to="/credits" className="hover:text-primary transition-colors">Credits</Link>
+              <Link to="/terms" className="hover:text-primary transition-colors">Terms</Link>
+              <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
            </div>
         </div>
       </footer>
