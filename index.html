@@ -1,15 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FARALLON | Compiled from Starlight</title>
+    
+    <!-- PRIMARY META TAGS -->
+    <title>FARALLON | Heavy Water | AI Music Artist</title>
+    <meta name="title" content="FARALLON | Heavy Water | AI Music Artist">
+    <meta name="description" content="Official site of Farallon. Listen to the debut album Heavy Water. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning.">
+    <meta name="keywords" content="Farallon, AI Music, Generative Audio, Heavy Water, Electronic Music, Glitch, Ambient, San Francisco">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://farallonai.com" />
+
+    <!-- OPEN GRAPH / FACEBOOK -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://farallonai.com/">
+    <meta property="og:title" content="FARALLON | Heavy Water | AI Music Artist">
+    <meta property="og:description" content="Official site of Farallon. Listen to the debut album Heavy Water. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning.">
+    <meta property="og:image" content="https://i.postimg.cc/jdfN9Gxb/Album-cover.png">
+    <meta property="og:site_name" content="Farallon">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@farallonai">
+    <meta name="twitter:creator" content="@farallonai">
+    <meta name="twitter:url" content="https://farallonai.com/">
+    <meta name="twitter:title" content="FARALLON | Heavy Water | AI Music Artist">
+    <meta name="twitter:description" content="Official site of Farallon. Listen to the debut album Heavy Water. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning.">
+    <meta name="twitter:image" content="https://i.postimg.cc/jdfN9Gxb/Album-cover.png">
+
+    <!-- FONTS & STYLES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- STRUCTURED DATA (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Farallon",
+      "url": "https://farallonai.com",
+      "logo": "https://i.postimg.cc/jdfN9Gxb/Album-cover.png",
+      "image": "https://i.postimg.cc/jdfN9Gxb/Album-cover.png",
+      "description": "An immersive, cyber-noir experience for the generative AI music artist Farallon.",
+      "genre": ["Electronic", "Ambient", "Glitch"],
+      "sameAs": [
+        "https://x.com/farallonai",
+        "https://www.instagram.com/farallonai",
+        "https://www.youtube.com/@FarallonAI",
+        "https://www.tiktok.com/@farallonai",
+        "https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr"
+      ],
+      "album": [
+        {
+          "@type": "MusicAlbum",
+          "name": "Heavy Water",
+          "datePublished": "2024",
+          "image": "https://i.postimg.cc/jdfN9Gxb/Album-cover.png",
+          "artist": {
+            "@type": "MusicGroup",
+            "name": "Farallon"
+          }
+        },
+        {
+          "@type": "MusicAlbum",
+          "name": "Ghostwriter",
+          "datePublished": "2025",
+          "image": "https://i.postimg.cc/Jh8Y3p9w/Untitled_design.png",
+          "artist": {
+            "@type": "MusicGroup",
+            "name": "Farallon"
+          }
+        }
+      ]
+    }
+    </script>
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -117,7 +185,56 @@
 </script>
 </head>
   <body class="bg-aurora text-text-main-light dark:text-text-main-dark font-body overflow-x-hidden selection:bg-primary/30">
-    <div id="root"></div>
+    <div id="root">
+        <!-- STATIC CONTENT FOR BOTS / SEO / NO-JS -->
+        <!-- This content provides an immediate render for crawlers and is replaced by React upon hydration. -->
+        <header class="p-6 border-b border-gray-200 dark:border-gray-800">
+            <nav class="flex gap-6 justify-center text-sm font-bold uppercase tracking-wider">
+                <a href="/" class="text-primary">FARALLON</a>
+                <a href="/discography">Music</a>
+                <a href="/bio">Biography</a>
+                <a href="/videos">Videos</a>
+                <a href="/store">Store</a>
+            </nav>
+        </header>
+        <main class="max-w-4xl mx-auto p-8 text-center mt-12">
+            <h1 class="text-6xl font-bold mb-4 font-sans tracking-tighter">FARALLON</h1>
+            <h2 class="text-3xl text-primary mb-6 font-sans">HEAVY WATER</h2>
+            <p class="text-xl mb-12 font-light leading-relaxed max-w-2xl mx-auto">
+                An immersive, cyber-noir experience for the generative AI music artist Farallon. 
+                Farallon explores the intersection of human emotion and machine learning, 
+                creating a sound that sits between algorithmic precision and human vulnerability.
+            </p>
+            
+            <section class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 font-sans uppercase tracking-widest text-sm text-gray-500">Latest Release</h3>
+                <p class="mb-6 font-medium">Stream "Heavy Water" now on all platforms.</p>
+                <div class="flex gap-6 justify-center">
+                    <a href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" class="text-green-600 font-bold hover:underline">Spotify</a>
+                    <a href="https://music.apple.com/us/artist/farallon/1858060937" class="text-pink-600 font-bold hover:underline">Apple Music</a>
+                    <a href="https://music.youtube.com/channel/UCcmcBlwZK6AJy1XH3pvHFFA" class="text-red-600 font-bold hover:underline">YouTube Music</a>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 font-sans uppercase tracking-widest text-sm text-gray-500">Biography</h3>
+                <p class="mb-6 leading-relaxed max-w-2xl mx-auto">
+                    Farallon is a musical project exploring the concept of a digital entity with a composite memory of San Francisco.
+                    Originally conceptualized as an AI monitoring the waters around the Farallon Islands, the project has evolved into a full musical exploration.
+                    The sound absorbs the "stray signals" of the city—radio waves, intercepted conversations, and the static of digital noise.
+                </p>
+                <a href="/bio" class="inline-block px-6 py-3 border border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-colors">Read Full Bio</a>
+            </section>
+            
+            <section class="mb-12">
+                <h3 class="text-2xl font-bold mb-4 font-sans uppercase tracking-widest text-sm text-gray-500">Contact</h3>
+                <p>Management & Inquiries: <a href="mailto:Farallon@farallonai.com" class="text-primary hover:underline">Farallon@farallonai.com</a></p>
+            </section>
+        </main>
+        <footer class="p-8 text-center text-gray-500 text-xs font-mono border-t border-gray-200 dark:border-gray-800 mt-12">
+            &copy; 2025 Farallon Music. All Rights Reserved.
+        </footer>
+    </div>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
