@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail } from 'lucide-react';
-import { ALBUM_COVER_URL } from '../constants';
+import { LIQUIDATION_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
 import SEO from '../components/SEO';
 
@@ -212,38 +213,38 @@ const Home: React.FC = () => {
       <section className="py-20 bg-white dark:bg-black/40 border-y border-slate-100 dark:border-white/5 transition-colors">
          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2 relative group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
+               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-indigo-500 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
                <img 
-                 src={ALBUM_COVER_URL} 
-                 alt="Heavy Water Album" 
+                 src={LIQUIDATION_COVER_URL} 
+                 alt="Liquidation Album" 
                  className="relative z-10 w-full rounded-[3rem] shadow-ethereal border border-white/20 transform group-hover:scale-[1.02] transition-transform duration-700"
                />
             </div>
             <div className="w-full md:w-1/2">
                <div className="flex items-center gap-2 mb-6">
-                  <Disc className="text-primary animate-spin-slow" size={20} />
-                  <span className="font-mono text-xs font-bold text-primary uppercase tracking-[0.3em]">Now Streaming</span>
+                  <Disc className="text-indigo-400 animate-spin-slow" size={20} />
+                  <span className="font-mono text-xs font-bold text-indigo-400 uppercase tracking-[0.3em]">Surprise Drop // 2025</span>
                </div>
                <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-6 leading-[0.9]">
-                  HEAVY WATER
+                  LIQUIDATION
                </h2>
                <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
-                  The new 14-track album featuring "Sodium Glare" and "The Architect".
+                  A vibrant, late-night album to ring in the new year. Everything must go.
                </p>
                
-               {/* Spotify Embed */}
+               {/* Spotify Artist Embed - Ensures we link to all music if album ID isn't available yet */}
                <div className="mb-10 w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
                  <iframe 
                    data-testid="embed-iframe" 
                    style={{borderRadius: '12px'}} 
-                   src="https://open.spotify.com/embed/album/5nQY0x78mVxlL2C5ORojKC?utm_source=generator" 
+                   src="https://open.spotify.com/embed/artist/2klqZ4U3Rpi099apjZabkr?utm_source=generator&theme=0" 
                    width="100%" 
                    height="352" 
                    frameBorder="0" 
                    allowFullScreen 
                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                    loading="lazy"
-                   title="Spotify Album Embed"
+                   title="Spotify Artist Embed"
                  ></iframe>
                </div>
 

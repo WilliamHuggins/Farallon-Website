@@ -1,8 +1,10 @@
+
 import React, { useEffect } from 'react';
 import { translations } from '../translations';
-import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, TRACK_LIST } from '../constants';
-import { Calendar, Mic2, AlertCircle, Music, Zap, Globe } from 'lucide-react';
+import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL, TRACK_LIST, LIQUIDATION_TRACK_LIST } from '../constants';
+import { Calendar, Mic2, AlertCircle, Music, Zap, Globe, Disc } from 'lucide-react';
 import SEO from '../components/SEO';
+import TrackItem from '../components/TrackItem';
 
 const platforms = [
   { name: 'Spotify', url: 'https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr' },
@@ -40,10 +42,10 @@ const Discography: React.FC = () => {
     <div className="min-h-screen py-24 bg-aurora dark:bg-black/80 transition-colors">
       <SEO 
         title="Discography - Farallon"
-        description="Catalog of Farallon releases including Heavy Water, Ghostwriter, and the Offline Sessions."
+        description="Catalog of Farallon releases including Liquidation, Heavy Water, Ghostwriter, and the Offline Sessions."
         canonical="/discography"
         type="music.album"
-        image={ALBUM_COVER_URL}
+        image={LIQUIDATION_COVER_URL}
         jsonLd={structuredData}
       />
       <div className="max-w-[1200px] mx-auto px-6">
@@ -64,6 +66,72 @@ const Discography: React.FC = () => {
 
         <div className="space-y-32">
           
+          {/* ITEM 0: LIQUIDATION (NEW POP-UP) */}
+          <section className="relative group">
+             {/* Background Glow */}
+             <div className="absolute -inset-4 bg-gradient-to-tr from-cyan-400/10 to-indigo-500/10 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-1000"></div>
+             
+             <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-indigo-500/20 overflow-hidden">
+                <div className="absolute top-0 right-0 p-4">
+                   <div className="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 rounded-full border border-indigo-500/30">
+                      <Zap size={14} className="text-indigo-500" />
+                      <span className="font-mono text-[10px] font-bold text-indigo-500 tracking-widest uppercase">Pop-Up Release</span>
+                   </div>
+                </div>
+
+                <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+                   <div className="w-full lg:w-5/12 max-w-md">
+                      <img 
+                        src={LIQUIDATION_COVER_URL} 
+                        alt="Liquidation Album Cover" 
+                        className="w-full rounded-[2rem] shadow-2xl border border-white/10 transition-all duration-700 hover:scale-[1.02]"
+                      />
+                   </div>
+                   
+                   <div className="flex-1 space-y-8 w-full">
+                      <div>
+                        <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-2 tracking-tighter">
+                          {t.liquidation.title}
+                        </h2>
+                        <div className="flex items-center gap-3 text-indigo-400 font-mono text-sm tracking-widest uppercase">
+                          <Calendar size={16} />
+                          <span>{t.liquidation.date}</span>
+                        </div>
+                      </div>
+
+                      <div className="space-y-4">
+                        <p className="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-lg">
+                          {t.liquidation.description}
+                        </p>
+                        
+                        <div className="border-t border-slate-200 dark:border-white/10 pt-4 mt-6">
+                             <div className="flex items-center gap-2 mb-4 text-xs font-mono uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark">
+                                <Disc size={14} /> Track List
+                             </div>
+                             <div className="max-h-[300px] overflow-y-auto pr-2 custom-scrollbar space-y-1">
+                                {LIQUIDATION_TRACK_LIST.map((track) => (
+                                    <TrackItem key={track.id} track={track} />
+                                ))}
+                             </div>
+                        </div>
+                      </div>
+
+                      <div className="pt-4">
+                         <a 
+                           href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" 
+                           target="_blank" 
+                           rel="noreferrer"
+                           className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-indigo-500/25 flex items-center gap-2 w-fit"
+                         >
+                            <Music size={18} />
+                            Stream Now
+                         </a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </section>
+
           {/* ITEM 1: GHOSTWRITER (UPCOMING) */}
           <section className="relative group">
              {/* Background Glow */}

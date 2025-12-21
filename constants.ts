@@ -68,11 +68,30 @@ export const SPANISH_EDITION_TRACK_LIST: Track[] = [
   { id: 6, title: "Aqua Pesada", duration: "06:15" },
 ];
 
+export const LIQUIDATION_TRACK_LIST: Track[] = [
+  { id: 1, title: "Mint Condition", duration: "03:24" },
+  { id: 2, title: "Thousand Tiny Yeses", duration: "02:58" },
+  { id: 3, title: "Rent Free", duration: "03:12" },
+  { id: 4, title: "Blue Light Balcony", duration: "04:05" },
+  { id: 5, title: "Gold Rush", duration: "03:15" },
+  { id: 6, title: "Do Not Disturb Me (But Do)", duration: "03:42" },
+  { id: 7, title: "Vaporware", duration: "02:45" },
+  { id: 8, title: "I Keep Receipts", duration: "03:30" },
+  { id: 9, title: "Paper Billionaire", duration: "03:18" },
+  { id: 10, title: "Net Positive", duration: "03:05" },
+  { id: 11, title: "Compound Interest", duration: "03:55" },
+  { id: 12, title: "Sugarcoat Detector", duration: "03:22" },
+  { id: 13, title: "Back Outside", duration: "02:50" },
+  { id: 14, title: "Blackout Season", duration: "04:15" },
+  { id: 15, title: "Liquidation", duration: "03:40" },
+];
+
 export const ALBUM_COVER_URL = "https://i.postimg.cc/jdfN9Gxb/Album-cover.png";
 export const LATEST_SINGLE_COVER_URL = "https://i.postimg.cc/nz4yQgw9/Untitled-design-(1).png";
 export const OFFLINE_SESSION_COVER_URL = "https://i.postimg.cc/DZQLSfZB/FARALLON-OFFLINE-SESSION.png";
 export const GHOSTWRITER_COVER_URL = "https://i.postimg.cc/Jh8Y3p9w/Untitled_design.png";
 export const SPANISH_ALBUM_COVER_URL = "https://i.postimg.cc/W1ZX3ryp/Untitled-design-(2).png";
+export const LIQUIDATION_COVER_URL = "https://i.postimg.cc/vZGS2z8r/Untitled-design-(5).png";
 
 export const GALLERY_IMAGES = [
   { id: 1, url: "https://i.postimg.cc/05D7KPvz/Golden-Gate-Bridge.png", caption: "SECTOR_01 // GOLDEN_GATE_BRIDGE", alt: "Golden Gate Bridge in Fog" },

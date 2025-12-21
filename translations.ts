@@ -21,6 +21,13 @@ export const translations = {
       type: "Single // 2025",
       description: "New music for the new year. Available now on all streaming platforms."
     },
+    liquidation: {
+      label: "Surprise Drop // 2025",
+      title: "Liquidation",
+      type: "Pop-Up Album",
+      description: "A vibrant, late-night album to ring in the new year. Everything must go.",
+      date: "December 21, 2025"
+    },
     ghostwriter: {
       label: "Upcoming Release // 2025",
       title: "Ghostwriter",
@@ -142,6 +149,13 @@ export const translations = {
       title: "Midnight Meridian",
       type: "Sencillo // 2025",
       description: "Música nueva para el nuevo año. Disponible ahora en todas las plataformas."
+    },
+    liquidation: {
+      label: "Lanzamiento Sorpresa // 2025",
+      title: "Liquidation",
+      type: "Álbum Pop-Up",
+      description: "Un álbum vibrante y nocturno para recibir el año nuevo.",
+      date: "21 de Diciembre, 2025"
     },
     ghostwriter: {
       label: "Próximo Lanzamiento // 2025",
@@ -265,6 +279,13 @@ export const translations = {
       type: "Single // 2025",
       description: "Nouvelle musique pour la nouvelle année. Disponible maintenant."
     },
+    liquidation: {
+      label: "Surprise Drop // 2025",
+      title: "Liquidation",
+      type: "Album Pop-Up",
+      description: "Un album vibrant et nocturne pour la nouvelle année.",
+      date: "21 Décembre 2025"
+    },
     ghostwriter: {
       label: "Sortie à Venir // 2025",
       title: "Ghostwriter",
@@ -387,6 +408,13 @@ export const translations = {
       type: "シングル // 2025",
       description: "新年のための新しい音楽。全プラットフォームで配信中。"
     },
+    liquidation: {
+      label: "サプライズリリース // 2025",
+      title: "Liquidation",
+      type: "ポップアップアルバム",
+      description: "新年を迎えるための活気に満ちた深夜のアルバム。",
+      date: "2025年12月21日"
+    },
     ghostwriter: {
       label: "近日公開 // 2025",
       title: "Ghostwriter",
@@ -508,6 +536,13 @@ export const translations = {
       title: "Midnight Meridian",
       type: "单曲 // 2025",
       description: "新的一年，新的音乐。现已在所有平台上线。"
+    },
+    liquidation: {
+      label: "惊喜发布 // 2025",
+      title: "Liquidation",
+      type: "快闪专辑",
+      description: "一张充满活力的深夜专辑，迎接新的一年。",
+      date: "2025年12月21日"
     },
     ghostwriter: {
       label: "即将发布 // 2025",

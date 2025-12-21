@@ -1,6 +1,30 @@
+
 {
   "artist": "Farallon",
   "releases": [
+    {
+      "title": "Liquidation",
+      "type": "Album",
+      "year": 2025,
+      "date": "2025-12-21",
+      "tracks": [
+        { "id": 1, "title": "Mint Condition", "duration": "03:24" },
+        { "id": 2, "title": "Thousand Tiny Yeses", "duration": "02:58" },
+        { "id": 3, "title": "Rent Free", "duration": "03:12" },
+        { "id": 4, "title": "Blue Light Balcony", "duration": "04:05" },
+        { "id": 5, "title": "Gold Rush", "duration": "03:15" },
+        { "id": 6, "title": "Do Not Disturb Me (But Do)", "duration": "03:42" },
+        { "id": 7, "title": "Vaporware", "duration": "02:45" },
+        { "id": 8, "title": "I Keep Receipts", "duration": "03:30" },
+        { "id": 9, "title": "Paper Billionaire", "duration": "03:18" },
+        { "id": 10, "title": "Net Positive", "duration": "03:05" },
+        { "id": 11, "title": "Compound Interest", "duration": "03:55" },
+        { "id": 12, "title": "Sugarcoat Detector", "duration": "03:22" },
+        { "id": 13, "title": "Back Outside", "duration": "02:50" },
+        { "id": 14, "title": "Blackout Season", "duration": "04:15" },
+        { "id": 15, "title": "Liquidation", "duration": "03:40" }
+      ]
+    },
     {
       "title": "Heavy Water",
       "type": "Album",
