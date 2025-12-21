@@ -7,6 +7,151 @@ body {
   padding: 0;
 }
 
+/* Local replacements for Tailwind Typography & Forms plugins (registry access blocked) */
+:root {
+  --prose-text: #0f172a;
+  --prose-muted: #334155;
+  --prose-link: #8b5cf6;
+  --prose-border: #e2e8f0;
+  --prose-code-bg: rgba(15, 23, 42, 0.05);
+  --prose-code-text: #0f172a;
+  --prose-strong: #0f172a;
+}
+
+.dark {
+  --prose-text: #e2e8f0;
+  --prose-muted: #cbd5e1;
+  --prose-link: #c084fc;
+  --prose-border: #1f2937;
+  --prose-code-bg: rgba(226, 232, 240, 0.07);
+  --prose-code-text: #e2e8f0;
+  --prose-strong: #f8fafc;
+}
+
+.prose {
+  color: var(--prose-text);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--prose-strong);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.6em 0 0.6em;
+}
+
+.prose h1 { font-size: 2rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+.prose h4 { font-size: 1.1rem; }
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0 0 1.25em;
+  color: var(--prose-muted);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25em;
+}
+
+.prose a {
+  color: var(--prose-link);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.prose strong { color: var(--prose-strong); font-weight: 700; }
+
+.prose blockquote {
+  border-left: 4px solid var(--prose-border);
+  margin: 1.5em 0;
+  padding-left: 1em;
+  font-style: italic;
+  color: var(--prose-muted);
+}
+
+.prose code {
+  background: var(--prose-code-bg);
+  color: var(--prose-code-text);
+  border-radius: 0.25rem;
+  padding: 0.15em 0.35em;
+  font-weight: 600;
+}
+
+.prose pre {
+  background: var(--prose-code-bg);
+  color: var(--prose-code-text);
+  border-radius: 0.5rem;
+  padding: 1em;
+  overflow: auto;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--prose-border);
+  margin: 2em 0;
+}
+
+@media (min-width: 1024px) {
+  .lg\:prose-xl { font-size: 1.125rem; line-height: 1.85; }
+  .lg\:prose-xl h1 { font-size: 2.35rem; }
+  .lg\:prose-xl h2 { font-size: 1.85rem; }
+  .lg\:prose-xl h3 { font-size: 1.4rem; }
+}
+
+/* Form primitives (mirrors Tailwind Forms defaults) */
+input,
+textarea,
+select,
+button,
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="number"] {
+  border: 1px solid var(--prose-border);
+  border-radius: 0.5rem;
+  background-color: #fff;
+  color: #0f172a;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dark input,
+.dark textarea,
+.dark select,
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="search"],
+.dark input[type="password"],
+.dark input[type="tel"],
+.dark input[type="url"],
+.dark input[type="number"] {
+  background-color: #0b1220;
+  border-color: #1f2937;
+  color: #e2e8f0;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
 .bg-aurora {
     background: linear-gradient(135deg, #f3f4f6 0%, #fff 50%, #eff6ff 100%);
     min-height: 100vh;
