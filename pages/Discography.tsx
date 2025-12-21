@@ -1,10 +1,9 @@
 
 import React, { useEffect } from 'react';
 import { translations } from '../translations';
-import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL, TRACK_LIST, LIQUIDATION_TRACK_LIST } from '../constants';
+import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL } from '../constants';
 import { Calendar, Mic2, AlertCircle, Music, Zap, Globe, Disc } from 'lucide-react';
 import SEO from '../components/SEO';
-import TrackItem from '../components/TrackItem';
 
 const platforms = [
   { name: 'Spotify', url: 'https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr' },
@@ -30,12 +29,8 @@ const Discography: React.FC = () => {
     },
     "datePublished": "2024-12-01",
     "image": ALBUM_COVER_URL,
-    "numTracks": TRACK_LIST.length,
-    "track": TRACK_LIST.map(track => ({
-      "@type": "MusicRecording",
-      "name": track.title,
-      "duration": `PT${track.duration.replace(':', 'M')}S`
-    }))
+    "numTracks": 14,
+    "track": []
   };
 
   return (
@@ -104,27 +99,31 @@ const Discography: React.FC = () => {
                           {t.liquidation.description}
                         </p>
                         
-                        <div className="border-t border-slate-200 dark:border-white/10 pt-4 mt-6">
-                             <div className="flex items-center gap-2 mb-4 text-xs font-mono uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark">
-                                <Disc size={14} /> Track List
-                             </div>
-                             <div className="max-h-[300px] overflow-y-auto pr-2 custom-scrollbar space-y-1">
-                                {LIQUIDATION_TRACK_LIST.map((track) => (
-                                    <TrackItem key={track.id} track={track} />
-                                ))}
-                             </div>
+                        <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10 mt-6">
+                            <iframe 
+                                data-testid="embed-iframe" 
+                                style={{borderRadius: '12px'}} 
+                                src="https://open.spotify.com/embed/album/6CUuabZdSWOnZCecjBkOcb?utm_source=generator" 
+                                width="100%" 
+                                height="352" 
+                                frameBorder="0" 
+                                allowFullScreen 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy"
+                                title="Liquidation Album Preview"
+                            ></iframe>
                         </div>
                       </div>
 
                       <div className="pt-4">
                          <a 
-                           href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" 
+                           href="https://open.spotify.com/album/6CUuabZdSWOnZCecjBkOcb" 
                            target="_blank" 
                            rel="noreferrer"
                            className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-indigo-500/25 flex items-center gap-2 w-fit"
                          >
                             <Music size={18} />
-                            Stream Now
+                            Stream on Spotify
                          </a>
                       </div>
                    </div>
