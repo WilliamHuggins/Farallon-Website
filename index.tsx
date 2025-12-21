@@ -16,3 +16,12 @@ root.render(
     </HelmetProvider>
   </React.StrictMode>
 );
+
+// Cleanup static SEO content to prevent interaction issues
+// We use a small timeout to ensure React has painted at least the background
+setTimeout(() => {
+  const seoContent = document.getElementById('seo-content');
+  if (seoContent) {
+    seoContent.style.display = 'none';
+  }
+}, 100);

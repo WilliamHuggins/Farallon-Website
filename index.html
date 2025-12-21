@@ -137,6 +137,24 @@
           background: rgba(5, 5, 10, 0.85);
           border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       }
+      /* Layering for SEO Content vs React Root */
+      #seo-content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 0;
+          opacity: 1;
+          transition: opacity 0.5s ease;
+      }
+      #root {
+          position: relative;
+          z-index: 10;
+          /* Ensure root covers the static content once loaded */
+          min-height: 100vh;
+          /* Default background to cover SEO content */
+          background: inherit; 
+      }
       /* Video Hero Scaling for YouTube Background */
       .hero-video-wrapper {
           position: absolute;
@@ -189,26 +207,19 @@
   <body class="bg-aurora text-text-main-light dark:text-text-main-dark font-body overflow-x-hidden selection:bg-primary/30">
     <noscript>
       <div style="font-family: sans-serif; padding: 40px; text-align: center; max-width: 800px; margin: 0 auto; color: #1e293b;">
-        <h1 style="font-size: 3rem; margin-bottom: 1rem; letter-spacing: -0.05em;">FARALLON</h1>
-        <p style="font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.6;">
-          An immersive, cyber-noir experience for the generative AI music artist Farallon. 
-          Farallon explores the intersection of human emotion and machine learning.
-        </p>
-        <div style="display: flex; gap: 20px; justify-content: center; margin-bottom: 2rem;">
-          <a href="/discography" style="color: #8b5cf6; text-decoration: none; font-weight: bold;">Music</a>
-          <a href="/bio" style="color: #8b5cf6; text-decoration: none; font-weight: bold;">Biography</a>
-          <a href="/videos" style="color: #8b5cf6; text-decoration: none; font-weight: bold;">Videos</a>
-          <a href="/store" style="color: #8b5cf6; text-decoration: none; font-weight: bold;">Store</a>
-        </div>
-        <p>
-          <a href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" style="text-decoration: underline;">Listen on Spotify</a>
-        </p>
+        <h1>FARALLON</h1>
+        <p>An immersive, cyber-noir experience for the generative AI music artist Farallon.</p>
+        <p>Listen to the debut album <strong>Heavy Water</strong>.</p>
+        <a href="/discography">Music</a> | 
+        <a href="/bio">Biography</a> | 
+        <a href="/videos">Videos</a> | 
+        <a href="/store">Store</a>
       </div>
     </noscript>
-    <div id="root">
-        <!-- STATIC CONTENT FOR BOTS / SEO / NO-JS -->
-        <!-- This content provides an immediate render for crawlers and is replaced by React upon hydration. -->
-        <header class="p-6 border-b border-gray-200 dark:border-gray-800">
+
+    <!-- SEO / CRAWLER CONTENT HUB (Visually present, covered by React on load) -->
+    <div id="seo-content" class="p-8">
+        <header class="p-6 border-b border-gray-200 dark:border-gray-800 mb-12">
             <nav class="flex gap-6 justify-center text-sm font-bold uppercase tracking-wider">
                 <a href="/" class="text-primary">FARALLON</a>
                 <a href="/discography">Music</a>
@@ -217,43 +228,36 @@
                 <a href="/store">Store</a>
             </nav>
         </header>
-        <main class="max-w-4xl mx-auto p-8 text-center mt-12">
-            <h1 class="text-6xl font-bold mb-4 font-sans tracking-tighter">FARALLON</h1>
+        
+        <main class="max-w-4xl mx-auto text-center">
+            <h1 class="text-6xl font-bold mb-6 font-sans tracking-tighter text-text-main-light">FARALLON</h1>
             <h2 class="text-3xl text-primary mb-6 font-sans">HEAVY WATER</h2>
-            <p class="text-xl mb-12 font-light leading-relaxed max-w-2xl mx-auto">
-                An immersive, cyber-noir experience for the generative AI music artist Farallon. 
-                Farallon explores the intersection of human emotion and machine learning, 
-                creating a sound that sits between algorithmic precision and human vulnerability.
-            </p>
             
-            <section class="mb-16">
-                <h3 class="text-2xl font-bold mb-6 font-sans uppercase tracking-widest text-sm text-gray-500">Latest Release</h3>
-                <p class="mb-6 font-medium">Stream "Heavy Water" now on all platforms.</p>
-                <div class="flex gap-6 justify-center">
-                    <a href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" class="text-green-600 font-bold hover:underline">Spotify</a>
-                    <a href="https://music.apple.com/us/artist/farallon/1858060937" class="text-pink-600 font-bold hover:underline">Apple Music</a>
-                    <a href="https://music.youtube.com/channel/UCcmcBlwZK6AJy1XH3pvHFFA" class="text-red-600 font-bold hover:underline">YouTube Music</a>
-                </div>
-            </section>
-
-            <section class="mb-16">
-                <h3 class="text-2xl font-bold mb-6 font-sans uppercase tracking-widest text-sm text-gray-500">Biography</h3>
-                <p class="mb-6 leading-relaxed max-w-2xl mx-auto">
-                    Farallon is a musical project exploring the concept of a digital entity with a composite memory of San Francisco.
-                    Originally conceptualized as an AI monitoring the waters around the Farallon Islands, the project has evolved into a full musical exploration.
-                    The sound absorbs the "stray signals" of the city—radio waves, intercepted conversations, and the static of digital noise.
+            <article class="prose lg:prose-xl mx-auto mb-12">
+                <p>
+                    An immersive, cyber-noir experience for the generative AI music artist Farallon. 
+                    Farallon explores the intersection of human emotion and machine learning, 
+                    creating a sound that sits between algorithmic precision and human vulnerability.
                 </p>
-                <a href="/bio" class="inline-block px-6 py-3 border border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-colors">Read Full Bio</a>
-            </section>
-            
+                <p>
+                    The debut album "Heavy Water" is available now, featuring tracks "Sodium Glare" and "The Architect".
+                    Farallon is a musical project exploring the concept of a digital entity with a composite memory of San Francisco.
+                </p>
+            </article>
+
             <section class="mb-12">
-                <h3 class="text-2xl font-bold mb-4 font-sans uppercase tracking-widest text-sm text-gray-500">Contact</h3>
-                <p>Management & Inquiries: <a href="mailto:Farallon@farallonai.com" class="text-primary hover:underline">Farallon@farallonai.com</a></p>
+                <h3 class="text-2xl font-bold mb-4">Stream & Download</h3>
+                <ul class="flex gap-6 justify-center list-none">
+                    <li><a href="/discography" class="text-primary font-bold underline">Discography</a></li>
+                    <li><a href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" class="text-green-600 font-bold underline">Spotify</a></li>
+                    <li><a href="https://music.apple.com/us/artist/farallon/1858060937" class="text-pink-600 font-bold underline">Apple Music</a></li>
+                </ul>
             </section>
         </main>
-        <footer class="p-8 text-center text-gray-500 text-xs font-mono border-t border-gray-200 dark:border-gray-800 mt-12">
-            &copy; 2025 Farallon Music. All Rights Reserved.
-        </footer>
+    </div>
+
+    <div id="root">
+        <!-- React hydrates here, covering #seo-content -->
     </div>
     <script type="module" src="/index.tsx"></script>
   </body>
