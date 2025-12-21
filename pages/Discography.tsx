@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { translations } from '../translations';
 import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL } from '../constants';
-import { Calendar, Mic2, AlertCircle, Music, Zap, Globe, Disc } from 'lucide-react';
+import { Calendar, Mic2, AlertCircle, Music, Zap, Globe } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const platforms = [
