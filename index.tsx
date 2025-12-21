@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
+import './index.css';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -17,11 +18,10 @@ root.render(
   </React.StrictMode>
 );
 
-// Cleanup static SEO content to prevent interaction issues
-// We use a small timeout to ensure React has painted at least the background
-setTimeout(() => {
-  const seoContent = document.getElementById('seo-content');
-  if (seoContent) {
-    seoContent.style.display = 'none';
-  }
-}, 100);
+// Signal that the app has booted to hide static SEO content via CSS
+// This prevents layout thrashing compared to inline style manipulation
+requestAnimationFrame(() => {
+  document.documentElement.classList.add('app-booted');
+  // Optional: Set the global flag if needed by other scripts
+  (window as any).__APP_BOOTED__ = true;
+});

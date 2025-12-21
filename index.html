@@ -10,13 +10,14 @@
     <meta name="description" content="Official site of Farallon. Listen to the debut album Heavy Water. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning.">
     <meta name="keywords" content="Farallon, AI Music, Generative Audio, Heavy Water, Electronic Music, Glitch, Ambient, San Francisco">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://farallonai.com" />
+    <!-- Enforce WWW Canonical -->
+    <link rel="canonical" href="https://www.farallonai.com" />
     <link rel="icon" href="https://i.postimg.cc/g02431w6/Untitled-design-(3).png" />
     <link rel="apple-touch-icon" href="https://i.postimg.cc/g02431w6/Untitled-design-(3).png" />
 
     <!-- OPEN GRAPH / FACEBOOK -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://farallonai.com/">
+    <meta property="og:url" content="https://www.farallonai.com/">
     <meta property="og:title" content="FARALLON | Heavy Water | AI Music Artist">
     <meta property="og:description" content="Official site of Farallon. Listen to the debut album Heavy Water. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning.">
     <meta property="og:image" content="https://i.postimg.cc/jdfN9Gxb/Album-cover.png">
@@ -26,16 +27,15 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@farallonai">
     <meta name="twitter:creator" content="@farallonai">
-    <meta name="twitter:url" content="https://farallonai.com/">
+    <meta name="twitter:url" content="https://www.farallonai.com/">
     <meta name="twitter:title" content="FARALLON | Heavy Water | AI Music Artist">
     <meta name="twitter:description" content="Official site of Farallon. Listen to the debut album Heavy Water. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning.">
     <meta name="twitter:image" content="https://i.postimg.cc/jdfN9Gxb/Album-cover.png">
 
-    <!-- FONTS & STYLES -->
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     
     <!-- STRUCTURED DATA (JSON-LD) -->
     <script type="application/ld+json">
@@ -43,7 +43,7 @@
       "@context": "https://schema.org",
       "@type": "MusicGroup",
       "name": "Farallon",
-      "url": "https://farallonai.com",
+      "url": "https://www.farallonai.com",
       "logo": "https://i.postimg.cc/jdfN9Gxb/Album-cover.png",
       "image": "https://i.postimg.cc/jdfN9Gxb/Album-cover.png",
       "description": "An immersive, cyber-noir experience for the generative AI music artist Farallon.",
@@ -80,126 +80,21 @@
     }
     </script>
 
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#8b5cf6", 
-                        "secondary": "#06b6d4",
-                        "accent": "#f472b6",
-                        "surface": {
-                          light: "#fdfdff",
-                          dark: "#050508"
-                        },
-                        "text-main": {
-                          light: "#1e293b",
-                          dark: "#f8fafc"
-                        },
-                        "text-muted": {
-                          light: "#64748b",
-                          dark: "#94a3b8"
-                        }
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"],
-                        "mono": ["Space Mono", "monospace"]
-                    },
-                    boxShadow: {
-                        'ethereal': '0 25px 50px -12px rgba(139, 92, 246, 0.15)',
-                        'glow': '0 0 30px rgba(139, 92, 246, 0.3)'
-                    }
-                },
-            },
-        }
+    <script>
+      // App Boot State for CSS
+      window.__APP_BOOTED__ = false;
     </script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      .bg-aurora {
-          background: linear-gradient(135deg, #f3f4f6 0%, #fff 50%, #eff6ff 100%);
-          min-height: 100vh;
-          transition: background 0.5s ease;
-      }
-      .dark .bg-aurora {
-          background: #020617;
-      }
-      .glass-nav {
-          background: rgba(255, 255, 255, 0.85);
-          backdrop-filter: blur(20px);
-          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
-      .dark .glass-nav {
-          background: rgba(5, 5, 10, 0.85);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-      /* Layering for SEO Content vs React Root */
-      #seo-content {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          z-index: 0;
-          opacity: 1;
-          transition: opacity 0.5s ease;
-      }
-      #root {
-          position: relative;
-          z-index: 10;
-          /* Ensure root covers the static content once loaded */
-          min-height: 100vh;
-          /* Default background to cover SEO content */
-          background: inherit; 
-      }
-      /* Video Hero Scaling for YouTube Background */
-      .hero-video-wrapper {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-          pointer-events: none;
-          z-index: 0;
-      }
-      .hero-video-iframe {
-          position: absolute;
-          top: 0;
-          left: 50%;
-          /* Min dimensions to cover the screen while maintaining 16:9 aspect ratio */
-          width: 100vw;
-          height: 56.25vw; /* 16:9 calculation */
-          min-height: 100vh;
-          min-width: 177.77vh; /* 16:9 calculation */
-          transform: translate(-50%, 0);
-          pointer-events: none;
-      }
-      .crt-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.01));
-          z-index: 20;
-          background-size: 100% 2px, 3px 100%;
-          pointer-events: none;
-      }
-    </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react/": "https://esm.sh/react@18.2.0/",
-    "react-dom": "https://esm.sh/react-dom@18.2.0?deps=react@18.2.0",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?deps=react@18.2.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
-    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.2.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "vite": "https://esm.sh/vite@^7.3.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "react-helmet-async": "https://esm.sh/react-helmet-async@^2.0.5"
+    "react-helmet-async": "https://esm.sh/react-helmet-async@^2.0.5",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
   }
 }
 </script>
@@ -217,7 +112,7 @@
       </div>
     </noscript>
 
-    <!-- SEO / CRAWLER CONTENT HUB (Visually present, covered by React on load) -->
+    <!-- SEO / CRAWLER CONTENT HUB (Visually present, hidden by CSS when React boots) -->
     <div id="seo-content" class="p-8">
         <header class="p-6 border-b border-gray-200 dark:border-gray-800 mb-12">
             <nav class="flex gap-6 justify-center text-sm font-bold uppercase tracking-wider">
@@ -256,9 +151,7 @@
         </main>
     </div>
 
-    <div id="root">
-        <!-- React hydrates here, covering #seo-content -->
-    </div>
+    <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

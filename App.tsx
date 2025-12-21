@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/MainLayout';
 import Home from './pages/Home';
 import Bio from './pages/Bio';
@@ -10,6 +10,7 @@ import VisualArchives from './pages/VisualArchives';
 import Store from './pages/Store';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import NotFound from './pages/NotFound';
 
 const App: React.FC = () => {
   return (
@@ -27,8 +28,8 @@ const App: React.FC = () => {
           <Route path="/store" element={<Store />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
-          {/* Fallback route to prevent blank screens on 404 */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* 404 Page */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>
     </Router>

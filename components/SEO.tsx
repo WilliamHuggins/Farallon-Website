@@ -20,13 +20,13 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   const siteName = "Farallon";
   const twitterHandle = "@farallonai";
-  // Canonical host enforcement: non-www
-  const baseUrl = "https://farallonai.com";
+  // Canonical host enforcement: www
+  const baseUrl = "https://www.farallonai.com";
   
   // Construct absolute URL for canonical if relative path provided
   // Ensures we always point to the canonical host
   const canonicalUrl = canonical 
-    ? (canonical.startsWith('http') ? canonical : `${baseUrl}${canonical}`)
+    ? (canonical.startsWith('http') ? canonical : `${baseUrl}${canonical.startsWith('/') ? canonical : '/' + canonical}`)
     : `${baseUrl}${window.location.pathname}`;
 
   const imageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`;
