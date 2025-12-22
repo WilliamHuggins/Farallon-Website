@@ -55,8 +55,8 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       <SEO 
-        title="Heavy Water - Electronic / Ambient Music"
-        description="Official site of Farallon. Listen to the debut album Heavy Water. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning."
+        title="Liquidation - New Album"
+        description="Official site of Farallon. Listen to the new album Liquidation. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning."
         canonical="/"
         jsonLd={structuredData}
       />
@@ -100,19 +100,19 @@ const Home: React.FC = () => {
            <div className="animate-fade-in-up flex flex-col items-center">
               
               {/* Artist Name - Subtle, Technological */}
-              <h2 className="text-lg md:text-2xl font-mono tracking-[0.5em] text-cyan-300 uppercase mb-4 opacity-90 drop-shadow-md">
+              <h2 className="text-lg md:text-2xl font-mono tracking-[0.5em] text-indigo-400 uppercase mb-4 opacity-90 drop-shadow-md">
                  FARALLON
               </h2>
               
               {/* Album Name - Massive, Impactful */}
-              <h1 className="text-6xl sm:text-7xl md:text-9xl font-bold leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-200 to-slate-400 mb-8 drop-shadow-2xl">
-                HEAVY WATER
+              <h1 className="text-6xl sm:text-7xl md:text-9xl font-bold leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-white via-indigo-100 to-indigo-300 mb-8 drop-shadow-2xl">
+                LIQUIDATION
               </h1>
               
               {/* Release Type - Badge Style */}
-              <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/20 mb-12 shadow-lg">
-                <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
-                <span className="text-xs md:text-sm font-mono text-white tracking-widest uppercase font-bold">The Debut Album</span>
+              <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-black/40 backdrop-blur-md border border-indigo-500/30 mb-12 shadow-lg">
+                <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                <span className="text-xs md:text-sm font-mono text-white tracking-widest uppercase font-bold">New Pop-Up Album</span>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
