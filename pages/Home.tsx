@@ -99,13 +99,13 @@ const Home: React.FC = () => {
         <div className="relative z-10 max-w-5xl w-full px-6 flex flex-col items-center text-center mt-8">
            <div className="animate-fade-in-up flex flex-col items-center">
               
-              {/* Artist Name - Subtle, Technological */}
-              <h2 className="text-lg md:text-2xl font-mono tracking-[0.5em] text-indigo-400 uppercase mb-4 opacity-90 drop-shadow-md">
+              {/* Artist Name - Massive for Recognition */}
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display tracking-[0.2em] text-white uppercase mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                  FARALLON
               </h2>
               
               {/* Album Name - Massive, Impactful */}
-              <h1 className="text-6xl sm:text-7xl md:text-9xl font-bold leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-white via-indigo-100 to-indigo-300 mb-8 drop-shadow-2xl">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 via-white to-cyan-300 mb-8 drop-shadow-2xl">
                 LIQUIDATION
               </h1>
               
