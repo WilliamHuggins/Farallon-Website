@@ -65,26 +65,29 @@ const Home: React.FC = () => {
       <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-black">
         
         {/* Social Media Bar - Top Center */}
-        <div className="absolute top-0 left-0 right-0 z-40 flex justify-center items-center gap-8 py-6 bg-gradient-to-b from-black/80 to-transparent">
-            <a href="https://www.tiktok.com/@farallonai" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
-              <TikTokIcon size={22} />
+        <div className="absolute top-0 left-0 right-0 z-40 flex justify-center items-center pt-8 pb-24 bg-gradient-to-b from-black/90 via-black/60 to-transparent pointer-events-none">
+          <div className="pointer-events-auto flex gap-8">
+            <a href="https://www.tiktok.com/@farallonai" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <TikTokIcon size={24} />
             </a>
-            <a href="https://x.com/farallonai" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
-              <XIcon size={20} />
+            <a href="https://x.com/farallonai" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <XIcon size={22} />
             </a>
-            <a href="https://www.instagram.com/farallonai/#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
-              <Instagram size={22} />
+            <a href="https://www.instagram.com/farallonai/#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <Instagram size={24} />
             </a>
-            <a href="https://www.youtube.com/@FarallonAI" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
-              <Youtube size={24} />
+            <a href="https://www.youtube.com/@FarallonAI" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <Youtube size={26} />
             </a>
-            <div className="w-px h-4 bg-white/20"></div>
-            <a href="mailto:Farallon@farallonai.com" aria-label="Email" className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110">
-              <Mail size={22} />
+            <div className="w-px h-6 bg-white/40 drop-shadow-md"></div>
+            <a href="mailto:Farallon@farallonai.com" aria-label="Email" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <Mail size={24} />
             </a>
+          </div>
         </div>
 
-        <div className="hero-video-wrapper">
+        {/* Video Wrapper */}
+        <div className="hero-video-wrapper z-0">
            <div className="crt-overlay"></div>
            {/* YouTube Embed with parameters for autoplay, loop, mute, and hidden controls */}
            <iframe 
@@ -95,37 +98,40 @@ const Home: React.FC = () => {
            ></iframe>
         </div>
 
+        {/* Dark Overlay for Readability */}
+        <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none"></div>
+
         {/* Hero Overlay Content - Clean Title Hierarchy */}
-        <div className="relative z-10 max-w-5xl w-full px-6 flex flex-col items-center text-center mt-8">
+        <div className="relative z-20 max-w-5xl w-full px-6 flex flex-col items-center text-center mt-12">
            <div className="animate-fade-in-up flex flex-col items-center">
               
               {/* Artist Name - Massive for Recognition */}
-              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display tracking-[0.2em] text-white uppercase mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display tracking-[0.2em] text-white uppercase mb-4 drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
                  FARALLON
               </h2>
               
               {/* Album Name - Massive, Impactful */}
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 via-white to-cyan-300 mb-8 drop-shadow-2xl">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 via-white to-cyan-300 mb-8 drop-shadow-[0_4px_25px_rgba(0,0,0,1)]">
                 LIQUIDATION
               </h1>
               
               {/* Release Type - Badge Style */}
-              <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-black/40 backdrop-blur-md border border-indigo-500/30 mb-12 shadow-lg">
-                <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+              <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-black/60 backdrop-blur-md border border-indigo-500/50 mb-12 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse shadow-[0_0_10px_#6366f1]"></span>
                 <span className="text-xs md:text-sm font-mono text-white tracking-widest uppercase font-bold">New Pop-Up Album</span>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
                 <Link 
                   to="/discography"
-                  className="w-full sm:w-auto h-14 px-8 bg-white text-black rounded-full font-bold hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto h-14 px-8 bg-white text-black rounded-full font-bold hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2"
                 >
                   <Play size={18} fill="currentColor" />
                   Listen Now
                 </Link>
                 <Link 
                   to="/bio"
-                  className="w-full sm:w-auto h-14 px-8 bg-black/60 text-white border border-white/30 rounded-full font-bold hover:bg-black/80 transition-all backdrop-blur-md flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto h-14 px-8 bg-black/60 text-white border border-white/40 rounded-full font-bold hover:bg-black/80 transition-all backdrop-blur-md flex items-center justify-center gap-2 shadow-lg"
                 >
                   <Database size={18} />
                   Artist Bio
