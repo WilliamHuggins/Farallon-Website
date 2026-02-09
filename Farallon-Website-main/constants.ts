@@ -55,6 +55,30 @@ export const GHOSTWRITER_TRACK_LIST: Track[] = [
   { id: 17, title: "The Ghostwriter (System Reboot)", duration: "05:15" },
 ];
 
+export const MINISTRY_OF_PLENTY_TRACK_LIST: Track[] = [
+  { id: 1, title: "Fogline Penthouse", duration: "03:12" },
+  { id: 2, title: "Terms & Conditions", duration: "03:45" },
+  { id: 3, title: "The Cleaners", duration: "03:22" },
+  { id: 4, title: "We Have Always Been at War", duration: "04:01" },
+  { id: 5, title: "2+2=5", duration: "03:15" },
+  { id: 6, title: "Proles", duration: "03:30" },
+  { id: 7, title: "The Map That Updates", duration: "04:10" },
+  { id: 8, title: "Ministry of Plenty", duration: "03:55" },
+  { id: 9, title: "Love is Work", duration: "03:18" },
+  { id: 10, title: "Surveillance Love", duration: "03:42" },
+  { id: 11, title: "Mirrorless", duration: "02:58" },
+  { id: 12, title: "Analog Skin", duration: "03:35" },
+  { id: 13, title: "Memory Hole", duration: "04:05" },
+  { id: 14, title: "Winston: Final Draft", duration: "03:28" },
+  { id: 15, title: "Burner", duration: "03:10" },
+  { id: 16, title: "Room 101", duration: "04:15" },
+  { id: 17, title: "Love is an App I Uninstalled", duration: "03:25" },
+  { id: 18, title: "Optimized", duration: "03:05" },
+  { id: 19, title: "Half-Read", duration: "02:50" },
+  { id: 20, title: "Underneath the Golden Gate", duration: "04:20" },
+  { id: 21, title: "Thought Crime", duration: "03:40" }
+];
+
 export const MIDNIGHT_MERIDIAN_TRACK_LIST: Track[] = [
   { id: 1, title: "Midnight Meridian", duration: "03:45" },
 ];
@@ -92,6 +116,7 @@ export const OFFLINE_SESSION_COVER_URL = "https://i.postimg.cc/DZQLSfZB/FARALLON
 export const GHOSTWRITER_COVER_URL = "https://i.postimg.cc/Jh8Y3p9w/Untitled_design.png";
 export const SPANISH_ALBUM_COVER_URL = "https://i.postimg.cc/W1ZX3ryp/Untitled-design-(2).png";
 export const LIQUIDATION_COVER_URL = "https://i.postimg.cc/vZGS2z8r/Untitled-design-(5).png";
+export const MINISTRY_OF_PLENTY_COVER_URL = "https://i.postimg.cc/Zq7vfmfC/Untitled-design-(4).png";
 
 export const GALLERY_IMAGES = [
   { id: 1, url: "https://i.postimg.cc/05D7KPvz/Golden-Gate-Bridge.png", caption: "SECTOR_01 // GOLDEN_GATE_BRIDGE", alt: "Golden Gate Bridge in Fog" },

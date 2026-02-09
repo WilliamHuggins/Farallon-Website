@@ -1,9 +1,11 @@
 
-import React, { useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { translations } from '../translations';
-import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL } from '../constants';
-import { Calendar, Mic2, AlertCircle, Music, Zap, Globe } from 'lucide-react';
+import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, MINISTRY_OF_PLENTY_TRACK_LIST } from '../constants';
+import { Calendar, Mic2, AlertCircle, Music, Zap, Globe, Disc, ChevronDown, ChevronUp } from 'lucide-react';
 import SEO from '../components/SEO';
+import TrackItem from '../components/TrackItem';
 
 const platforms = [
   { name: 'Spotify', url: 'https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr' },
@@ -14,6 +16,7 @@ const platforms = [
 
 const Discography: React.FC = () => {
   const t = translations['en'];
+  const [showTracksMinistry, setShowTracksMinistry] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,14 +25,14 @@ const Discography: React.FC = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "MusicAlbum",
-    "name": "Heavy Water",
+    "name": "Ministry of Plenty",
     "byArtist": {
       "@type": "MusicGroup",
       "name": "Farallon"
     },
-    "datePublished": "2024-12-01",
-    "image": ALBUM_COVER_URL,
-    "numTracks": 14,
+    "datePublished": "2025-02-14",
+    "image": MINISTRY_OF_PLENTY_COVER_URL,
+    "numTracks": 21,
     "track": []
   };
 
@@ -37,10 +40,10 @@ const Discography: React.FC = () => {
     <div className="min-h-screen py-24 bg-aurora dark:bg-black/80 transition-colors">
       <SEO 
         title="Discography - Farallon"
-        description="Catalog of Farallon releases including Liquidation, Heavy Water, Ghostwriter, and the Offline Sessions."
+        description="Catalog of Farallon releases including Ministry of Plenty, Ghostwriter, Liquidation, and Heavy Water."
         canonical="/discography"
         type="music.album"
-        image={LIQUIDATION_COVER_URL}
+        image={MINISTRY_OF_PLENTY_COVER_URL}
         jsonLd={structuredData}
       />
       <div className="max-w-[1200px] mx-auto px-6">
@@ -60,8 +63,158 @@ const Discography: React.FC = () => {
         </div>
 
         <div className="space-y-32">
-          
-          {/* ITEM 0: LIQUIDATION (NEW POP-UP) */}
+
+          {/* ITEM 0: MINISTRY OF PLENTY (NEW ALBUM) */}
+          <section className="relative group">
+             {/* Background Glow */}
+             <div className="absolute -inset-4 bg-gradient-to-tr from-teal-400/10 to-indigo-500/10 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-1000"></div>
+             
+             <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-teal-500/20 overflow-hidden">
+                <div className="absolute top-0 right-0 p-4">
+                   <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-full border border-teal-500/30">
+                      <Disc size={14} className="text-teal-500" />
+                      <span className="font-mono text-[10px] font-bold text-teal-500 tracking-widest uppercase">New Album</span>
+                   </div>
+                </div>
+
+                <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+                   <div className="w-full lg:w-5/12 max-w-md">
+                      <img 
+                        src={MINISTRY_OF_PLENTY_COVER_URL} 
+                        alt="Ministry of Plenty Album Cover" 
+                        className="w-full rounded-[2rem] shadow-2xl border border-white/10 transition-all duration-700 hover:scale-[1.02]"
+                      />
+                      
+                      <button 
+                        onClick={() => setShowTracksMinistry(!showTracksMinistry)}
+                        className="w-full mt-6 py-3 border border-teal-500/30 rounded-xl flex items-center justify-center gap-2 text-sm font-mono uppercase tracking-widest text-teal-600 dark:text-teal-400 hover:bg-teal-500/5 transition-colors"
+                      >
+                         {showTracksMinistry ? 'Hide Tracklist' : 'View Tracklist'}
+                         {showTracksMinistry ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      </button>
+                   </div>
+                   
+                   <div className="flex-1 space-y-8 w-full">
+                      <div>
+                        <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-2 tracking-tighter">
+                          {t.ministryOfPlenty.title}
+                        </h2>
+                        <div className="flex items-center gap-3 text-teal-400 font-mono text-sm tracking-widest uppercase">
+                          <Calendar size={16} />
+                          <span>{t.ministryOfPlenty.date}</span>
+                        </div>
+                      </div>
+
+                      <div className="space-y-4">
+                        <p className="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-lg">
+                          {t.ministryOfPlenty.description}
+                        </p>
+                        
+                        {/* Since it's new, maybe no embed yet, or use generic placeholder until embed is ready. Assuming user wants to promote it "out now", providing generic action buttons. */}
+                        <div className="flex flex-wrap gap-4 pt-4">
+                           <a 
+                             href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" 
+                             target="_blank" 
+                             rel="noreferrer"
+                             className="px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-teal-500/25 flex items-center gap-2 w-fit"
+                           >
+                              <Music size={18} />
+                              Stream on Spotify
+                           </a>
+                           <a 
+                             href="https://music.apple.com/us/artist/farallon/1858060937" 
+                             target="_blank" 
+                             rel="noreferrer"
+                             className="px-8 py-4 bg-white dark:bg-white/10 text-black dark:text-white border border-slate-200 dark:border-white/20 hover:bg-slate-50 dark:hover:bg-white/20 rounded-full font-bold transition-all flex items-center gap-2 w-fit"
+                           >
+                              <Music size={18} />
+                              Apple Music
+                           </a>
+                        </div>
+                      </div>
+
+                      {/* Tracklist Expandable */}
+                      {showTracksMinistry && (
+                         <div className="animate-fade-in-down mt-8 pt-8 border-t border-dashed border-slate-200 dark:border-white/10">
+                            {MINISTRY_OF_PLENTY_TRACK_LIST.map((track) => (
+                               <TrackItem key={track.id} track={track} />
+                            ))}
+                         </div>
+                      )}
+                   </div>
+                </div>
+             </div>
+          </section>
+
+          {/* ITEM 1: GHOSTWRITER (NOW RELEASED) */}
+          <section className="relative group">
+             {/* Background Glow */}
+             <div className="absolute -inset-4 bg-gradient-to-r from-red-500/10 to-purple-500/10 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
+             
+             <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-red-500/20 overflow-hidden">
+                <div className="absolute top-0 right-0 p-4">
+                   <div className="flex items-center gap-2 px-4 py-2 bg-red-500/10 rounded-full border border-red-500/30">
+                      <Zap size={14} className="text-red-500" />
+                      <span className="font-mono text-[10px] font-bold text-red-500 tracking-widest uppercase">Studio Album</span>
+                   </div>
+                </div>
+
+                <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+                   <div className="w-full lg:w-5/12 max-w-md">
+                      <img 
+                        src={GHOSTWRITER_COVER_URL} 
+                        alt="Ghostwriter Album Cover" 
+                        className="w-full rounded-[2rem] shadow-2xl border border-white/10 transition-all duration-700 hover:scale-[1.02]"
+                      />
+                   </div>
+                   
+                   <div className="flex-1 space-y-8 w-full">
+                      <div>
+                        <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-2 tracking-tighter">
+                          {t.ghostwriter.title}
+                        </h2>
+                        <div className="flex items-center gap-3 text-red-400 font-mono text-sm tracking-widest uppercase">
+                          <Calendar size={16} />
+                          <span>Released 2025</span>
+                        </div>
+                      </div>
+
+                      <div className="space-y-4">
+                        <p className="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-lg">
+                          {t.ghostwriter.description}
+                        </p>
+                        
+                        <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10 mt-6">
+                             <iframe 
+                                style={{borderRadius: '12px'}} 
+                                src="https://open.spotify.com/embed/album/135UCYCrjdkg56Khz9NiAt?utm_source=generator" 
+                                width="100%" 
+                                height="352" 
+                                frameBorder="0" 
+                                allowFullScreen 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy"
+                             ></iframe>
+                        </div>
+                      </div>
+
+                      <div className="pt-4">
+                         <a 
+                           href="https://open.spotify.com/album/135UCYCrjdkg56Khz9NiAt" 
+                           target="_blank" 
+                           rel="noreferrer"
+                           className="px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-red-500/25 flex items-center gap-2 w-fit"
+                         >
+                            <Music size={18} />
+                            Stream Now
+                         </a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </section>
+
+          {/* ITEM 2: LIQUIDATION (POP-UP) */}
           <section className="relative group">
              {/* Background Glow */}
              <div className="absolute -inset-4 bg-gradient-to-tr from-cyan-400/10 to-indigo-500/10 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-1000"></div>
@@ -114,86 +267,12 @@ const Discography: React.FC = () => {
                             ></iframe>
                         </div>
                       </div>
-
-                      <div className="pt-4">
-                         <a 
-                           href="https://open.spotify.com/album/6CUuabZdSWOnZCecjBkOcb" 
-                           target="_blank" 
-                           rel="noreferrer"
-                           className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-indigo-500/25 flex items-center gap-2 w-fit"
-                         >
-                            <Music size={18} />
-                            Stream on Spotify
-                         </a>
-                      </div>
                    </div>
                 </div>
              </div>
           </section>
 
-          {/* ITEM 1: GHOSTWRITER (UPCOMING) */}
-          <section className="relative group">
-             {/* Background Glow */}
-             <div className="absolute -inset-4 bg-gradient-to-r from-red-500/10 to-purple-500/10 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
-             
-             <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-red-500/20 overflow-hidden">
-                <div className="absolute top-0 right-0 p-4">
-                   <div className="flex items-center gap-2 px-4 py-2 bg-red-500/10 rounded-full border border-red-500/30">
-                      <AlertCircle size={14} className="text-red-500" />
-                      <span className="font-mono text-[10px] font-bold text-red-500 tracking-widest uppercase">Upcoming Release</span>
-                   </div>
-                </div>
-
-                <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
-                   <div className="w-full lg:w-5/12 max-w-md">
-                      <img 
-                        src={GHOSTWRITER_COVER_URL} 
-                        alt="Ghostwriter Album Cover" 
-                        className="w-full rounded-[2rem] shadow-2xl border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]"
-                      />
-                   </div>
-                   
-                   <div className="flex-1 space-y-8 w-full">
-                      <div>
-                        <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-2 tracking-tighter">
-                          {t.ghostwriter.title}
-                        </h2>
-                        <div className="flex items-center gap-3 text-red-400 font-mono text-sm tracking-widest uppercase">
-                          <Calendar size={16} />
-                          <span>January 9, 2025</span>
-                        </div>
-                      </div>
-
-                      <div className="space-y-4">
-                        <h3 className="text-xl font-bold text-text-main-light dark:text-white">New Studio Album</h3>
-                        <p className="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-lg">
-                          {t.ghostwriter.description}
-                        </p>
-                        <p className="text-text-muted-light dark:text-text-muted-dark leading-relaxed">
-                          {t.ghostwriter.body}
-                        </p>
-                      </div>
-
-                      <div className="pt-4">
-                         <a 
-                           href="https://distrokid.com/hyperfollow/farallon1/ghostwriter" 
-                           target="_blank" 
-                           rel="noreferrer"
-                           className="px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-red-500/25 flex items-center gap-2 w-fit"
-                         >
-                            <Music size={18} />
-                            Pre-Save Now
-                         </a>
-                         <p className="mt-4 text-xs text-text-muted-light dark:text-text-muted-dark font-mono max-w-sm">
-                            Pre-save on Spotify or Apple Music to get the album instantly upon release.
-                         </p>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </section>
-
-          {/* ITEM 2: MIDNIGHT MERIDIAN (SINGLE) */}
+          {/* ITEM 3: MIDNIGHT MERIDIAN (SINGLE) */}
           <section className="relative">
              <div className="flex flex-col lg:flex-row-reverse gap-12">
                 
@@ -206,13 +285,6 @@ const Discography: React.FC = () => {
                        alt="Midnight Meridian Cover" 
                        className="relative z-10 w-full rounded-[2.5rem] shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]"
                      />
-                   </div>
-                   
-                   <div className="mt-8 flex justify-center">
-                      <a href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-indigo-500 hover:text-indigo-400 font-bold tracking-widest uppercase text-xs transition-colors">
-                        <Zap size={16} />
-                        Stream Single
-                      </a>
                    </div>
                 </div>
 
@@ -239,7 +311,7 @@ const Discography: React.FC = () => {
           </section>
 
 
-          {/* ITEM 3: HEAVY WATER (ALBUM) */}
+          {/* ITEM 4: HEAVY WATER (ALBUM) */}
           <section className="relative">
              <div className="flex flex-col lg:flex-row gap-12">
                 
@@ -252,23 +324,6 @@ const Discography: React.FC = () => {
                        alt="Heavy Water Album Cover" 
                        className="relative z-10 w-full rounded-[2.5rem] shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]"
                      />
-                   </div>
-                   
-                   <div className="mt-8 flex flex-col gap-3">
-                      <span className="text-center font-mono text-xs text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mb-2">Listen on</span>
-                      <div className="flex flex-wrap justify-center gap-3">
-                        {platforms.map((platform) => (
-                           <a 
-                             key={platform.name}
-                             href={platform.url} 
-                             target="_blank" 
-                             rel="noreferrer" 
-                             className="px-4 py-2 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-slate-50 dark:hover:bg-white/10 transition-colors text-text-main-light dark:text-white"
-                           >
-                             {platform.name}
-                           </a>
-                        ))}
-                      </div>
                    </div>
                 </div>
 
@@ -294,7 +349,7 @@ const Discography: React.FC = () => {
              </div>
           </section>
 
-          {/* ITEM 4: EDICIÓN EN ESPAÑOL */}
+          {/* ITEM 5: EDICIÓN EN ESPAÑOL */}
           <section className="relative">
              <div className="flex flex-col lg:flex-row-reverse gap-12">
                 
@@ -307,13 +362,6 @@ const Discography: React.FC = () => {
                        alt="Edición en Español Cover" 
                        className="relative z-10 w-full rounded-[2.5rem] shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]"
                      />
-                   </div>
-                   
-                   <div className="mt-8 flex justify-center">
-                      <div className="flex items-center gap-2 text-orange-500 font-bold tracking-widest uppercase text-xs">
-                        <Globe size={16} />
-                        International Release
-                      </div>
                    </div>
                 </div>
 
@@ -339,7 +387,7 @@ const Discography: React.FC = () => {
              </div>
           </section>
 
-          {/* ITEM 5: OFFLINE SESSION (LIVE) */}
+          {/* ITEM 6: OFFLINE SESSION (LIVE) */}
           <section className="relative">
              <div className="flex flex-col lg:flex-row gap-12">
                 

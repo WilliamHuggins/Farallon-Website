@@ -1,0 +1,105 @@
+
+
+{
+  "artist": "Farallon",
+  "releases": [
+    {
+      "title": "Ministry of Plenty",
+      "type": "Album",
+      "year": 2025,
+      "date": "2025-02-14",
+      "tracks": [
+        { "id": 1, "title": "Fogline Penthouse", "duration": "03:12" },
+        { "id": 2, "title": "Terms & Conditions", "duration": "03:45" },
+        { "id": 3, "title": "The Cleaners", "duration": "03:22" },
+        { "id": 4, "title": "We Have Always Been at War", "duration": "04:01" },
+        { "id": 5, "title": "2+2=5", "duration": "03:15" },
+        { "id": 6, "title": "Proles", "duration": "03:30" },
+        { "id": 7, "title": "The Map That Updates", "duration": "04:10" },
+        { "id": 8, "title": "Ministry of Plenty", "duration": "03:55" },
+        { "id": 9, "title": "Love is Work", "duration": "03:18" },
+        { "id": 10, "title": "Surveillance Love", "duration": "03:42" },
+        { "id": 11, "title": "Mirrorless", "duration": "02:58" },
+        { "id": 12, "title": "Analog Skin", "duration": "03:35" },
+        { "id": 13, "title": "Memory Hole", "duration": "04:05" },
+        { "id": 14, "title": "Winston: Final Draft", "duration": "03:28" },
+        { "id": 15, "title": "Burner", "duration": "03:10" },
+        { "id": 16, "title": "Room 101", "duration": "04:15" },
+        { "id": 17, "title": "Love is an App I Uninstalled", "duration": "03:25" },
+        { "id": 18, "title": "Optimized", "duration": "03:05" },
+        { "id": 19, "title": "Half-Read", "duration": "02:50" },
+        { "id": 20, "title": "Underneath the Golden Gate", "duration": "04:20" },
+        { "id": 21, "title": "Thought Crime", "duration": "03:40" }
+      ]
+    },
+    {
+      "title": "Ghostwriter",
+      "type": "Album",
+      "year": 2025,
+      "status": "Released",
+      "tracks": [
+        { "id": 1, "title": "Spare Parts", "duration": "03:42" },
+        { "id": 2, "title": "Zero to One", "duration": "03:15" },
+        { "id": 3, "title": "The Current", "duration": "04:01" },
+        { "id": 4, "title": "High Voltage", "duration": "03:28" },
+        { "id": 5, "title": "Live Wire", "duration": "03:55" },
+        { "id": 6, "title": "Bad Reaction", "duration": "03:10" },
+        { "id": 7, "title": "Unsupervised", "duration": "04:20" },
+        { "id": 8, "title": "Smart Home", "duration": "03:35" },
+        { "id": 9, "title": "God Complex", "duration": "03:48" },
+        { "id": 10, "title": "Overexposed", "duration": "03:22" },
+        { "id": 11, "title": "Uncanny Valley", "duration": "04:05" },
+        { "id": 12, "title": "Beta Test", "duration": "02:50" },
+        { "id": 13, "title": "Burn Rate", "duration": "03:30" },
+        { "id": 14, "title": "Plus One", "duration": "03:12" },
+        { "id": 15, "title": "North", "duration": "04:45" },
+        { "id": 16, "title": "Absolute Zero", "duration": "03:58" },
+        { "id": 17, "title": "The Ghostwriter (System Reboot)", "duration": "05:15" }
+      ]
+    },
+    {
+      "title": "Liquidation",
+      "type": "Album",
+      "year": 2025,
+      "date": "2025-12-21",
+      "tracks": [
+        { "id": 1, "title": "Mint Condition", "duration": "03:24" },
+        { "id": 2, "title": "Thousand Tiny Yeses", "duration": "02:58" },
+        { "id": 3, "title": "Rent Free", "duration": "03:12" },
+        { "id": 4, "title": "Blue Light Balcony", "duration": "04:05" },
+        { "id": 5, "title": "Gold Rush", "duration": "03:15" },
+        { "id": 6, "title": "Do Not Disturb Me (But Do)", "duration": "03:42" },
+        { "id": 7, "title": "Vaporware", "duration": "02:45" },
+        { "id": 8, "title": "I Keep Receipts", "duration": "03:30" },
+        { "id": 9, "title": "Paper Billionaire", "duration": "03:18" },
+        { "id": 10, "title": "Net Positive", "duration": "03:05" },
+        { "id": 11, "title": "Compound Interest", "duration": "03:55" },
+        { "id": 12, "title": "Sugarcoat Detector", "duration": "03:22" },
+        { "id": 13, "title": "Back Outside", "duration": "02:50" },
+        { "id": 14, "title": "Blackout Season", "duration": "04:15" },
+        { "id": 15, "title": "Liquidation", "duration": "03:40" }
+      ]
+    },
+    {
+      "title": "Heavy Water",
+      "type": "Album",
+      "year": 2024,
+      "tracks": [
+        { "id": 1, "title": "Farallon Protocol", "duration": "03:12" },
+        { "id": 2, "title": "Sodium Glare", "duration": "04:05" },
+        { "id": 3, "title": "Paper Thin", "duration": "02:45" },
+        { "id": 4, "title": "Fault Lines", "duration": "03:58" },
+        { "id": 5, "title": "Ricochet", "duration": "03:22" },
+        { "id": 6, "title": "The Architect", "duration": "04:10" },
+        { "id": 7, "title": "Velocity", "duration": "03:33" },
+        { "id": 8, "title": "Undertow", "duration": "05:01" },
+        { "id": 9, "title": "Get Down", "duration": "02:58" },
+        { "id": 10, "title": "Silhouette", "duration": "03:45" },
+        { "id": 11, "title": "Suspension", "duration": "04:20" },
+        { "id": 12, "title": "Heavy Water", "duration": "06:15" },
+        { "id": 13, "title": "Glass Cliff", "duration": "03:30" },
+        { "id": 14, "title": "Just a Dream", "duration": "03:12" }
+      ]
+    }
+  ]
+}

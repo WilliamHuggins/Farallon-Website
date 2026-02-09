@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail, Zap } from 'lucide-react';
-import { LIQUIDATION_COVER_URL, ALBUM_COVER_URL } from '../constants';
+import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail, Zap, Radio } from 'lucide-react';
+import { LIQUIDATION_COVER_URL, ALBUM_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, GHOSTWRITER_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
 import SEO from '../components/SEO';
 
@@ -55,14 +56,17 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       <SEO 
-        title="Liquidation - New Album"
-        description="Official site of Farallon. Listen to the new album Liquidation. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning."
+        title="Ministry of Plenty - New Album Out Now"
+        description="Official site of Farallon. Listen to the new album Ministry of Plenty. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning."
         canonical="/"
         jsonLd={structuredData}
       />
       
       {/* 1. CINEMATIC VIDEO HERO (YOUTUBE METHOD) */}
-      <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-black">
+      <section 
+        className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-black"
+        style={{ backgroundColor: '#000000', minHeight: '90vh' }}
+      >
         
         {/* Social Media Bar - Top Center */}
         <div className="absolute top-0 left-0 right-0 z-40 flex justify-center items-center pt-8 pb-24 bg-gradient-to-b from-black/90 via-black/60 to-transparent pointer-events-none">
@@ -112,13 +116,13 @@ const Home: React.FC = () => {
               
               {/* Album Name - Massive, Impactful */}
               <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 via-white to-cyan-300 mb-8 drop-shadow-[0_4px_25px_rgba(0,0,0,1)]">
-                LIQUIDATION
+                MINISTRY OF PLENTY
               </h1>
               
               {/* Release Type - Badge Style */}
               <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-black/60 backdrop-blur-md border border-indigo-500/50 mb-12 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-                <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse shadow-[0_0_10px_#6366f1]"></span>
-                <span className="text-xs md:text-sm font-mono text-white tracking-widest uppercase font-bold">New Pop-Up Album</span>
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_#22c55e]"></span>
+                <span className="text-xs md:text-sm font-mono text-white tracking-widest uppercase font-bold">New Album Out Now</span>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
@@ -214,29 +218,29 @@ const Home: React.FC = () => {
          </div>
       </section>
 
-      {/* 4. FEATURED RELEASE: LIQUIDATION (New Section) */}
+      {/* 4. FEATURED RELEASE: GHOSTWRITER (Was Liquidation) */}
       <section className="py-20 bg-white dark:bg-black/40 border-y border-slate-100 dark:border-white/5 transition-colors">
          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
             {/* Image Left */}
             <div className="w-full md:w-1/2 relative group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-indigo-500 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
+               <div className="absolute inset-0 bg-gradient-to-tr from-red-500 to-purple-600 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
                <img 
-                 src={LIQUIDATION_COVER_URL} 
-                 alt="Liquidation Album" 
+                 src={GHOSTWRITER_COVER_URL} 
+                 alt="Ghostwriter Album" 
                  className="relative z-10 w-full rounded-[3rem] shadow-ethereal border border-white/20 transform group-hover:scale-[1.02] transition-transform duration-700"
                />
             </div>
             {/* Content Right */}
             <div className="w-full md:w-1/2">
                <div className="flex items-center gap-2 mb-6">
-                  <Zap className="text-indigo-400" size={20} />
-                  <span className="font-mono text-xs font-bold text-indigo-400 uppercase tracking-[0.3em]">New Release // 2025</span>
+                  <Radio className="text-red-500" size={20} />
+                  <span className="font-mono text-xs font-bold text-red-500 uppercase tracking-[0.3em]">Released // 2025</span>
                </div>
                <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-6 leading-[0.9]">
-                  LIQUIDATION
+                  GHOSTWRITER
                </h2>
                <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
-                  A vibrant, late-night album to ring in the new year. Everything must go.
+                  The sophomore studio album featuring 'High Voltage'. A haunting collision of Gothic horror and Silicon Valley paranoia.
                </p>
                
                {/* Spotify Album Embed */}
@@ -244,14 +248,14 @@ const Home: React.FC = () => {
                  <iframe 
                    data-testid="embed-iframe" 
                    style={{borderRadius: '12px'}} 
-                   src="https://open.spotify.com/embed/album/6CUuabZdSWOnZCecjBkOcb?utm_source=generator" 
+                   src="https://open.spotify.com/embed/album/135UCYCrjdkg56Khz9NiAt?utm_source=generator" 
                    width="100%" 
                    height="352" 
                    frameBorder="0" 
                    allowFullScreen 
                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                    loading="lazy"
-                   title="Liquidation Album Spotify Embed"
+                   title="Ghostwriter Album Spotify Embed"
                  ></iframe>
                </div>
 
@@ -286,7 +290,7 @@ const Home: React.FC = () => {
                   HEAVY WATER
                </h2>
                <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
-                  The new 14-track album featuring "Sodium Glare" and "The Architect".
+                  The debut 14-track album featuring "Sodium Glare" and "The Architect".
                </p>
                
                {/* Spotify Embed for Heavy Water - Expanded Size */}
