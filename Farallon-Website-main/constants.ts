@@ -47,12 +47,12 @@ export const GHOSTWRITER_TRACK_LIST: Track[] = [
   { id: 9, title: "God Complex", duration: "03:48" },
   { id: 10, title: "Overexposed", duration: "03:22" },
   { id: 11, title: "Uncanny Valley", duration: "04:05" },
-  { id: 12, title: "Beta Test", duration: "02:50" },
-  { id: 13, title: "Burn Rate", duration: "03:30" },
-  { id: 14, title: "Plus One", duration: "03:12" },
-  { id: 15, title: "North", duration: "04:45" },
-  { id: 16, title: "Absolute Zero", duration: "03:58" },
-  { id: 17, title: "The Ghostwriter (System Reboot)", duration: "05:15" },
+  { id: 12, "title": "Beta Test", duration: "02:50" },
+  { id: 13, "title": "Burn Rate", duration: "03:30" },
+  { id: 14, "title": "Plus One", duration: "03:12" },
+  { id: 15, "title": "North", duration: "04:45" },
+  { id: 16, "title": "Absolute Zero", duration: "03:58" },
+  { id: 17, "title": "The Ghostwriter (System Reboot)", duration: "05:15" },
 ];
 
 export const MINISTRY_OF_PLENTY_TRACK_LIST: Track[] = [
@@ -104,10 +104,10 @@ export const LIQUIDATION_TRACK_LIST: Track[] = [
   { id: 9, title: "Paper Billionaire", duration: "03:18" },
   { id: 10, title: "Net Positive", duration: "03:05" },
   { id: 11, title: "Compound Interest", duration: "03:55" },
-  { id: 12, title: "Sugarcoat Detector", duration: "03:22" },
-  { id: 13, title: "Back Outside", duration: "02:50" },
-  { id: 14, title: "Blackout Season", duration: "04:15" },
-  { id: 15, title: "Liquidation", duration: "03:40" },
+  { id: 12, "title": "Sugarcoat Detector", duration: "03:22" },
+  { id: 13, "title": "Back Outside", duration: "02:50" },
+  { id: 14, "title": "Blackout Season", duration: "04:15" },
+  { id: 15, "title": "Liquidation", duration: "03:40" },
 ];
 
 export const ALBUM_COVER_URL = "https://i.postimg.cc/jdfN9Gxb/Album-cover.png";
