@@ -12,6 +12,14 @@ interface MajorSection {
   lines: string[];
 }
 
+
+const HIDDEN_SECTION_TITLES = new Set([
+  'HERO SECTION',
+  'THE PROCESS',
+  'DISCOGRAPHY AT A GLANCE',
+  'META TAGS / SEO',
+]);
+
 const slugify = (value: string) =>
   value
     .toLowerCase()
@@ -36,7 +44,8 @@ const parseMajorSections = (copy: string): MajorSection[] => {
   }
 
   if (current) sections.push(current);
-  return sections;
+
+  return sections.filter((section) => !HIDDEN_SECTION_TITLES.has(section.title));
 };
 
 const renderInlineMarkdown = (text: string): React.ReactNode[] => {
@@ -146,6 +155,19 @@ const renderSectionLines = (lines: string[], sectionKey: string) => {
     }
 
     if (line.startsWith('# ')) {
+      continue;
+    }
+
+    const hiddenLinePatterns = [
+      /^\*\*Listen to Farallon:\*\*/,
+      /^\*\*Watch the Visual Archives:\*\*/,
+      /^\*\*Contact:\*\*/,
+      /^\[Links to /,
+      /^Farallon@farallonai\.com$/,
+      /^©\s2025\sWill\sHuggins\s\/\sProject\sFarallon\.\sAll\sRights\sReserved\.$/,
+    ];
+
+    if (hiddenLinePatterns.some((pattern) => pattern.test(line.trim()))) {
       continue;
     }
 
