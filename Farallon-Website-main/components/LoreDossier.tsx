@@ -8,6 +8,26 @@ interface LoreDossierProps {
   content: typeof translations['en']['about']['dossier'];
 }
 
+const renderExpandedLine = (line: string, index: number) => {
+  if (line.startsWith('### ')) {
+    return <h4 key={index} className="text-lg md:text-xl text-cyan-300 font-semibold mt-6">{line.replace('### ', '')}</h4>;
+  }
+
+  if (line.startsWith('## ')) {
+    return <h3 key={index} className="text-xl md:text-2xl text-white font-semibold mt-10">{line.replace('## ', '')}</h3>;
+  }
+
+  if (line.startsWith('# ')) {
+    return <h2 key={index} className="text-2xl md:text-3xl text-white font-bold mt-2">{line.replace('# ', '')}</h2>;
+  }
+
+  if (line.trim() === '') {
+    return <div key={index} className="h-2" />;
+  }
+
+  return <p key={index} className="text-sm md:text-base text-slate-400 leading-7">{line}</p>;
+};
+
 interface WeatherData {
   temperature: number;
   windSpeed: number;
@@ -188,17 +208,23 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
                 {content.quote}
               </p>
 
-              <div className="space-y-6 text-sm md:text-base text-slate-400 leading-7">
-                <p>
-                  {content.p1_1}<strong className="text-white font-normal">{content.p1_2}</strong>{content.p1_3}
-                </p>
-                <p>
-                  {content.p2_1}<span className="text-cyan-300">{content.p2_2}</span>{content.p2_3}
-                </p>
-                <p>
-                  {content.p3}
-                </p>
-              </div>
+              {content.expandedCopy ? (
+                <div className="space-y-1">
+                  {content.expandedCopy.split('\n').map((line, index) => renderExpandedLine(line, index))}
+                </div>
+              ) : (
+                <div className="space-y-6 text-sm md:text-base text-slate-400 leading-7">
+                  <p>
+                    {content.p1_1}<strong className="text-white font-normal">{content.p1_2}</strong>{content.p1_3}
+                  </p>
+                  <p>
+                    {content.p2_1}<span className="text-cyan-300">{content.p2_2}</span>{content.p2_3}
+                  </p>
+                  <p>
+                    {content.p3}
+                  </p>
+                </div>
+              )}
            </div>
 
            <div className="mt-12 flex items-center gap-4">
