@@ -301,12 +301,12 @@ It's not "AI-generated music." It's **human-directed music created through AI to
 
 ## DISCOGRAPHY AT A GLANCE
 
-**MINISTRY OF PLENTY** (February 2025)
+**MINISTRY OF PLENTY** (February 2026)
 - 80s dystopian synth-wave
 - Orwellian themes
 - Surveillance and resistance
 
-**GHOSTWRITER** (2025)
+**GHOSTWRITER** (2026)
 - Frankenstein retelling
 - Creation and consciousness
 - Dark electronic landscapes

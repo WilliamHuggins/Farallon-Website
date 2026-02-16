@@ -24,7 +24,7 @@ const Discography: React.FC = () => {
       "@type": "MusicGroup",
       "name": "Farallon"
     },
-    "datePublished": "2025-02-14",
+    "datePublished": "2026-02-14",
     "image": MINISTRY_OF_PLENTY_COVER_URL,
     "numTracks": 21,
     "track": []
@@ -160,7 +160,7 @@ const Discography: React.FC = () => {
                         </h2>
                         <div className="flex items-center gap-3 text-red-400 font-mono text-sm tracking-widest uppercase">
                           <Calendar size={16} />
-                          <span>Released 2025</span>
+                          <span>Released 2026</span>
                         </div>
                       </div>
 

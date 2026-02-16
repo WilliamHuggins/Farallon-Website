@@ -32,14 +32,14 @@ export const translations = {
       date: "December 21, 2025"
     },
     ministryOfPlenty: {
-      label: "New Album // 2025",
+      label: "New Album // 2026",
       title: "Ministry of Plenty",
       type: "Studio Album",
       description: "An 80's dystopian San Francisco synth-wave journey inspired by 1984. Big Brother is listening to the beat.",
-      date: "February 2025"
+      date: "February 2026"
     },
     ghostwriter: {
-      label: "Released // 2025",
+      label: "Released // 2026",
       title: "Ghostwriter",
       headline: "The Digital Phantom.",
       description: "Ghostwriter is the sound of the machine rewriting its own code.",
@@ -169,14 +169,14 @@ export const translations = {
       date: "21 de Diciembre, 2025"
     },
     ministryOfPlenty: {
-      label: "Nuevo Álbum // 2025",
+      label: "Nuevo Álbum // 2026",
       title: "Ministry of Plenty",
       type: "Álbum de Estudio",
       description: "Un viaje distópico synth-wave a través del estado de vigilancia.",
-      date: "Febrero 2025"
+      date: "Febrero 2026"
     },
     ghostwriter: {
-      label: "Lanzado // 2025",
+      label: "Lanzado // 2026",
       title: "Ghostwriter",
       headline: "El Fantasma Digital Regresa.",
       description: "Ghostwriter es el sonido de la máquina reescribiendo su propio código.",
@@ -281,8 +281,8 @@ export const translations = {
       hero: { initiating: "Bienvenue", subtitle: "Électronique / Ambient / Glitch", cta: "Écouter Maintenant" },
       latest: { label: "Dernière Sortie", title: "Midnight Meridian", type: "Single // 2025", description: "Nouvelle musique pour la nouvelle année. Disponible maintenant." },
       liquidation: { label: "Surprise Drop // 2025", title: "Liquidation", type: "Album Pop-Up", description: "Un album vibrant et nocturne pour la nouvelle année.", date: "21 Décembre 2025" },
-      ministryOfPlenty: { label: "Nouvel Album // 2025", title: "Ministry of Plenty", type: "Album Studio", description: "Un voyage dystopique.", date: "Février 2025" },
-      ghostwriter: { label: "Sorti // 2025", title: "Ghostwriter", headline: "Le Fantôme Numérique.", description: "Ghostwriter est le son de la machine.", body: "Le nouvel album de Farallon.", punchline: "Elle est l'auteur." },
+      ministryOfPlenty: { label: "Nouvel Album // 2026", title: "Ministry of Plenty", type: "Album Studio", description: "Un voyage dystopique.", date: "Février 2026" },
+      ghostwriter: { label: "Sorti // 2026", title: "Ghostwriter", headline: "Le Fantôme Numérique.", description: "Ghostwriter est le son de la machine.", body: "Le nouvel album de Farallon.", punchline: "Elle est l'auteur." },
       offline: { title: "Session Offline", subtitle: "Unplugged", status: "Disponible", description: "Enregistrements bruts." },
       about: { title: "À Propos de Farallon", origin: "Biographie", dossier: { identityTitle: "Profil", subjectName: "Farallon", build: "Artiste", baseOpsLabel: "Lieu", baseOpsValue: "San Francisco", ageLabel: "Activité", ageValue: "2024+", functionLabel: "Genre", functionValue: "Électronique", deprecated: "", statusLabel: "Statut", statusValue: "Actif", warningTitle: "Note", warningText: "Farallon explore l'intersection de l'homme et de la machine.", logTitle: "Biographie", voiceLogLabel: "Intro", quote: "\"Ils ont nourri la machine...\"", p1_1: "Farallon est...", p1_2: "une mémoire...", p1_3: "...", p2_1: "...", p2_2: "...", p2_3: "...", p3: "...", endLog: "Fin" } },
       album: { catalog: "Catalogue", runtimeLabel: "Durée", inputStream: "Écouter", visualTransmission: "Vidéo" },
@@ -297,8 +297,8 @@ export const translations = {
       hero: { initiating: "ようこそ", subtitle: "エレクトロニック", cta: "聴く" },
       latest: { label: "最新", title: "Midnight Meridian", type: "シングル", description: "新曲。" },
       liquidation: { label: "サプライズ // 2025", title: "Liquidation", type: "アルバム", description: "新作。", date: "2025" },
-      ministryOfPlenty: { label: "ニューアルバム // 2025", title: "Ministry of Plenty", type: "スタジオアルバム", description: "ディストピアなシンセウェーブの旅。", date: "2025" },
-      ghostwriter: { label: "リリース済み // 2025", title: "Ghostwriter", headline: "デジタルファントム。", description: "機械の音。", body: "ニューアルバム。", punchline: "彼女は作者。" },
+      ministryOfPlenty: { label: "ニューアルバム // 2026", title: "Ministry of Plenty", type: "スタジオアルバム", description: "ディストピアなシンセウェーブの旅。", date: "2026" },
+      ghostwriter: { label: "リリース済み // 2026", title: "Ghostwriter", headline: "デジタルファントム。", description: "機械の音。", body: "ニューアルバム。", punchline: "彼女は作者。" },
       offline: { title: "オフライン", subtitle: "ライブ", status: "配信中", description: "..." },
       about: { title: "Farallonについて", origin: "バイオ", dossier: { identityTitle: "プロフ", subjectName: "Farallon", build: "アーティスト", baseOpsLabel: "拠点", baseOpsValue: "SF", ageLabel: "期間", ageValue: "2024+", functionLabel: "ジャンル", functionValue: "Electro", deprecated: "", statusLabel: "ステータス", statusValue: "Active", warningTitle: "Note", warningText: "...", logTitle: "Bio", voiceLogLabel: "Intro", quote: "...", p1_1: "...", p1_2: "...", p1_3: "...", p2_1: "...", p2_2: "...", p2_3: "...", p3: "...", endLog: "End" } },
       album: { catalog: "カタログ", runtimeLabel: "時間", inputStream: "聴く", visualTransmission: "ビデオ" },
@@ -313,8 +313,8 @@ export const translations = {
       hero: { initiating: "欢迎", subtitle: "电子", cta: "收听" },
       latest: { label: "最新", title: "Midnight Meridian", type: "单曲", description: "新音乐。" },
       liquidation: { label: "惊喜 // 2025", title: "Liquidation", type: "专辑", description: "...", date: "2025" },
-      ministryOfPlenty: { label: "新专辑 // 2025", title: "Ministry of Plenty", type: "录音室专辑", description: "反乌托邦合成波之旅。", date: "2025" },
-      ghostwriter: { label: "已发布 // 2025", title: "Ghostwriter", headline: "数字幽灵。", description: "机器的声音。", body: "新专辑。", punchline: "她是作者。" },
+      ministryOfPlenty: { label: "新专辑 // 2026", title: "Ministry of Plenty", type: "录音室专辑", description: "反乌托邦合成波之旅。", date: "2026" },
+      ghostwriter: { label: "已发布 // 2026", title: "Ghostwriter", headline: "数字幽灵。", description: "机器的声音。", body: "新专辑。", punchline: "她是作者。" },
       offline: { title: "离线", subtitle: "不插电", status: "上线", description: "..." },
       about: { title: "关于", origin: "传记", dossier: { identityTitle: "资料", subjectName: "Farallon", build: "艺术家", baseOpsLabel: "地点", baseOpsValue: "SF", ageLabel: "活跃", ageValue: "2024+", functionLabel: "流派", functionValue: "电子", deprecated: "", statusLabel: "状态", statusValue: "活跃", warningTitle: "注", warningText: "...", logTitle: "传记", voiceLogLabel: "音频", quote: "...", p1_1: "...", p1_2: "...", p1_3: "...", p2_1: "...", p2_2: "...", p2_3: "...", p3: "...", endLog: "结束" } },
       album: { catalog: "目录", runtimeLabel: "时长", inputStream: "收听", visualTransmission: "视频" },

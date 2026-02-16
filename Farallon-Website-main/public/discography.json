@@ -6,8 +6,8 @@
     {
       "title": "Ministry of Plenty",
       "type": "Album",
-      "year": 2025,
-      "date": "2025-02-14",
+      "year": 2026,
+      "date": "2026-02-14",
       "tracks": [
         { "id": 1, "title": "Fogline Penthouse", "duration": "03:12" },
         { "id": 2, "title": "Terms & Conditions", "duration": "03:45" },
@@ -35,7 +35,7 @@
     {
       "title": "Ghostwriter",
       "type": "Album",
-      "year": 2025,
+      "year": 2026,
       "status": "Released",
       "tracks": [
         { "id": 1, "title": "Spare Parts", "duration": "03:42" },
