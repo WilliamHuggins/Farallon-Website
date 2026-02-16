@@ -11,6 +11,8 @@ EXPECTED_PROJECT="farallon-website"
 EXPECTED_SCOPE="will-hs-projects"
 EXPECTED_PRODUCTION_URLS=(
   "farallonai.com"
+  "www.farallonai.com"
+  "farallon-website.vercel.app"
   "farallon-website-will-hs-projects.vercel.app"
 )
 
@@ -21,6 +23,7 @@ if [[ -n "$PROJECT_NAME" && "$PROJECT_NAME" != "$EXPECTED_PROJECT" ]]; then
   echo "[verify-vercel-target] ERROR: Wrong Vercel project name."
   echo "  expected: $EXPECTED_PROJECT"
   echo "  got:      $PROJECT_NAME"
+  echo "  expected scope/team: $EXPECTED_SCOPE"
   exit 1
 fi
 
@@ -34,7 +37,7 @@ if [[ -n "$PRODUCTION_URL" ]]; then
   done
 
   if [[ "$ok" != "true" ]]; then
-    echo "[verify-vercel-target] ERROR: This build is linked to an unexpected production URL."
+    echo "[verify-vercel-target] ERROR: Unexpected production URL for this project context."
     echo "  expected one of: ${EXPECTED_PRODUCTION_URLS[*]}"
     echo "  got:             $PRODUCTION_URL"
     echo "  expected scope:  $EXPECTED_SCOPE"

@@ -31,6 +31,8 @@ If Root Directory is repository root, use root `vercel.json`.
 
 Builds now include a hard guard script (`scripts/verify-vercel-target.sh`) that fails Vercel builds when the deployment context does not match the expected Farallon project target.
 
+Accepted production URLs for guard checks: `farallonai.com`, `www.farallonai.com`, and `farallon-website.vercel.app`.
+
 To relink locally (CLI):
 
 ```bash
