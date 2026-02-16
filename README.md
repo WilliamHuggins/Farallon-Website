@@ -29,6 +29,8 @@ This repo should deploy to:
 If your Vercel project Root Directory is set to `Farallon-Website-main`, keep using `Farallon-Website-main/vercel.json`.
 If Root Directory is repository root, use root `vercel.json`.
 
+Builds now include a hard guard script (`scripts/verify-vercel-target.sh`) that fails Vercel builds when the deployment context does not match the expected Farallon project target.
+
 To relink locally (CLI):
 
 ```bash

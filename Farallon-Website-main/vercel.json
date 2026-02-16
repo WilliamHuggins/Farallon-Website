@@ -3,7 +3,7 @@
   "framework": "vite",
   "name": "farallon-website",
   "installCommand": "npm install",
-  "buildCommand": "npm run build",
+  "buildCommand": "bash ../scripts/verify-vercel-target.sh && npm run build",
   "outputDirectory": "dist",
   "rewrites": [
     {
