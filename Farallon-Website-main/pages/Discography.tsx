@@ -60,7 +60,6 @@ const Discography: React.FC = () => {
 
           {/* ITEM 0: MINISTRY OF PLENTY (NEW ALBUM) */}
           <section className="relative group">
-             {/* Background Glow */}
              <div className="absolute -inset-4 bg-gradient-to-tr from-teal-400/10 to-indigo-500/10 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-1000"></div>
              
              <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-teal-500/20 overflow-hidden">
@@ -135,7 +134,6 @@ const Discography: React.FC = () => {
 
           {/* ITEM 1: GHOSTWRITER (NOW RELEASED) */}
           <section className="relative group">
-             {/* Background Glow */}
              <div className="absolute -inset-4 bg-gradient-to-r from-red-500/10 to-purple-500/10 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
              
              <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-red-500/20 overflow-hidden">
@@ -203,9 +201,6 @@ const Discography: React.FC = () => {
 
           {/* ITEM 2: LIQUIDATION (POP-UP) */}
           <section className="relative group">
-             {/* Background Glow */}
-             <div className="absolute -inset-4 bg-gradient-to-tr from-cyan-400/10 to-indigo-500/10 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-1000"></div>
-             
              <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-indigo-500/20 overflow-hidden">
                 <div className="absolute top-0 right-0 p-4">
                    <div className="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 rounded-full border border-indigo-500/30">
@@ -266,7 +261,6 @@ const Discography: React.FC = () => {
                 {/* Visuals */}
                 <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0 lg:sticky lg:top-32 h-fit">
                    <div className="relative group">
-                     <div className="absolute inset-0 bg-indigo-500/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                      <img 
                        src={LATEST_SINGLE_COVER_URL} 
                        alt="Midnight Meridian Cover" 
@@ -291,7 +285,7 @@ const Discography: React.FC = () => {
                    </div>
 
                    <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
-                     <iframe style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/album/3bY2z5jfysH90LVzeVCCrT?utm_source=generator" width="100%" height="352" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                     <iframe style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/album/135UCYCrjdkg56Khz9NiAt?utm_source=generator" width="100%" height="352" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                    </div>
                 </div>
              </div>
@@ -305,7 +299,6 @@ const Discography: React.FC = () => {
                 {/* Visuals */}
                 <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0 lg:sticky lg:top-32 h-fit">
                    <div className="relative group">
-                     <div className="absolute inset-0 bg-cyan-500/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                      <img 
                        src={ALBUM_COVER_URL} 
                        alt="Heavy Water Album Cover" 
@@ -343,7 +336,6 @@ const Discography: React.FC = () => {
                 {/* Visuals */}
                 <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0 lg:sticky lg:top-32 h-fit">
                    <div className="relative group">
-                     <div className="absolute inset-0 bg-orange-500/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                      <img 
                        src={SPANISH_ALBUM_COVER_URL} 
                        alt="Edición en Español Cover" 
@@ -381,7 +373,6 @@ const Discography: React.FC = () => {
                 {/* Visuals */}
                 <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0 lg:sticky lg:top-32 h-fit">
                    <div className="relative group">
-                     <div className="absolute inset-0 bg-purple-500/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                      <img 
                        src={OFFLINE_SESSION_COVER_URL} 
                        alt="Offline Session Cover" 

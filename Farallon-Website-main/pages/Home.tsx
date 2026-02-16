@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail } from 'lucide-react';
-import { ALBUM_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL } from '../constants';
+import { MINISTRY_OF_PLENTY_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
 import SEO from '../components/SEO';
 
@@ -268,54 +268,7 @@ const Home: React.FC = () => {
          </div>
       </section>
 
-      {/* 5. DEBUT ALBUM: HEAVY WATER (Existing Section) */}
-      <section className="py-20 bg-white dark:bg-black/60 border-b border-slate-100 dark:border-white/5 transition-colors">
-         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
-            {/* Image Left */}
-            <div className="w-full md:w-1/2 relative group">
-               <div className="absolute inset-0 bg-gradient-to-bl from-purple-400 to-cyan-500 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
-               <img 
-                 src={ALBUM_COVER_URL} 
-                 alt="Heavy Water Album" 
-                 className="relative z-10 w-full rounded-[3rem] shadow-ethereal border border-white/20 transform group-hover:scale-[1.02] transition-transform duration-700"
-               />
-            </div>
-            {/* Content Right */}
-            <div className="w-full md:w-1/2">
-               <div className="flex items-center gap-2 mb-6">
-                  <Disc className="text-purple-500" size={20} />
-                  <span className="font-mono text-xs font-bold text-purple-500 uppercase tracking-[0.3em]">Now Streaming</span>
-               </div>
-               <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-6 leading-[0.9]">
-                  HEAVY WATER
-               </h2>
-               <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
-                  The debut 14-track album featuring "Sodium Glare" and "The Architect".
-               </p>
-               
-               {/* Spotify Embed for Heavy Water - Expanded Size */}
-               <div className="mb-10 w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
-                 <iframe 
-                   style={{borderRadius: '12px'}} 
-                   src="https://open.spotify.com/embed/album/5nQY0x78mVxlL2C5ORojKC?utm_source=generator" 
-                   width="100%" 
-                   height="352" 
-                   frameBorder="0" 
-                   allowFullScreen 
-                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                   loading="lazy"
-                   title="Heavy Water Spotify Embed"
-                 ></iframe>
-               </div>
 
-               <div className="flex flex-wrap gap-4">
-                  <Link to="/discography" className="h-12 px-8 bg-transparent border border-text-main-light dark:border-white text-text-main-light dark:text-white rounded-full font-bold flex items-center justify-center hover:bg-text-main-light hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
-                     View Discography
-                  </Link>
-               </div>
-            </div>
-         </div>
-      </section>
 
     </div>
   );
