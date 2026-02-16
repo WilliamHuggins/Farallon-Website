@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "name": "farallon-website",
+  "installCommand": "cd Farallon-Website-main && npm install",
+  "buildCommand": "cd Farallon-Website-main && npm run build",
+  "outputDirectory": "Farallon-Website-main/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

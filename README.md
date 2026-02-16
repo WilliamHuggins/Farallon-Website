@@ -18,3 +18,19 @@ View your app in AI Studio: https://ai.studio/apps/drive/1L_UfUV5oje7J6do6EC-dBB
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Vercel deployment target
+
+This repo should deploy to:
+
+- `will-hs-projects/farallon-website`
+- https://vercel.com/will-hs-projects/farallon-website
+
+If your Vercel project Root Directory is set to `Farallon-Website-main`, keep using `Farallon-Website-main/vercel.json`.
+If Root Directory is repository root, use root `vercel.json`.
+
+To relink locally (CLI):
+
+```bash
+vercel link --scope will-hs-projects --project farallon-website
+```
