@@ -234,7 +234,7 @@ const Home: React.FC = () => {
             <div className="w-full md:w-1/2">
                <div className="flex items-center gap-2 mb-6">
                   <Disc className="text-teal-500" size={20} />
-                  <span className="font-mono text-xs font-bold text-teal-500 uppercase tracking-[0.3em]">New Album // 2025</span>
+                  <span className="font-mono text-xs font-bold text-teal-500 uppercase tracking-[0.3em]">New Album // 2026</span>
                </div>
                <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-6 leading-[0.9]">
                   MINISTRY OF PLENTY
