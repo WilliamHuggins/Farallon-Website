@@ -9,6 +9,7 @@ fi
 
 EXPECTED_PROJECT="farallon-website"
 EXPECTED_SCOPE="will-hs-projects"
+EXPECTED_PRODUCTION_BRANCH="main"
 EXPECTED_PRODUCTION_URLS=(
   "farallonai.com"
   "www.farallonai.com"
@@ -18,6 +19,8 @@ EXPECTED_PRODUCTION_URLS=(
 
 PROJECT_NAME="${VERCEL_PROJECT_NAME:-}"
 PRODUCTION_URL="${VERCEL_PROJECT_PRODUCTION_URL:-}"
+VERCEL_ENV_NAME="${VERCEL_ENV:-}"
+COMMIT_REF="${VERCEL_GIT_COMMIT_REF:-}"
 
 if [[ -n "$PROJECT_NAME" && "$PROJECT_NAME" != "$EXPECTED_PROJECT" ]]; then
   echo "[verify-vercel-target] ERROR: Wrong Vercel project name."
@@ -43,6 +46,15 @@ if [[ -n "$PRODUCTION_URL" ]]; then
     echo "  expected scope:  $EXPECTED_SCOPE"
     exit 1
   fi
+fi
+
+# Hard-stop accidental production deploys from feature branches.
+if [[ "$VERCEL_ENV_NAME" == "production" && -n "$COMMIT_REF" && "$COMMIT_REF" != "$EXPECTED_PRODUCTION_BRANCH" ]]; then
+  echo "[verify-vercel-target] ERROR: Production deploy attempted from non-production branch."
+  echo "  expected branch: $EXPECTED_PRODUCTION_BRANCH"
+  echo "  got branch:      $COMMIT_REF"
+  echo "  action: merge/promote to main before expecting farallonai.com to update."
+  exit 1
 fi
 
 echo "[verify-vercel-target] OK: Deployment context matches expected Vercel target (${EXPECTED_SCOPE}/${EXPECTED_PROJECT})."
