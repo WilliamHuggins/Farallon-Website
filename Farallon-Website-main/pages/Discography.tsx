@@ -3,16 +3,10 @@
 import React, { useEffect, useState } from 'react';
 import { translations } from '../translations';
 import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, MINISTRY_OF_PLENTY_TRACK_LIST } from '../constants';
-import { Calendar, Mic2, AlertCircle, Music, Zap, Globe, Disc, ChevronDown, ChevronUp } from 'lucide-react';
+import { Calendar, Mic2, Music, Zap, Disc, ChevronDown, ChevronUp } from 'lucide-react';
 import SEO from '../components/SEO';
 import TrackItem from '../components/TrackItem';
 
-const platforms = [
-  { name: 'Spotify', url: 'https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr' },
-  { name: 'Apple Music', url: 'https://music.apple.com/us/artist/farallon/1858060937' },
-  { name: 'YouTube Music', url: 'https://music.youtube.com/channel/UCcmcBlwZK6AJy1XH3pvHFFA' },
-  { name: 'Amazon Music', url: 'https://music.amazon.com/artists/B07QMVM288/farallon' },
-];
 
 const Discography: React.FC = () => {
   const t = translations['en'];
@@ -66,7 +60,6 @@ const Discography: React.FC = () => {
 
           {/* ITEM 0: MINISTRY OF PLENTY (NEW ALBUM) */}
           <section className="relative group">
-             {/* Background Glow */}
              <div className="absolute -inset-4 bg-gradient-to-tr from-teal-400/10 to-indigo-500/10 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-1000"></div>
              
              <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-teal-500/20 overflow-hidden">
@@ -110,26 +103,19 @@ const Discography: React.FC = () => {
                           {t.ministryOfPlenty.description}
                         </p>
                         
-                        {/* Since it's new, maybe no embed yet, or use generic placeholder until embed is ready. Assuming user wants to promote it "out now", providing generic action buttons. */}
-                        <div className="flex flex-wrap gap-4 pt-4">
-                           <a 
-                             href="https://open.spotify.com/artist/2klqZ4U3Rpi099apjZabkr" 
-                             target="_blank" 
-                             rel="noreferrer"
-                             className="px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-teal-500/25 flex items-center gap-2 w-fit"
-                           >
-                              <Music size={18} />
-                              Stream on Spotify
-                           </a>
-                           <a 
-                             href="https://music.apple.com/us/artist/farallon/1858060937" 
-                             target="_blank" 
-                             rel="noreferrer"
-                             className="px-8 py-4 bg-white dark:bg-white/10 text-black dark:text-white border border-slate-200 dark:border-white/20 hover:bg-slate-50 dark:hover:bg-white/20 rounded-full font-bold transition-all flex items-center gap-2 w-fit"
-                           >
-                              <Music size={18} />
-                              Apple Music
-                           </a>
+                        <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10 mt-6">
+                             <iframe 
+                                data-testid="embed-iframe"
+                                style={{borderRadius: '12px'}} 
+                                src="https://open.spotify.com/embed/album/6Iq3SvlEQW9HcQUeU1eBq7?utm_source=generator&theme=0" 
+                                width="100%" 
+                                height="352" 
+                                frameBorder="0" 
+                                allowFullScreen 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy"
+                                title="Ministry of Plenty Album Spotify Embed"
+                             ></iframe>
                         </div>
                       </div>
 
@@ -148,7 +134,6 @@ const Discography: React.FC = () => {
 
           {/* ITEM 1: GHOSTWRITER (NOW RELEASED) */}
           <section className="relative group">
-             {/* Background Glow */}
              <div className="absolute -inset-4 bg-gradient-to-r from-red-500/10 to-purple-500/10 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
              
              <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-red-500/20 overflow-hidden">
@@ -187,7 +172,7 @@ const Discography: React.FC = () => {
                         <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10 mt-6">
                              <iframe 
                                 style={{borderRadius: '12px'}} 
-                                src="https://open.spotify.com/embed/album/135UCYCrjdkg56Khz9NiAt?utm_source=generator" 
+                                src="https://open.spotify.com/embed/album/3bY2z5jfysH90LVzeVCCrT?utm_source=generator" 
                                 width="100%" 
                                 height="352" 
                                 frameBorder="0" 
@@ -200,7 +185,7 @@ const Discography: React.FC = () => {
 
                       <div className="pt-4">
                          <a 
-                           href="https://open.spotify.com/album/135UCYCrjdkg56Khz9NiAt" 
+                           href="https://open.spotify.com/album/3bY2z5jfysH90LVzeVCCrT" 
                            target="_blank" 
                            rel="noreferrer"
                            className="px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-red-500/25 flex items-center gap-2 w-fit"
@@ -216,9 +201,6 @@ const Discography: React.FC = () => {
 
           {/* ITEM 2: LIQUIDATION (POP-UP) */}
           <section className="relative group">
-             {/* Background Glow */}
-             <div className="absolute -inset-4 bg-gradient-to-tr from-cyan-400/10 to-indigo-500/10 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-1000"></div>
-             
              <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-indigo-500/20 overflow-hidden">
                 <div className="absolute top-0 right-0 p-4">
                    <div className="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 rounded-full border border-indigo-500/30">
@@ -279,7 +261,6 @@ const Discography: React.FC = () => {
                 {/* Visuals */}
                 <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0 lg:sticky lg:top-32 h-fit">
                    <div className="relative group">
-                     <div className="absolute inset-0 bg-indigo-500/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                      <img 
                        src={LATEST_SINGLE_COVER_URL} 
                        alt="Midnight Meridian Cover" 
@@ -318,7 +299,6 @@ const Discography: React.FC = () => {
                 {/* Visuals */}
                 <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0 lg:sticky lg:top-32 h-fit">
                    <div className="relative group">
-                     <div className="absolute inset-0 bg-cyan-500/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                      <img 
                        src={ALBUM_COVER_URL} 
                        alt="Heavy Water Album Cover" 
@@ -356,7 +336,6 @@ const Discography: React.FC = () => {
                 {/* Visuals */}
                 <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0 lg:sticky lg:top-32 h-fit">
                    <div className="relative group">
-                     <div className="absolute inset-0 bg-orange-500/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                      <img 
                        src={SPANISH_ALBUM_COVER_URL} 
                        alt="Edición en Español Cover" 
@@ -394,7 +373,6 @@ const Discography: React.FC = () => {
                 {/* Visuals */}
                 <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0 lg:sticky lg:top-32 h-fit">
                    <div className="relative group">
-                     <div className="absolute inset-0 bg-purple-500/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                      <img 
                        src={OFFLINE_SESSION_COVER_URL} 
                        alt="Offline Session Cover" 

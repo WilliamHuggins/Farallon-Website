@@ -33,7 +33,7 @@ export const translations = {
       label: "New Album // 2025",
       title: "Ministry of Plenty",
       type: "Studio Album",
-      description: "A dystopian synth-wave journey through the surveillance state. Big Brother is listening to the beat.",
+      description: "An 80's dystopian San Francisco synth-wave journey inspired by 1984. Big Brother is listening to the beat.",
       date: "February 2025"
     },
     ghostwriter: {

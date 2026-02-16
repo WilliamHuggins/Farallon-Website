@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail, Zap, Radio } from 'lucide-react';
-import { LIQUIDATION_COVER_URL, ALBUM_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, GHOSTWRITER_COVER_URL } from '../constants';
+import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail } from 'lucide-react';
+import { MINISTRY_OF_PLENTY_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
 import SEO from '../components/SEO';
 
@@ -110,12 +110,12 @@ const Home: React.FC = () => {
            <div className="animate-fade-in-up flex flex-col items-center">
               
               {/* Artist Name - Massive for Recognition */}
-              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display tracking-[0.2em] text-white uppercase mb-4 drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-retro tracking-[0.25em] text-slate-100 uppercase mb-4 drop-shadow-[0_0_20px_rgba(147,197,253,0.55)]">
                  FARALLON
               </h2>
               
               {/* Album Name - Massive, Impactful */}
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 via-white to-cyan-300 mb-8 drop-shadow-[0_4px_25px_rgba(0,0,0,1)]">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-[0.03em] font-retro text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-cyan-200 to-fuchsia-300 mb-8 drop-shadow-[0_0_28px_rgba(56,189,248,0.45)]">
                 MINISTRY OF PLENTY
               </h1>
               
@@ -218,29 +218,29 @@ const Home: React.FC = () => {
          </div>
       </section>
 
-      {/* 4. FEATURED RELEASE: GHOSTWRITER (Was Liquidation) */}
+      {/* 4. FEATURED RELEASE: MINISTRY OF PLENTY */}
       <section className="py-20 bg-white dark:bg-black/40 border-y border-slate-100 dark:border-white/5 transition-colors">
          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
             {/* Image Left */}
             <div className="w-full md:w-1/2 relative group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-red-500 to-purple-600 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
+               <div className="absolute inset-0 bg-gradient-to-tr from-teal-500 to-indigo-600 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
                <img 
-                 src={GHOSTWRITER_COVER_URL} 
-                 alt="Ghostwriter Album" 
+                 src={MINISTRY_OF_PLENTY_COVER_URL} 
+                 alt="Ministry of Plenty Album" 
                  className="relative z-10 w-full rounded-[3rem] shadow-ethereal border border-white/20 transform group-hover:scale-[1.02] transition-transform duration-700"
                />
             </div>
             {/* Content Right */}
             <div className="w-full md:w-1/2">
                <div className="flex items-center gap-2 mb-6">
-                  <Radio className="text-red-500" size={20} />
-                  <span className="font-mono text-xs font-bold text-red-500 uppercase tracking-[0.3em]">Released // 2025</span>
+                  <Disc className="text-teal-500" size={20} />
+                  <span className="font-mono text-xs font-bold text-teal-500 uppercase tracking-[0.3em]">New Album // 2025</span>
                </div>
                <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-6 leading-[0.9]">
-                  GHOSTWRITER
+                  MINISTRY OF PLENTY
                </h2>
                <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
-                  The sophomore studio album featuring 'High Voltage'. A haunting collision of Gothic horror and Silicon Valley paranoia.
+                  A dystopian synth journey through an 80&apos;s San Francisco under total surveillance, inspired by Orwell&apos;s 1984.
                </p>
                
                {/* Spotify Album Embed */}
@@ -248,14 +248,14 @@ const Home: React.FC = () => {
                  <iframe 
                    data-testid="embed-iframe" 
                    style={{borderRadius: '12px'}} 
-                   src="https://open.spotify.com/embed/album/135UCYCrjdkg56Khz9NiAt?utm_source=generator" 
+                   src="https://open.spotify.com/embed/album/6Iq3SvlEQW9HcQUeU1eBq7?utm_source=generator&theme=0" 
                    width="100%" 
                    height="352" 
                    frameBorder="0" 
                    allowFullScreen 
                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                    loading="lazy"
-                   title="Ghostwriter Album Spotify Embed"
+                   title="Ministry of Plenty Album Spotify Embed"
                  ></iframe>
                </div>
 
@@ -268,54 +268,7 @@ const Home: React.FC = () => {
          </div>
       </section>
 
-      {/* 5. DEBUT ALBUM: HEAVY WATER (Existing Section) */}
-      <section className="py-20 bg-white dark:bg-black/60 border-b border-slate-100 dark:border-white/5 transition-colors">
-         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
-            {/* Image Left */}
-            <div className="w-full md:w-1/2 relative group">
-               <div className="absolute inset-0 bg-gradient-to-bl from-purple-400 to-cyan-500 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
-               <img 
-                 src={ALBUM_COVER_URL} 
-                 alt="Heavy Water Album" 
-                 className="relative z-10 w-full rounded-[3rem] shadow-ethereal border border-white/20 transform group-hover:scale-[1.02] transition-transform duration-700"
-               />
-            </div>
-            {/* Content Right */}
-            <div className="w-full md:w-1/2">
-               <div className="flex items-center gap-2 mb-6">
-                  <Disc className="text-purple-500" size={20} />
-                  <span className="font-mono text-xs font-bold text-purple-500 uppercase tracking-[0.3em]">Now Streaming</span>
-               </div>
-               <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-6 leading-[0.9]">
-                  HEAVY WATER
-               </h2>
-               <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
-                  The debut 14-track album featuring "Sodium Glare" and "The Architect".
-               </p>
-               
-               {/* Spotify Embed for Heavy Water - Expanded Size */}
-               <div className="mb-10 w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
-                 <iframe 
-                   style={{borderRadius: '12px'}} 
-                   src="https://open.spotify.com/embed/album/5nQY0x78mVxlL2C5ORojKC?utm_source=generator" 
-                   width="100%" 
-                   height="352" 
-                   frameBorder="0" 
-                   allowFullScreen 
-                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                   loading="lazy"
-                   title="Heavy Water Spotify Embed"
-                 ></iframe>
-               </div>
 
-               <div className="flex flex-wrap gap-4">
-                  <Link to="/discography" className="h-12 px-8 bg-transparent border border-text-main-light dark:border-white text-text-main-light dark:text-white rounded-full font-bold flex items-center justify-center hover:bg-text-main-light hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
-                     View Discography
-                  </Link>
-               </div>
-            </div>
-         </div>
-      </section>
 
     </div>
   );

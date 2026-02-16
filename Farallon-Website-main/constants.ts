@@ -116,7 +116,7 @@ export const OFFLINE_SESSION_COVER_URL = "https://i.postimg.cc/DZQLSfZB/FARALLON
 export const GHOSTWRITER_COVER_URL = "https://i.postimg.cc/Jh8Y3p9w/Untitled_design.png";
 export const SPANISH_ALBUM_COVER_URL = "https://i.postimg.cc/W1ZX3ryp/Untitled-design-(2).png";
 export const LIQUIDATION_COVER_URL = "https://i.postimg.cc/vZGS2z8r/Untitled-design-(5).png";
-export const MINISTRY_OF_PLENTY_COVER_URL = "https://i.postimg.cc/Zq7vfmfC/Untitled-design-(4).png";
+export const MINISTRY_OF_PLENTY_COVER_URL = "https://i.postimg.cc/RVpwS3L9/Untitled-design-(1).png";
 
 export const GALLERY_IMAGES = [
   { id: 1, url: "https://i.postimg.cc/05D7KPvz/Golden-Gate-Bridge.png", caption: "SECTOR_01 // GOLDEN_GATE_BRIDGE", alt: "Golden Gate Bridge in Fog" },
@@ -136,4 +136,23 @@ export const GALLERY_IMAGES = [
   { id: 16, url: "https://i.postimg.cc/NMZZSY9L/Farallon-North-Beach.png", caption: "SECTOR_16 // NORTH_BEACH_REDUX", alt: "North Beach" },
   { id: 17, url: "https://i.postimg.cc/ZRXX2ZBw/Farallon-Palace-of-FIne-Arts.png", caption: "SECTOR_17 // PALACE_MEMORY_FILE", alt: "Palace of Fine Arts" },
   { id: 18, url: "https://i.postimg.cc/63FFgw2g/Farallon-Record-Shop.png", caption: "SECTOR_18 // VINYL_ARCHIVE_NODE", alt: "Record Shop" },
+  { id: 19, url: "https://i.postimg.cc/3NYbTLHN/Chat-GPT-Image-Feb-15-2026-06-42-49-PM.png", caption: "SECTOR_19 // FEB2026_ARCHIVE_01", alt: "Farallon February 2026 Archive 01" },
+  { id: 20, url: "https://i.postimg.cc/C5S6gvVK/Chat-GPT-Image-Feb-15-2026-06-42-50-PM.png", caption: "SECTOR_20 // FEB2026_ARCHIVE_02", alt: "Farallon February 2026 Archive 02" },
+  { id: 21, url: "https://i.postimg.cc/7hwQkByY/Chat-GPT-Image-Feb-15-2026-06-42-52-PM.png", caption: "SECTOR_21 // FEB2026_ARCHIVE_03", alt: "Farallon February 2026 Archive 03" },
+  { id: 22, url: "https://i.postimg.cc/sxs0rnRj/Chat-GPT-Image-Feb-15-2026-06-42-54-PM.png", caption: "SECTOR_22 // FEB2026_ARCHIVE_04", alt: "Farallon February 2026 Archive 04" },
+  { id: 23, url: "https://i.postimg.cc/4ysFg8TZ/Chat-GPT-Image-Feb-15-2026-06-43-15-PM.png", caption: "SECTOR_23 // FEB2026_ARCHIVE_05", alt: "Farallon February 2026 Archive 05" },
+  { id: 24, url: "https://i.postimg.cc/4ysFg8Tg/Chat-GPT-Image-Feb-15-2026-06-43-38-PM.png", caption: "SECTOR_24 // FEB2026_ARCHIVE_06", alt: "Farallon February 2026 Archive 06" },
+  { id: 25, url: "https://i.postimg.cc/J0MdLTWW/Chat-GPT-Image-Feb-15-2026-06-44-00-PM.png", caption: "SECTOR_25 // FEB2026_ARCHIVE_07", alt: "Farallon February 2026 Archive 07" },
+  { id: 26, url: "https://i.postimg.cc/mkB6sdGf/Chat-GPT-Image-Feb-15-2026-06-44-12-PM.png", caption: "SECTOR_26 // FEB2026_ARCHIVE_08", alt: "Farallon February 2026 Archive 08" },
+  { id: 27, url: "https://i.postimg.cc/Xq4Db26R/Chat-GPT-Image-Feb-15-2026-06-44-38-PM.png", caption: "SECTOR_27 // FEB2026_ARCHIVE_09", alt: "Farallon February 2026 Archive 09" },
+  { id: 28, url: "https://i.postimg.cc/nrpwJdf6/Chat-GPT-Image-Feb-15-2026-06-44-58-PM.png", caption: "SECTOR_28 // FEB2026_ARCHIVE_10", alt: "Farallon February 2026 Archive 10" },
+  { id: 29, url: "https://i.postimg.cc/mkB6sdWK/Chat-GPT-Image-Feb-15-2026-06-45-38-PM.png", caption: "SECTOR_29 // FEB2026_ARCHIVE_11", alt: "Farallon February 2026 Archive 11" },
+  { id: 30, url: "https://i.postimg.cc/wMgbpWYG/Chat-GPT-Image-Feb-15-2026-06-45-51-PM.png", caption: "SECTOR_30 // FEB2026_ARCHIVE_12", alt: "Farallon February 2026 Archive 12" },
+  { id: 31, url: "https://i.postimg.cc/QChn36Zz/Chat-GPT-Image-Feb-15-2026-06-45-55-PM.png", caption: "SECTOR_31 // FEB2026_ARCHIVE_13", alt: "Farallon February 2026 Archive 13" },
+  { id: 32, url: "https://i.postimg.cc/Zn4DSfzf/Chat-GPT-Image-Feb-15-2026-06-46-16-PM.png", caption: "SECTOR_32 // FEB2026_ARCHIVE_14", alt: "Farallon February 2026 Archive 14" },
+  { id: 33, url: "https://i.postimg.cc/GtdSCMnS/Chat-GPT-Image-Feb-15-2026-06-46-30-PM.png", caption: "SECTOR_33 // FEB2026_ARCHIVE_15", alt: "Farallon February 2026 Archive 15" },
+  { id: 34, url: "https://i.postimg.cc/d18SpbgM/Chat-GPT-Image-Feb-15-2026-06-46-45-PM.png", caption: "SECTOR_34 // FEB2026_ARCHIVE_16", alt: "Farallon February 2026 Archive 16" },
+  { id: 35, url: "https://i.postimg.cc/gJvBQCQf/Chat-GPT-Image-Feb-15-2026-06-47-00-PM.png", caption: "SECTOR_35 // FEB2026_ARCHIVE_17", alt: "Farallon February 2026 Archive 17" },
+  { id: 36, url: "https://i.postimg.cc/V6jHpxpx/Chat-GPT-Image-Feb-15-2026-06-47-17-PM.png", caption: "SECTOR_36 // FEB2026_ARCHIVE_18", alt: "Farallon February 2026 Archive 18" },
+  { id: 37, url: "https://i.postimg.cc/264XMsgR/Chat-GPT-Image-Feb-15-2026-06-47-41-PM.png", caption: "SECTOR_37 // FEB2026_ARCHIVE_19", alt: "Farallon February 2026 Archive 19" },
 ];
