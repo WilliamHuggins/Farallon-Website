@@ -1,4 +1,4 @@
-export const bioExpandedCopy = `# FARALLON.AI - WEBSITE COPY (EXPANDED VERSION)
+export const bioPageCopy = `# FARALLON.AI - WEBSITE COPY (EXPANDED VERSION)
 
 ## HERO SECTION
 

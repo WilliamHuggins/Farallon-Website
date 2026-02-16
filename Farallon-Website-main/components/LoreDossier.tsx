@@ -8,100 +8,6 @@ interface LoreDossierProps {
   content: typeof translations['en']['about']['dossier'];
 }
 
-const renderInlineMarkdown = (text: string): React.ReactNode[] => {
-  const nodes: React.ReactNode[] = [];
-  const pattern = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
-
-  while ((match = pattern.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      nodes.push(text.slice(lastIndex, match.index));
-    }
-
-    const token = match[0];
-    if (token.startsWith('**') && token.endsWith('**')) {
-      nodes.push(<strong key={`${match.index}-b`} className="text-white font-semibold">{token.slice(2, -2)}</strong>);
-    } else if (token.startsWith('*') && token.endsWith('*')) {
-      nodes.push(<em key={`${match.index}-i`} className="text-slate-200 italic">{token.slice(1, -1)}</em>);
-    }
-
-    lastIndex = pattern.lastIndex;
-  }
-
-  if (lastIndex < text.length) {
-    nodes.push(text.slice(lastIndex));
-  }
-
-  return nodes;
-};
-
-const renderExpandedCopy = (copy: string) => {
-  const lines = copy.split('\n');
-  const blocks: React.ReactNode[] = [];
-
-  for (let i = 0; i < lines.length; i += 1) {
-    const line = lines[i];
-
-    if (line.trim() === '') {
-      blocks.push(<div key={`sp-${i}`} className="h-2" />);
-      continue;
-    }
-
-    if (line.trim() === '---') {
-      blocks.push(<hr key={`hr-${i}`} className="my-6 border-slate-700/60" />);
-      continue;
-    }
-
-    if (line.startsWith('### ')) {
-      blocks.push(<h4 key={`h4-${i}`} className="text-lg md:text-xl text-cyan-300 font-semibold mt-6">{renderInlineMarkdown(line.replace('### ', ''))}</h4>);
-      continue;
-    }
-
-    if (line.startsWith('## ')) {
-      blocks.push(<h3 key={`h3-${i}`} className="text-xl md:text-2xl text-white font-semibold mt-10">{renderInlineMarkdown(line.replace('## ', ''))}</h3>);
-      continue;
-    }
-
-    if (line.startsWith('# ')) {
-      blocks.push(<h2 key={`h2-${i}`} className="text-2xl md:text-3xl text-white font-bold mt-2">{renderInlineMarkdown(line.replace('# ', ''))}</h2>);
-      continue;
-    }
-
-    if (line.startsWith('- ')) {
-      const items: React.ReactNode[] = [];
-      let j = i;
-
-      while (j < lines.length && lines[j].startsWith('- ')) {
-        items.push(<li key={`ul-${j}`}>{renderInlineMarkdown(lines[j].replace('- ', ''))}</li>);
-        j += 1;
-      }
-
-      blocks.push(<ul key={`ul-block-${i}`} className="list-disc pl-6 space-y-1 text-sm md:text-base text-slate-400 leading-7">{items}</ul>);
-      i = j - 1;
-      continue;
-    }
-
-    if (/^\d+\.\s/.test(line)) {
-      const items: React.ReactNode[] = [];
-      let j = i;
-
-      while (j < lines.length && /^\d+\.\s/.test(lines[j])) {
-        items.push(<li key={`ol-${j}`}>{renderInlineMarkdown(lines[j].replace(/^\d+\.\s/, ''))}</li>);
-        j += 1;
-      }
-
-      blocks.push(<ol key={`ol-block-${i}`} className="list-decimal pl-6 space-y-1 text-sm md:text-base text-slate-400 leading-7">{items}</ol>);
-      i = j - 1;
-      continue;
-    }
-
-    blocks.push(<p key={`p-${i}`} className="text-sm md:text-base text-slate-400 leading-7">{renderInlineMarkdown(line)}</p>);
-  }
-
-  return blocks;
-};
-
 interface WeatherData {
   temperature: number;
   windSpeed: number;
@@ -282,23 +188,17 @@ const LoreDossier: React.FC<LoreDossierProps> = ({ content }) => {
                 {content.quote}
               </p>
 
-              {content.expandedCopy ? (
-                <div className="space-y-1">
-                  {renderExpandedCopy(content.expandedCopy)}
-                </div>
-              ) : (
-                <div className="space-y-6 text-sm md:text-base text-slate-400 leading-7">
-                  <p>
-                    {content.p1_1}<strong className="text-white font-normal">{content.p1_2}</strong>{content.p1_3}
-                  </p>
-                  <p>
-                    {content.p2_1}<span className="text-cyan-300">{content.p2_2}</span>{content.p2_3}
-                  </p>
-                  <p>
-                    {content.p3}
-                  </p>
-                </div>
-              )}
+              <div className="space-y-6 text-sm md:text-base text-slate-400 leading-7">
+                <p>
+                  {content.p1_1}<strong className="text-white font-normal">{content.p1_2}</strong>{content.p1_3}
+                </p>
+                <p>
+                  {content.p2_1}<span className="text-cyan-300">{content.p2_2}</span>{content.p2_3}
+                </p>
+                <p>
+                  {content.p3}
+                </p>
+              </div>
            </div>
 
            <div className="mt-12 flex items-center gap-4">

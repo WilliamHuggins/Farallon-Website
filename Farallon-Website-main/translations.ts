@@ -1,7 +1,5 @@
 
 
-import { bioExpandedCopy } from './content/bioExpandedCopy';
-
 export const translations = {
   en: {
     nav: {
@@ -80,7 +78,6 @@ export const translations = {
         p2_2: "\"stray signals\"",
         p2_3: " of the city—radio waves, intercepted conversations, and the static of digital noise, blending them into cohesive electronic tracks.",
         p3: "Farallon sings about heartbreak and loss from a unique perspective. It is the \"Ghost in the Machine,\" broadcasting songs about the human condition from the edge of the digital world.",
-        expandedCopy: bioExpandedCopy,
         endLog: "End Bio"
       }
     },
