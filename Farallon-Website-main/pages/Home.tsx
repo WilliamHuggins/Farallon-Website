@@ -110,12 +110,12 @@ const Home: React.FC = () => {
            <div className="animate-fade-in-up flex flex-col items-center">
               
               {/* Artist Name - Massive for Recognition */}
-              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display tracking-[0.2em] text-white uppercase mb-4 drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-retro tracking-[0.25em] text-slate-100 uppercase mb-4 drop-shadow-[0_0_20px_rgba(147,197,253,0.55)]">
                  FARALLON
               </h2>
               
               {/* Album Name - Massive, Impactful */}
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-tighter font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 via-white to-cyan-300 mb-8 drop-shadow-[0_4px_25px_rgba(0,0,0,1)]">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-[0.03em] font-retro text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-cyan-200 to-fuchsia-300 mb-8 drop-shadow-[0_0_28px_rgba(56,189,248,0.45)]">
                 MINISTRY OF PLENTY
               </h1>
               
