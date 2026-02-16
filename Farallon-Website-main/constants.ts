@@ -116,7 +116,7 @@ export const OFFLINE_SESSION_COVER_URL = "https://i.postimg.cc/DZQLSfZB/FARALLON
 export const GHOSTWRITER_COVER_URL = "https://i.postimg.cc/Jh8Y3p9w/Untitled_design.png";
 export const SPANISH_ALBUM_COVER_URL = "https://i.postimg.cc/W1ZX3ryp/Untitled-design-(2).png";
 export const LIQUIDATION_COVER_URL = "https://i.postimg.cc/vZGS2z8r/Untitled-design-(5).png";
-export const MINISTRY_OF_PLENTY_COVER_URL = "https://i.postimg.cc/Zq7vfmfC/Untitled-design-(4).png";
+export const MINISTRY_OF_PLENTY_COVER_URL = "https://i.postimg.cc/RVpwS3L9/Untitled-design-(1).png";
 
 export const GALLERY_IMAGES = [
   { id: 1, url: "https://i.postimg.cc/05D7KPvz/Golden-Gate-Bridge.png", caption: "SECTOR_01 // GOLDEN_GATE_BRIDGE", alt: "Golden Gate Bridge in Fog" },

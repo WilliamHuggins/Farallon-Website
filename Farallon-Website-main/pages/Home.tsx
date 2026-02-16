@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail, Zap, Radio } from 'lucide-react';
-import { LIQUIDATION_COVER_URL, ALBUM_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, GHOSTWRITER_COVER_URL } from '../constants';
+import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail } from 'lucide-react';
+import { ALBUM_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
 import SEO from '../components/SEO';
 
@@ -218,29 +218,29 @@ const Home: React.FC = () => {
          </div>
       </section>
 
-      {/* 4. FEATURED RELEASE: GHOSTWRITER (Was Liquidation) */}
+      {/* 4. FEATURED RELEASE: MINISTRY OF PLENTY */}
       <section className="py-20 bg-white dark:bg-black/40 border-y border-slate-100 dark:border-white/5 transition-colors">
          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
             {/* Image Left */}
             <div className="w-full md:w-1/2 relative group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-red-500 to-purple-600 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
+               <div className="absolute inset-0 bg-gradient-to-tr from-teal-500 to-indigo-600 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
                <img 
-                 src={GHOSTWRITER_COVER_URL} 
-                 alt="Ghostwriter Album" 
+                 src={MINISTRY_OF_PLENTY_COVER_URL} 
+                 alt="Ministry of Plenty Album" 
                  className="relative z-10 w-full rounded-[3rem] shadow-ethereal border border-white/20 transform group-hover:scale-[1.02] transition-transform duration-700"
                />
             </div>
             {/* Content Right */}
             <div className="w-full md:w-1/2">
                <div className="flex items-center gap-2 mb-6">
-                  <Radio className="text-red-500" size={20} />
-                  <span className="font-mono text-xs font-bold text-red-500 uppercase tracking-[0.3em]">Released // 2025</span>
+                  <Disc className="text-teal-500" size={20} />
+                  <span className="font-mono text-xs font-bold text-teal-500 uppercase tracking-[0.3em]">New Album // 2025</span>
                </div>
                <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-6 leading-[0.9]">
-                  GHOSTWRITER
+                  MINISTRY OF PLENTY
                </h2>
                <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
-                  The sophomore studio album featuring 'High Voltage'. A haunting collision of Gothic horror and Silicon Valley paranoia.
+                  A dystopian synth journey through an 80&apos;s San Francisco under total surveillance, inspired by Orwell&apos;s 1984.
                </p>
                
                {/* Spotify Album Embed */}
@@ -248,14 +248,14 @@ const Home: React.FC = () => {
                  <iframe 
                    data-testid="embed-iframe" 
                    style={{borderRadius: '12px'}} 
-                   src="https://open.spotify.com/embed/album/135UCYCrjdkg56Khz9NiAt?utm_source=generator" 
+                   src="https://open.spotify.com/embed/album/6Iq3SvlEQW9HcQUeU1eBq7?utm_source=generator&theme=0" 
                    width="100%" 
                    height="352" 
                    frameBorder="0" 
                    allowFullScreen 
                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                    loading="lazy"
-                   title="Ghostwriter Album Spotify Embed"
+                   title="Ministry of Plenty Album Spotify Embed"
                  ></iframe>
                </div>
 
