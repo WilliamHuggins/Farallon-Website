@@ -268,6 +268,33 @@ const Home: React.FC = () => {
          </div>
       </section>
 
+      {/* 5. FARALLON BEST OF PLAYLIST */}
+      <section className="py-20 bg-slate-50 dark:bg-black/60 border-b border-slate-100 dark:border-white/5 transition-colors">
+         <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-10">
+               <span className="font-mono text-xs font-bold text-cyan-500 uppercase tracking-[0.3em]">YouTube // Curated Selection</span>
+               <h2 className="text-4xl md:text-5xl font-bold font-display text-text-main-light dark:text-white mt-4 mb-4">
+                  FARALLON BEST OF
+               </h2>
+               <p className="text-text-muted-light dark:text-text-muted-dark text-base md:text-lg max-w-3xl mx-auto">
+                  A hand-picked YouTube selection featuring standout Farallon tracks and visuals.
+               </p>
+            </div>
+
+            <div className="w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 bg-black aspect-video">
+               <iframe
+                  src="https://www.youtube.com/embed/bmfAJvjVAJE?rel=0"
+                  title="Farallon Best Of YouTube Playlist"
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  loading="lazy"
+               ></iframe>
+            </div>
+         </div>
+      </section>
+
 
 
     </div>
