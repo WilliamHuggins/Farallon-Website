@@ -62,6 +62,13 @@ const nonAnimeVideos: VideoItem[] = [
     src: 'https://www.youtube.com/embed/am0Vvq9v16I?si=4uQe7ZWkJHO0twRB',
     description: 'Official non-anime human video for Heavy Water.',
     label: 'Non-Anime / Human Video'
+  },
+  {
+    id: 'vid_sunday_morning_coming_down_cover',
+    title: 'SUNDAY MORNING COMING DOWN // COVER',
+    src: 'https://www.youtube.com/embed/W5Oxs7v9S-8',
+    description: "Cover song video for 'Sunday Morning Coming Down.' Feed the Mountain's original version plays immediately after her version.",
+    label: 'Non-Anime / Human Video'
   }
 ];
 
