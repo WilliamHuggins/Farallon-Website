@@ -283,7 +283,7 @@ const Home: React.FC = () => {
 
             <div className="w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 bg-black aspect-video">
                <iframe
-                  src="https://www.youtube.com/embed/bmfAJvjVAJE?rel=0"
+                  src="https://www.youtube.com/embed/videoseries?si=EwQ7lZY0tU4y8xp2&list=PLF7Iw4TEcvkun-2hdCBZOhHwJNB9OUlxn"
                   title="Farallon Best Of YouTube Playlist"
                   className="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
