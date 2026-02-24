@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Doesn't Read — It Eats | The Writing Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1208;
+    --parchment: #f5f0e8;
+    --cream: #faf7f2;
+    --rust: #c0392b;
+    --gold: #b8860b;
+    --faded: #7a6f5e;
+    --highlight: #fff3cd;
+    --token-1: #fde8e8;
+    --token-2: #e8f4fd;
+    --token-3: #e8fde8;
+    --token-4: #fdf3e8;
+    --token-5: #f3e8fd;
+    --token-6: #e8fdfd;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Source Serif 4', serif;
+    font-size: 19px;
+    line-height: 1.8;
+  }
+
+  /* Textured paper background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  /* Header */
+  .masthead {
+    background: var(--ink);
+    color: var(--parchment);
+    text-align: center;
+    padding: 16px 24px 12px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 3px double var(--gold);
+  }
+
+  .hero {
+    background: var(--parchment);
+    border-bottom: 3px double var(--ink);
+    padding: 60px 24px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '§';
+    position: absolute;
+    font-size: 400px;
+    color: rgba(0,0,0,0.03);
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Playfair Display', serif;
+    pointer-events: none;
+  }
+
+  .issue-tag {
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 80px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .deck {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 24px);
+    color: var(--faded);
+    max-width: 560px;
+    margin: 0 auto 32px;
+    line-height: 1.5;
+  }
+
+  .byline {
+    font-family: 'Courier Prime', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--faded);
+    border-top: 1px solid var(--faded);
+    border-bottom: 1px solid var(--faded);
+    display: inline-block;
+    padding: 8px 24px;
+  }
+
+  /* Article body */
+  .article-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 32px 80px;
+  }
+
+  .drop-cap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 92px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.75;
+    margin: 8px 12px 0 -4px;
+    color: var(--rust);
+  }
+
+  p {
+    margin-bottom: 1.5em;
+    font-size: 19px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 2.5em 0 0.8em;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-family: 'Courier Prime', monospace;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin: 2em 0 0.6em;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    margin: 2.5em -32px;
+    padding: 32px 48px;
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: center;
+    position: relative;
+  }
+
+  .pull-quote::before, .pull-quote::after {
+    content: '"';
+    font-size: 80px;
+    color: var(--gold);
+    position: absolute;
+    line-height: 1;
+    font-style: normal;
+  }
+
+  .pull-quote::before { top: 12px; left: 16px; }
+  .pull-quote::after { content: '"'; bottom: -16px; right: 16px; }
+
+  /* Token demo box */
+  .token-demo {
+    margin: 2.5em 0;
+    padding: 32px;
+    background: white;
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .token-demo-label {
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--faded);
+    margin-bottom: 16px;
+  }
+
+  .token-sentence {
+    font-size: 22px;
+    line-height: 2;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  .tok {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin: 2px 1px;
+    font-weight: 400;
+    border: 1px solid rgba(0,0,0,0.15);
+    transition: transform 0.15s;
+    cursor: default;
+  }
+
+  .tok:hover { transform: translateY(-3px); }
+
+  .tok-a { background: var(--token-1); }
+  .tok-b { background: var(--token-2); }
+  .tok-c { background: var(--token-3); }
+  .tok-d { background: var(--token-4); }
+  .tok-e { background: var(--token-5); }
+  .tok-f { background: var(--token-6); }
+
+  .token-count {
+    margin-top: 16px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 13px;
+    color: var(--faded);
+  }
+
+  .token-count strong {
+    color: var(--rust);
+  }
+
+  /* Side-by-side comparison */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 2em 0;
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .compare-col {
+    padding: 24px;
+  }
+
+  .compare-col:first-child {
+    border-right: 2px solid var(--ink);
+    background: var(--parchment);
+  }
+
+  .compare-col:last-child {
+    background: var(--ink);
+    color: var(--parchment);
+  }
+
+  .compare-col h4 {
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: var(--gold);
+  }
+
+  .compare-col p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  /* Insight box */
+  .insight {
+    margin: 2.5em 0;
+    padding: 28px 32px;
+    background: var(--highlight);
+    border-left: 5px solid var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  /* Word rarity visual */
+  .rarity-demo {
+    margin: 2em 0;
+    padding: 28px;
+    background: white;
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .rarity-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  .rarity-row:last-child { margin-bottom: 0; }
+
+  .rarity-word {
+    font-size: 20px;
+    min-width: 180px;
+    font-weight: 400;
+  }
+
+  .rarity-bar-wrap {
+    flex: 1;
+    background: #eee;
+    height: 28px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .rarity-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 700;
+    transition: width 0.5s ease;
+    border-radius: 2px;
+  }
+
+  .rarity-full { background: var(--ink); }
+  .rarity-mid { background: var(--faded); }
+  .rarity-low { background: #b5651d; }
+  .rarity-tiny { background: var(--rust); }
+
+  /* The big aha moment */
+  .aha {
+    text-align: center;
+    margin: 3em 0;
+    padding: 48px 32px;
+    background: var(--parchment);
+    border: 3px double var(--ink);
+    position: relative;
+  }
+
+  .aha-word {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    display: block;
+    letter-spacing: -2px;
+    animation: flicker 3s infinite;
+  }
+
+  .aha-arrow {
+    font-size: 32px;
+    display: block;
+    margin: 8px 0;
+    color: var(--faded);
+  }
+
+  .aha-tokens {
+    font-family: 'Courier Prime', monospace;
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: var(--rust);
+    display: block;
+  }
+
+  @keyframes flicker {
+    0%, 94%, 100% { opacity: 1; }
+    96% { opacity: 0.7; }
+    98% { opacity: 0.9; }
+  }
+
+  /* Divider ornament */
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 28px;
+    margin: 2.5em 0;
+    letter-spacing: 12px;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--ink);
+    color: var(--parchment);
+    text-align: center;
+    padding: 40px 24px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-top: 3px double var(--gold);
+  }
+
+  footer p { margin-bottom: 0; font-size: 12px; }
+
+  .series-tag {
+    display: inline-block;
+    background: var(--rust);
+    color: white;
+    font-family: 'Courier Prime', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    margin-bottom: 2.5em;
+  }
+
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+
+  code {
+    font-family: 'Courier Prime', monospace;
+    font-size: 17px;
+    background: var(--parchment);
+    padding: 1px 5px;
+    border-radius: 2px;
+    color: var(--rust);
+  }
+
+  @media (max-width: 600px) {
+    .compare-grid { grid-template-columns: 1fr; }
+    .compare-col:first-child { border-right: none; border-bottom: 2px solid var(--ink); }
+    .pull-quote { margin: 2.5em 0; }
+    .rarity-word { min-width: 120px; font-size: 16px; }
+    .aha-word { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">The Writing Community &nbsp;·&nbsp; AI & The Craft &nbsp;·&nbsp; Issue No. 1</div>
+
+<div class="hero">
+  <span class="issue-tag">AI & the Craft — A Series for Writers</span>
+  <h1>AI Doesn't <em>Read.</em><br>It Eats.</h1>
+  <p class="deck">Your words are not sentences to a machine. They're a meal — and the chef cuts them in ways that will genuinely surprise you.</p>
+  <span class="byline">A Beginner's Guide to Tokenization</span>
+</div>
+
+<div class="article-wrapper">
+
+  <span class="series-tag">Part 1 of the Series</span>
+
+  <p class="drop-cap">Before you hand your prose to an AI — for feedback, for brainstorming, for anything at all — there's one thing you need to know. Something that will change how you think about every word you choose, every strange compound noun, every piece of slang you've been nervously workshopping for three drafts. Here it is:</p>
+
+  <p><strong>An AI does not read your writing the way you do.</strong></p>
+
+  <p>It doesn't even see words, really. Not in any way that maps to how we learned them in first grade. Instead, it sees something called <strong>tokens</strong> — and understanding this tiny, weird, overlooked concept is your first key to understanding how these tools actually work.</p>
+
+  <div class="pull-quote">
+    To an AI, the word "unbelievable" is not one thing. It might be three.
+  </div>
+
+  <h2>First: Forget What You Know About Words</h2>
+
+  <p>When you read the word <em>cat</em>, your brain does something remarkable. In an instant, you conjure fur, whiskers, that particular disdainful stare. The word is a container, and you're unpacking it without even trying.</p>
+
+  <p>When an AI encounters the word <em>cat</em>, it processes a <strong>token</strong>. In this case, a whole-word token. But here's where it gets interesting: not every word gets that luxury.</p>
+
+  <p>A token is simply a chunk of text. It might be a whole word. It might be half a word. It might be just a punctuation mark or a single letter. The AI's brain — called a language model — was trained to break all text into these bite-sized pieces before it does anything else. Think of it as the machine's way of <em>chewing before it swallows.</em></p>
+
+  <div class="token-demo">
+    <div class="token-demo-label">Live Demo — Hover Over Each Token</div>
+    <div class="token-sentence">
+      <span class="tok tok-a">The</span>
+      <span class="tok tok-b"> quick</span>
+      <span class="tok tok-c"> brown</span>
+      <span class="tok tok-d"> fox</span>
+      <span class="tok tok-e"> jump</span><span class="tok tok-f">ed</span>
+      <span class="tok tok-a"> over</span>
+      <span class="tok tok-b"> the</span>
+      <span class="tok tok-c"> lazy</span>
+      <span class="tok tok-d"> dog</span><span class="tok tok-e">.</span>
+    </div>
+    <div class="token-count">That sentence contains <strong>11 tokens</strong> — not 9 words. Notice "jumped" splits into "jump" + "ed".</div>
+  </div>
+
+  <p>See that? <em>Jumped</em> became two pieces. The model separated the root from the suffix. It does this constantly, automatically, invisibly. Your polished sentence, parsed into puzzle pieces.</p>
+
+  <h2>Why Does It Chop Things Up Like This?</h2>
+
+  <p>Here's the brilliant, counterintuitive logic: if an AI tried to memorize every single word that exists — in every language, every technical field, every slang dictionary, every username ever typed — it would need a vocabulary of millions upon millions of entries. It would be impossibly bloated.</p>
+
+  <p>Tokens are the solution. By breaking words into recurring chunks — common roots, suffixes, syllables — a model can handle almost any word it encounters, even ones it's never seen before, by assembling them from familiar parts.</p>
+
+  <p>Think of it like a master chef who doesn't need a recipe for every dish in the world. They understand <em>salt, acid, fat, heat.</em> From those fundamentals, they can improvise anything.</p>
+
+  <div class="compare-grid">
+    <div class="compare-col">
+      <h4>How You Read a New Word</h4>
+      <p>You encounter <em>"verisimilitude."</em> You might not know it, but you can guess — it <em>sounds</em> like "verify" and "similar." Your ear finds the Latin roots. You make an educated inference from the whole shape of it.</p>
+    </div>
+    <div class="compare-col">
+      <h4>How AI Processes a New Word</h4>
+      <p>It sees: <code>ver</code> + <code>isim</code> + <code>ilit</code> + <code>ude</code>. Each piece has statistical relationships to thousands of other words. The meaning emerges from the pattern of those relationships.</p>
+    </div>
+  </div>
+
+  <div class="ornament">✦ ✦ ✦</div>
+
+  <h2>The Part That Will Genuinely Fascinate You</h2>
+
+  <p>Here's where it gets weird — and this is the part writers in particular need to know about.</p>
+
+  <p><strong>Common words get whole tokens. Rare words get chopped up.</strong></p>
+
+  <p>A plain, everyday word like <em>"the"</em> or <em>"said"</em> is so common that the model has its own dedicated token for it. Fast, clean, no fuss. But an unusual word — technical jargon, a neologism, a very long compound noun — might get shredded into four, five, even six pieces.</p>
+
+  <div class="rarity-demo">
+    <div class="token-demo-label">Token Cost — Common vs. Rare Words</div>
+    <div class="rarity-row">
+      <span class="rarity-word">"the"</span>
+      <div class="rarity-bar-wrap"><div class="rarity-bar rarity-full" style="width:100%">1 token</div></div>
+    </div>
+    <div class="rarity-row">
+      <span class="rarity-word">"writing"</span>
+      <div class="rarity-bar-wrap"><div class="rarity-bar rarity-full" style="width:100%">1 token</div></div>
+    </div>
+    <div class="rarity-row">
+      <span class="rarity-word">"unforgettable"</span>
+      <div class="rarity-bar-wrap"><div class="rarity-bar rarity-mid" style="width:66%">2–3 tokens</div></div>
+    </div>
+    <div class="rarity-row">
+      <span class="rarity-word">"neurodivergent"</span>
+      <div class="rarity-bar-wrap"><div class="rarity-bar rarity-low" style="width:50%">3–4 tokens</div></div>
+    </div>
+    <div class="rarity-row">
+      <span class="rarity-word">"hippopotomonstrosesquipedaliophobia"</span>
+      <div class="rarity-bar-wrap"><div class="rarity-bar rarity-tiny" style="width:33%">~8 tokens</div></div>
+    </div>
+  </div>
+
+  <p>This has a real, practical consequence: <strong>the AI does not have the same intuitive feel for your rare, unusual, or invented words that it has for common ones.</strong> It's not that it can't handle them — it can piece them together — but they require more processing, more assembly. The experience is different from reading "dog."</p>
+
+  <div class="insight">
+    Writers who use highly unusual vocabulary, invented terms, or non-English words should know: the AI is working harder to understand those words, and it may be slightly less confident in how it handles them.
+  </div>
+
+  <h2>The Spelling Mystery — Finally Solved</h2>
+
+  <p>Have you ever asked an AI how many letters are in a word — say, "strawberry" — and it got it wrong? There's a famous example where models confidently miscount the R's in that very word. Writers find this baffling: <em>how can something so powerful not count to ten?</em></p>
+
+  <p>Tokens explain everything.</p>
+
+  <div class="aha">
+    <span class="aha-word">strawberry</span>
+    <span class="aha-arrow">↓</span>
+    <span class="aha-tokens">straw · berry</span>
+    <p style="margin-top:16px; font-family:'Courier Prime',monospace; font-size:13px; color:var(--faded); letter-spacing:2px;">THE AI SEES TWO TOKENS, NOT TEN LETTERS</p>
+  </div>
+
+  <p>The model doesn't look at individual letters — it sees tokens. When you ask it to count letters, it has to <em>reconstruct</em> the original spelling from the token chunks and then count. It's doing something slightly unnatural. A brilliant literary critic, asked to count the number of brushstrokes in a painting — they can do it, but it's not their native mode.</p>
+
+  <p>This is also why AI can occasionally struggle with precise wordplay, acrostics, or spelling-dependent puzzles. It isn't "reading" the way you are.</p>
+
+  <h2>What This Means For You, The Writer</h2>
+
+  <p>You don't need to become a computer scientist. You just need one mental image to carry with you:</p>
+
+  <p><strong>When you give your writing to an AI, it doesn't see your sentences. It sees a river of tokens — chunks of language, flowing in sequence, each one in statistical conversation with all the others.</strong></p>
+
+  <p>Your beautiful prose arrives and gets immediately, lovingly, efficiently dismantled at the door. Then reassembled, understood, and responded to. The meaning survives the process — remarkably well, most of the time. But the journey is stranger than you imagined.</p>
+
+  <p>Here are three things this changes for the practicing writer:</p>
+
+  <p><strong>1. Invented words and neologisms deserve extra clarity.</strong> If you're writing speculative fiction with fabricated terminology, don't assume the AI will intuit your logic. Define your terms. Give it context. It's working from pieces, not wholes.</p>
+
+  <p><strong>2. Highly phonetic or sound-dependent work needs a different lens.</strong> The AI experiences language statistically, not acoustically. When you ask for feedback on the <em>sound</em> of a sentence, you're asking it to do something somewhat outside its native strengths. It can do it — but calibrate your expectations.</p>
+
+  <p><strong>3. Spelling, letter-counting, and anagram tasks need careful prompting.</strong> Ask explicitly, step by step. "List each letter individually, then count them." You're helping it do something that requires looking beneath the token level.</p>
+
+  <div class="pull-quote">
+    The machine is brilliant with meaning. It is mortal with letters.
+  </div>
+
+  <h2>Coming Up Next</h2>
+
+  <p>Now that you know how AI <em>chews</em> language, the next post will explore what it does once it swallows — how a language model actually <em>predicts</em> what comes next, and what that means for why it sometimes sounds eerily perfect and sometimes goes completely off the rails.</p>
+
+  <p>Because once you understand tokens, you're ready for the real conversation about how these things <em>think.</em></p>
+
+  <p>Or — don't think. Depending on who you ask.</p>
+
+  <div class="ornament">✦</div>
+
+  <p style="font-family:'Courier Prime',monospace; font-size:13px; color:var(--faded); text-align:center; letter-spacing:1px;">END OF ISSUE NO. 1 — AI &amp; THE CRAFT</p>
+
+</div>
+
+<footer>
+  <p>THE WRITING COMMUNITY &nbsp;·&nbsp; AI & THE CRAFT SERIES &nbsp;·&nbsp; ISSUE NO. 1</p>
+  <p style="margin-top:8px; opacity:0.5;">Demystifying AI for people who love language.</p>
+</footer>
+
+</body>
+</html>
