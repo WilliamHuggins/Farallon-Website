@@ -55,8 +55,8 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       <SEO 
-        title="Ministry of Plenty - New Album Out Now"
-        description="Official site of Farallon. Listen to the new album Ministry of Plenty. An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning."
+        title="New Albums Out Now - Revenge/Mercy + Live (Sort of)"
+        description="Official site of Farallon. Listen to the new albums Revenge/Mercy and Live (Sort of). An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning."
         canonical="/"
         jsonLd={structuredData}
       />
@@ -109,25 +109,31 @@ const Home: React.FC = () => {
            <div className="animate-fade-in-up flex flex-col items-center">
               
               {/* Artist Name - Massive for Recognition */}
-              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-retro tracking-[0.25em] text-slate-100 uppercase mb-4 drop-shadow-[0_0_20px_rgba(147,197,253,0.55)]">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-retro tracking-[0.25em] text-slate-100 uppercase mb-8 drop-shadow-[0_0_18px_rgba(220,38,38,0.35)]">
                  FARALLON
               </h2>
               
-              {/* Album Name - Massive, Impactful */}
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-[0.03em] font-retro text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-cyan-200 to-fuchsia-300 mb-8 drop-shadow-[0_0_28px_rgba(56,189,248,0.45)]">
-                MINISTRY OF PLENTY
-              </h1>
-              
-              {/* Release Type - Badge Style */}
-              <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-black/60 backdrop-blur-md border border-indigo-500/50 mb-12 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_#22c55e]"></span>
-                <span className="text-xs md:text-sm font-mono text-white tracking-widest uppercase font-bold">New Album Out Now</span>
+              {/* Release Type + Album Headlines */}
+              <div className="w-full max-w-4xl mb-12">
+                <div className="flex items-center justify-center gap-4 mb-4">
+                  <span className="h-px w-12 sm:w-20 bg-red-600/90"></span>
+                  <span className="text-sm md:text-lg font-mono text-white tracking-[0.35em] uppercase font-bold">New Albums Out Now</span>
+                  <span className="h-px w-12 sm:w-20 bg-red-600/90"></span>
+                </div>
+                <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-[0.02em] font-retro uppercase mb-3">
+                  <span className="text-red-700 drop-shadow-[0_0_25px_rgba(185,28,28,0.45)]">Revenge</span>
+                  <span className="text-red-600 px-1">/</span>
+                  <span className="text-zinc-100 drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]">Mercy</span>
+                </h1>
+                <p className="text-xl sm:text-2xl md:text-4xl font-mono font-bold text-red-600 tracking-[0.28em] uppercase">
+                  Live (Sort of)
+                </p>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
                 <Link 
                   to="/discography"
-                  className="w-full sm:w-auto h-14 px-8 bg-white text-black rounded-full font-bold hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto h-14 px-8 bg-red-700 text-white rounded-full font-bold hover:scale-105 hover:bg-red-600 transition-all shadow-[0_0_30px_rgba(220,38,38,0.45)] flex items-center justify-center gap-2"
                 >
                   <Play size={18} fill="currentColor" />
                   Listen Now
