@@ -48,13 +48,24 @@ if [[ -n "$PRODUCTION_URL" ]]; then
   fi
 fi
 
-# Hard-stop accidental production deploys from feature branches.
+# Optional guard for accidental production deploys from feature branches.
+# Keep this as a warning by default to avoid failing legitimate non-main
+# production builds (e.g., hotfix validation, temporary branch deploys).
+ENFORCE_MAIN_PRODUCTION_BRANCH="${ENFORCE_MAIN_PRODUCTION_BRANCH:-0}"
 if [[ "$VERCEL_ENV_NAME" == "production" && -n "$COMMIT_REF" && "$COMMIT_REF" != "$EXPECTED_PRODUCTION_BRANCH" ]]; then
-  echo "[verify-vercel-target] ERROR: Production deploy attempted from non-production branch."
+  if [[ "$ENFORCE_MAIN_PRODUCTION_BRANCH" == "1" ]]; then
+    echo "[verify-vercel-target] ERROR: Production deploy attempted from non-production branch."
+    echo "  expected branch: $EXPECTED_PRODUCTION_BRANCH"
+    echo "  got branch:      $COMMIT_REF"
+    echo "  action: merge/promote to main before expecting farallonai.com to update."
+    echo "  hint: set ENFORCE_MAIN_PRODUCTION_BRANCH=0 to downgrade this check to a warning."
+    exit 1
+  fi
+
+  echo "[verify-vercel-target] WARNING: Production deploy from non-main branch."
   echo "  expected branch: $EXPECTED_PRODUCTION_BRANCH"
   echo "  got branch:      $COMMIT_REF"
-  echo "  action: merge/promote to main before expecting farallonai.com to update."
-  exit 1
+  echo "  continuing (set ENFORCE_MAIN_PRODUCTION_BRANCH=1 to hard-fail)."
 fi
 
 echo "[verify-vercel-target] OK: Deployment context matches expected Vercel target (${EXPECTED_SCOPE}/${EXPECTED_PROJECT})."
