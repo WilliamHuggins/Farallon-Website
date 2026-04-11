@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail } from 'lucide-react';
-import { MINISTRY_OF_PLENTY_COVER_URL } from '../constants';
 import ListenSection from '../components/ListenSection';
 import SEO from '../components/SEO';
 
@@ -218,52 +217,66 @@ const Home: React.FC = () => {
          </div>
       </section>
 
-      {/* 4. FEATURED RELEASE: MINISTRY OF PLENTY */}
+      {/* 4. FEATURED RELEASES */}
       <section className="py-20 bg-white dark:bg-black/40 border-y border-slate-100 dark:border-white/5 transition-colors">
-         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
-            {/* Image Left */}
-            <div className="w-full md:w-1/2 relative group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-teal-500 to-indigo-600 opacity-20 blur-2xl rounded-full group-hover:opacity-30 transition-opacity"></div>
-               <img 
-                 src={MINISTRY_OF_PLENTY_COVER_URL} 
-                 alt="Ministry of Plenty Album" 
-                 className="relative z-10 w-full rounded-[3rem] shadow-ethereal border border-white/20 transform group-hover:scale-[1.02] transition-transform duration-700"
-               />
-            </div>
-            {/* Content Right */}
-            <div className="w-full md:w-1/2">
-               <div className="flex items-center gap-2 mb-6">
-                  <Disc className="text-teal-500" size={20} />
-                  <span className="font-mono text-xs font-bold text-teal-500 uppercase tracking-[0.3em]">New Album // 2026</span>
+         <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-12">
+               <div className="flex items-center justify-center gap-2 mb-4">
+                  <Disc className="text-teal-500" size={18} />
+                  <span className="font-mono text-xs font-bold text-teal-500 uppercase tracking-[0.3em]">New Releases // 2026</span>
                </div>
-               <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-6 leading-[0.9]">
-                  MINISTRY OF PLENTY
+               <h2 className="text-4xl md:text-6xl font-bold font-display text-text-main-light dark:text-white mb-4">
+                  Revenge/Mercy + Live (Sort of)
                </h2>
-               <p className="text-text-muted-light dark:text-text-muted-dark text-lg font-light leading-relaxed mb-10">
-                  A dystopian synth journey through an 80&apos;s San Francisco under total surveillance, inspired by Orwell&apos;s 1984.
+               <p className="text-text-muted-light dark:text-text-muted-dark text-lg max-w-3xl mx-auto">
+                  Two new Farallon albums released together: a studio release inspired by <em>The Count of Monte Cristo</em>, and a live set featuring fan favorites.
                </p>
-               
-               {/* Spotify Album Embed */}
-               <div className="mb-10 w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
-                 <iframe 
-                   data-testid="embed-iframe" 
-                   style={{borderRadius: '12px'}} 
-                   src="https://open.spotify.com/embed/album/6Iq3SvlEQW9HcQUeU1eBq7?utm_source=generator&theme=0" 
-                   width="100%" 
-                   height="352" 
-                   frameBorder="0" 
-                   allowFullScreen 
-                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                   loading="lazy"
-                   title="Ministry of Plenty Album Spotify Embed"
-                 ></iframe>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+               <div className="rounded-[2rem] p-6 bg-slate-50 dark:bg-black/40 border border-slate-200 dark:border-white/10">
+                 <h3 className="text-3xl font-bold font-display text-text-main-light dark:text-white mb-3">Revenge/Mercy</h3>
+                 <p className="text-text-muted-light dark:text-text-muted-dark mb-6">A studio album inspired by <em>The Count of Monte Cristo</em>.</p>
+                 <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
+                   <iframe 
+                     data-testid="embed-iframe" 
+                     style={{borderRadius: '12px'}} 
+                     src="https://open.spotify.com/embed/album/5PT5QdEIp9nRUzFnkqTw03?utm_source=generator" 
+                     width="100%" 
+                     height="352" 
+                     frameBorder="0" 
+                     allowFullScreen 
+                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                     loading="lazy"
+                     title="Revenge/Mercy Album Spotify Embed"
+                   ></iframe>
+                 </div>
                </div>
 
-               <div className="flex flex-wrap gap-4">
-                  <Link to="/discography" className="h-12 px-8 bg-text-main-light dark:bg-white text-white dark:text-black rounded-full font-bold flex items-center justify-center hover:scale-105 transition-transform shadow-lg">
-                     Learn More
-                  </Link>
+               <div className="rounded-[2rem] p-6 bg-slate-50 dark:bg-black/40 border border-slate-200 dark:border-white/10">
+                 <h3 className="text-3xl font-bold font-display text-text-main-light dark:text-white mb-3">Live (Sort of)</h3>
+                 <p className="text-text-muted-light dark:text-text-muted-dark mb-6">Live versions of Farallon&apos;s best tracks so far.</p>
+                 <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
+                   <iframe 
+                     data-testid="embed-iframe" 
+                     style={{borderRadius: '12px'}} 
+                     src="https://open.spotify.com/embed/album/4upnaUQyOJRpfw7rA0nkRA?utm_source=generator" 
+                     width="100%" 
+                     height="352" 
+                     frameBorder="0" 
+                     allowFullScreen 
+                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                     loading="lazy"
+                     title="Live (Sort of) Album Spotify Embed"
+                   ></iframe>
+                 </div>
                </div>
+            </div>
+
+            <div className="flex justify-center mt-10">
+               <Link to="/discography" className="h-12 px-8 bg-text-main-light dark:bg-white text-white dark:text-black rounded-full font-bold flex items-center justify-center hover:scale-105 transition-transform shadow-lg">
+                  Explore All Releases
+               </Link>
             </div>
          </div>
       </section>

@@ -34,7 +34,7 @@ const Discography: React.FC = () => {
     <div className="min-h-screen py-24 bg-aurora dark:bg-black/80 transition-colors">
       <SEO 
         title="Discography - Farallon"
-        description="Catalog of Farallon releases including Ministry of Plenty, Ghostwriter, Liquidation, and Heavy Water."
+        description="Catalog of Farallon releases including Revenge/Mercy, Live (Sort of), Ministry of Plenty, Ghostwriter, Liquidation, and Heavy Water."
         canonical="/discography"
         type="music.album"
         image={MINISTRY_OF_PLENTY_COVER_URL}
@@ -58,7 +58,89 @@ const Discography: React.FC = () => {
 
         <div className="space-y-32">
 
-          {/* ITEM 0: MINISTRY OF PLENTY (NEW ALBUM) */}
+          {/* ITEM 0: REVENGE/MERCY */}
+          <section className="relative group">
+             <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-fuchsia-500/20 overflow-hidden">
+                <div className="absolute top-0 right-0 p-4">
+                   <div className="flex items-center gap-2 px-4 py-2 bg-fuchsia-500/10 rounded-full border border-fuchsia-500/30">
+                      <Zap size={14} className="text-fuchsia-500" />
+                      <span className="font-mono text-[10px] font-bold text-fuchsia-500 tracking-widest uppercase">Studio Album</span>
+                   </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-2 tracking-tighter">
+                      Revenge/Mercy
+                    </h2>
+                    <div className="flex items-center gap-3 text-fuchsia-400 font-mono text-sm tracking-widest uppercase">
+                      <Calendar size={16} />
+                      <span>Released 2026</span>
+                    </div>
+                  </div>
+                  <p className="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-lg">
+                    A studio album inspired by <em>The Count of Monte Cristo</em>.
+                  </p>
+                  <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
+                    <iframe
+                      data-testid="embed-iframe"
+                      style={{borderRadius: '12px'}}
+                      src="https://open.spotify.com/embed/album/5PT5QdEIp9nRUzFnkqTw03?utm_source=generator"
+                      width="100%"
+                      height="352"
+                      frameBorder="0"
+                      allowFullScreen
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      title="Revenge/Mercy Album Spotify Embed"
+                    ></iframe>
+                  </div>
+                </div>
+             </div>
+          </section>
+
+          {/* ITEM 1: LIVE (SORT OF) */}
+          <section className="relative group">
+             <div className="relative glass-card bg-white dark:bg-black/50 rounded-[3rem] p-8 md:p-12 border border-amber-500/20 overflow-hidden">
+                <div className="absolute top-0 right-0 p-4">
+                   <div className="flex items-center gap-2 px-4 py-2 bg-amber-500/10 rounded-full border border-amber-500/30">
+                      <Mic2 size={14} className="text-amber-500" />
+                      <span className="font-mono text-[10px] font-bold text-amber-500 tracking-widest uppercase">Live Album</span>
+                   </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-2 tracking-tighter">
+                      Live (Sort of)
+                    </h2>
+                    <div className="flex items-center gap-3 text-amber-400 font-mono text-sm tracking-widest uppercase">
+                      <Calendar size={16} />
+                      <span>Released 2026</span>
+                    </div>
+                  </div>
+                  <p className="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-lg">
+                    Live versions of Farallon&apos;s best tracks so far.
+                  </p>
+                  <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
+                    <iframe
+                      data-testid="embed-iframe"
+                      style={{borderRadius: '12px'}}
+                      src="https://open.spotify.com/embed/album/4upnaUQyOJRpfw7rA0nkRA?utm_source=generator"
+                      width="100%"
+                      height="352"
+                      frameBorder="0"
+                      allowFullScreen
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      title="Live (Sort of) Album Spotify Embed"
+                    ></iframe>
+                  </div>
+                </div>
+             </div>
+          </section>
+
+          {/* ITEM 2: MINISTRY OF PLENTY (NEW ALBUM) */}
           <section className="relative group">
              <div className="absolute -inset-4 bg-gradient-to-tr from-teal-400/10 to-indigo-500/10 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-1000"></div>
              
