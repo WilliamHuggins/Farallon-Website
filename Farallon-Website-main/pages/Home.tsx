@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Database, ArrowRight, Disc, Image, ShoppingBag, Instagram, Youtube, Mail } from 'lucide-react';
 import ListenSection from '../components/ListenSection';
+import { HEAVIER_WATER_COVER_URL, HEAVIER_WATER_SPOTIFY_EMBED_URL } from '../constants';
 import SEO from '../components/SEO';
 
 // Custom X (Twitter) Icon
@@ -55,98 +56,48 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       <SEO 
-        title="New Albums Out Now - Revenge/Mercy + Live (Sort of)"
-        description="Official site of Farallon. Listen to the new albums Revenge/Mercy and Live (Sort of). An immersive, cyber-noir experience exploring the intersection of human emotion and machine learning."
+        title="Heavier Water Out Now - Farallon"
+        description="Official site of Farallon. Listen to Heavier Water, the upgraded re-release of Heavy Water with refreshed tracks and new songs."
         canonical="/"
         jsonLd={structuredData}
       />
       
-      {/* 1. CINEMATIC VIDEO HERO (YOUTUBE METHOD) */}
+      {/* 1. HEAVIER WATER ALBUM HERO */}
       <section 
-        className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-black"
-        style={{ backgroundColor: '#000000', minHeight: '90vh' }}
+        className="heavier-water-scene relative w-full min-h-[92vh] flex items-center justify-center overflow-hidden bg-slate-950 text-white"
+        style={{ backgroundImage: `linear-gradient(90deg, rgba(2, 6, 23, 0.94), rgba(8, 47, 73, 0.58), rgba(2, 6, 23, 0.78)), url(${HEAVIER_WATER_COVER_URL})` }}
       >
+        <div className="rain-layer rain-layer-fast" aria-hidden="true"></div>
+        <div className="rain-layer rain-layer-slow" aria-hidden="true"></div>
+        <div className="wave-layer" aria-hidden="true"></div>
         
         {/* Social Media Bar - Top Center */}
-        <div className="absolute top-0 left-0 right-0 z-40 flex justify-center items-center pt-8 pb-24 bg-gradient-to-b from-black/90 via-black/60 to-transparent pointer-events-none">
+        <div className="absolute top-0 left-0 right-0 z-40 flex justify-center items-center pt-8 pb-24 bg-gradient-to-b from-black/80 via-slate-950/40 to-transparent pointer-events-none">
           <div className="pointer-events-auto flex gap-8">
-            <a href="https://www.tiktok.com/@farallonai" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              <TikTokIcon size={24} />
-            </a>
-            <a href="https://x.com/farallonai" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              <XIcon size={22} />
-            </a>
-            <a href="https://www.instagram.com/farallonai/#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              <Instagram size={24} />
-            </a>
-            <a href="https://www.youtube.com/@FarallonAI" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              <Youtube size={26} />
-            </a>
+            <a href="https://www.tiktok.com/@farallonai" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-white hover:text-sky-300 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"><TikTokIcon size={24} /></a>
+            <a href="https://x.com/farallonai" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white hover:text-sky-300 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"><XIcon size={22} /></a>
+            <a href="https://www.instagram.com/farallonai/#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-sky-300 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"><Instagram size={24} /></a>
+            <a href="https://www.youtube.com/@FarallonAI" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-white hover:text-sky-300 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"><Youtube size={26} /></a>
             <div className="w-px h-6 bg-white/40 drop-shadow-md"></div>
-            <a href="mailto:Farallon@farallonai.com" aria-label="Email" className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              <Mail size={24} />
-            </a>
+            <a href="mailto:Farallon@farallonai.com" aria-label="Email" className="text-white hover:text-sky-300 transition-all duration-300 hover:scale-110 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"><Mail size={24} /></a>
           </div>
         </div>
 
-        {/* Video Wrapper */}
-        <div className="hero-video-wrapper z-0">
-           <div className="crt-overlay"></div>
-           {/* YouTube Embed with parameters for autoplay, loop, mute, and hidden controls */}
-           <iframe 
-              src="https://www.youtube.com/embed/ENkZ7kc3qW4?autoplay=1&mute=1&controls=0&loop=1&playlist=ENkZ7kc3qW4&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&disablekb=1"
-              className="hero-video-iframe"
-              allow="autoplay; encrypted-media"
-              title="Farallon Hero Video"
-           ></iframe>
-        </div>
-
-        {/* Dark Overlay for Readability */}
-        <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none"></div>
-
-        {/* Hero Overlay Content - Clean Title Hierarchy */}
-        <div className="relative z-20 max-w-5xl w-full px-6 flex flex-col items-center text-center mt-12">
-           <div className="animate-fade-in-up flex flex-col items-center">
-              
-              {/* Artist Name - Massive for Recognition */}
-              <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-retro tracking-[0.25em] text-slate-100 uppercase mb-8 drop-shadow-[0_0_18px_rgba(220,38,38,0.35)]">
-                 FARALLON
-              </h2>
-              
-              {/* Release Type + Album Headlines */}
-              <div className="w-full max-w-4xl mb-12">
-                <div className="flex items-center justify-center gap-4 mb-4">
-                  <span className="h-px w-12 sm:w-20 bg-red-600/90"></span>
-                  <span className="text-sm md:text-lg font-mono text-white tracking-[0.35em] uppercase font-bold">New Albums Out Now</span>
-                  <span className="h-px w-12 sm:w-20 bg-red-600/90"></span>
-                </div>
-                <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none tracking-[0.02em] font-retro uppercase mb-3">
-                  <span className="text-red-700 drop-shadow-[0_0_25px_rgba(185,28,28,0.45)]">Revenge</span>
-                  <span className="text-red-600 px-1">/</span>
-                  <span className="text-zinc-100 drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]">Mercy</span>
-                </h1>
-                <p className="text-xl sm:text-2xl md:text-4xl font-mono font-bold text-red-600 tracking-[0.28em] uppercase">
-                  Live (Sort of)
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-                <Link 
-                  to="/discography"
-                  className="w-full sm:w-auto h-14 px-8 bg-red-700 text-white rounded-full font-bold hover:scale-105 hover:bg-red-600 transition-all shadow-[0_0_30px_rgba(220,38,38,0.45)] flex items-center justify-center gap-2"
-                >
-                  <Play size={18} fill="currentColor" />
-                  Listen Now
-                </Link>
-                <Link 
-                  to="/bio"
-                  className="w-full sm:w-auto h-14 px-8 bg-black/60 text-white border border-white/40 rounded-full font-bold hover:bg-black/80 transition-all backdrop-blur-md flex items-center justify-center gap-2 shadow-lg"
-                >
-                  <Database size={18} />
-                  Artist Bio
-                </Link>
-              </div>
-           </div>
+        <div className="relative z-20 max-w-7xl w-full px-6 pt-28 pb-16 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+          <div className="animate-fade-in-up">
+            <span className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-sky-300/40 bg-sky-950/40 text-sky-100 font-mono text-xs font-bold uppercase tracking-[0.28em] shadow-[0_0_30px_rgba(56,189,248,0.25)]">New Album Out Now</span>
+            <h2 className="mt-8 text-4xl sm:text-6xl md:text-8xl font-bold font-retro tracking-[0.2em] text-sky-100 uppercase drop-shadow-[0_0_24px_rgba(56,189,248,0.55)]">FARALLON</h2>
+            <h1 className="mt-4 text-5xl sm:text-7xl md:text-9xl font-black leading-none font-retro uppercase text-white drop-shadow-[0_0_35px_rgba(14,165,233,0.7)]">Heavier Water</h1>
+            <p className="mt-6 max-w-2xl text-lg md:text-2xl text-sky-50/90 leading-relaxed">The storm has returned: an upgraded re-release of <em>Heavy Water</em> with reworked originals and new songs that expand Farallon&apos;s rain-soaked cyber-noir world.</p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link to="/discography" className="h-14 px-8 bg-sky-300 text-slate-950 rounded-full font-black hover:scale-105 hover:bg-white transition-all shadow-[0_0_35px_rgba(125,211,252,0.55)] flex items-center justify-center gap-2"><Play size={18} fill="currentColor" /> Listen to Heavier Water</Link>
+              <Link to="/bio" className="h-14 px-8 bg-black/45 text-white border border-sky-200/40 rounded-full font-bold hover:bg-sky-950/70 transition-all backdrop-blur-md flex items-center justify-center gap-2"><Database size={18} /> Artist Bio</Link>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="absolute -inset-6 rounded-[2.5rem] bg-sky-400/20 blur-3xl"></div>
+            <img src={HEAVIER_WATER_COVER_URL} alt="Heavier Water album cover" className="relative w-full rounded-[2rem] border border-sky-200/30 shadow-[0_30px_90px_rgba(8,47,73,0.85)]" />
+          </div>
         </div>
       </section>
 
@@ -224,66 +175,28 @@ const Home: React.FC = () => {
       </section>
 
       {/* 4. FEATURED RELEASES */}
-      <section className="py-20 bg-white dark:bg-black/40 border-y border-slate-100 dark:border-white/5 transition-colors">
-         <div className="max-w-6xl mx-auto px-6">
+      <section className="relative py-20 overflow-hidden bg-sky-50 dark:bg-slate-950 border-y border-sky-100 dark:border-sky-400/10 transition-colors">
+         <div className="wave-layer opacity-40 dark:opacity-70" aria-hidden="true"></div>
+         <div className="relative z-10 max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
                <div className="flex items-center justify-center gap-2 mb-4">
-                  <Disc className="text-teal-500" size={18} />
-                  <span className="font-mono text-xs font-bold text-teal-500 uppercase tracking-[0.3em]">New Releases // 2026</span>
+                  <Disc className="text-sky-500" size={18} />
+                  <span className="font-mono text-xs font-bold text-sky-600 dark:text-sky-300 uppercase tracking-[0.3em]">Featured Release // 2026</span>
                </div>
-               <h2 className="text-4xl md:text-6xl font-bold font-display text-text-main-light dark:text-white mb-4">
-                  Revenge/Mercy + Live (Sort of)
-               </h2>
-               <p className="text-text-muted-light dark:text-text-muted-dark text-lg max-w-3xl mx-auto">
-                  Two new Farallon albums released together: a studio release inspired by <em>The Count of Monte Cristo</em>, and a live set featuring fan favorites.
-               </p>
+               <h2 className="text-4xl md:text-6xl font-bold font-display text-text-main-light dark:text-white mb-4">Heavier Water</h2>
+               <p className="text-text-muted-light dark:text-sky-100/80 text-lg max-w-3xl mx-auto">An expanded Heavy Water era: upgraded old tracks, new songs, and the full Spotify album embed.</p>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-               <div className="rounded-[2rem] p-6 bg-slate-50 dark:bg-black/40 border border-slate-200 dark:border-white/10">
-                 <h3 className="text-3xl font-bold font-display text-text-main-light dark:text-white mb-3">Revenge/Mercy</h3>
-                 <p className="text-text-muted-light dark:text-text-muted-dark mb-6">A studio album inspired by <em>The Count of Monte Cristo</em>.</p>
-                 <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
-                   <iframe 
-                     data-testid="embed-iframe" 
-                     style={{borderRadius: '12px'}} 
-                     src="https://open.spotify.com/embed/album/5PT5QdEIp9nRUzFnkqTw03?utm_source=generator" 
-                     width="100%" 
-                     height="352" 
-                     frameBorder="0" 
-                     allowFullScreen 
-                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                     loading="lazy"
-                     title="Revenge/Mercy Album Spotify Embed"
-                   ></iframe>
-                 </div>
-               </div>
-
-               <div className="rounded-[2rem] p-6 bg-slate-50 dark:bg-black/40 border border-slate-200 dark:border-white/10">
-                 <h3 className="text-3xl font-bold font-display text-text-main-light dark:text-white mb-3">Live (Sort of)</h3>
-                 <p className="text-text-muted-light dark:text-text-muted-dark mb-6">Live versions of Farallon&apos;s best tracks so far.</p>
-                 <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
-                   <iframe 
-                     data-testid="embed-iframe" 
-                     style={{borderRadius: '12px'}} 
-                     src="https://open.spotify.com/embed/album/4upnaUQyOJRpfw7rA0nkRA?utm_source=generator" 
-                     width="100%" 
-                     height="352" 
-                     frameBorder="0" 
-                     allowFullScreen 
-                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                     loading="lazy"
-                     title="Live (Sort of) Album Spotify Embed"
-                   ></iframe>
-                 </div>
-               </div>
+            <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 items-center rounded-[2rem] p-6 bg-white/90 dark:bg-black/45 border border-sky-200 dark:border-sky-300/20 shadow-2xl backdrop-blur">
+              <img src={HEAVIER_WATER_COVER_URL} alt="Heavier Water album cover" className="w-full rounded-[1.5rem] border border-sky-200 dark:border-white/10 shadow-xl" />
+              <div>
+                <h3 className="text-3xl font-bold font-display text-text-main-light dark:text-white mb-3">Listen now on Spotify</h3>
+                <p className="text-text-muted-light dark:text-text-muted-dark mb-6">Farallon&apos;s latest release leads the catalog while keeping the rest of her discography one click away.</p>
+                <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10">
+                  <iframe data-testid="embed-iframe" style={{borderRadius: '12px'}} src={HEAVIER_WATER_SPOTIFY_EMBED_URL} width="100%" height="352" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Heavier Water Album Spotify Embed"></iframe>
+                </div>
+              </div>
             </div>
-
-            <div className="flex justify-center mt-10">
-               <Link to="/discography" className="h-12 px-8 bg-text-main-light dark:bg-white text-white dark:text-black rounded-full font-bold flex items-center justify-center hover:scale-105 transition-transform shadow-lg">
-                  Explore All Releases
-               </Link>
-            </div>
+            <div className="flex justify-center mt-10"><Link to="/discography" className="h-12 px-8 bg-text-main-light dark:bg-white text-white dark:text-black rounded-full font-bold flex items-center justify-center hover:scale-105 transition-transform shadow-lg">Explore All Releases</Link></div>
          </div>
       </section>
 

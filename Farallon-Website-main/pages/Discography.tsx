@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { translations } from '../translations';
-import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, MINISTRY_OF_PLENTY_TRACK_LIST } from '../constants';
+import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, MINISTRY_OF_PLENTY_TRACK_LIST, HEAVIER_WATER_COVER_URL, HEAVIER_WATER_SPOTIFY_EMBED_URL } from '../constants';
 import { Calendar, Mic2, Music, Zap, Disc, ChevronDown, ChevronUp } from 'lucide-react';
 import SEO from '../components/SEO';
 import TrackItem from '../components/TrackItem';
@@ -19,14 +19,14 @@ const Discography: React.FC = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "MusicAlbum",
-    "name": "Ministry of Plenty",
+    "name": "Heavier Water",
     "byArtist": {
       "@type": "MusicGroup",
       "name": "Farallon"
     },
-    "datePublished": "2026-02-14",
-    "image": MINISTRY_OF_PLENTY_COVER_URL,
-    "numTracks": 21,
+    "datePublished": "2026",
+    "image": HEAVIER_WATER_COVER_URL,
+    "numTracks": 0,
     "track": []
   };
 
@@ -34,10 +34,10 @@ const Discography: React.FC = () => {
     <div className="min-h-screen py-24 bg-aurora dark:bg-black/80 transition-colors">
       <SEO 
         title="Discography - Farallon"
-        description="Catalog of Farallon releases including Revenge/Mercy, Live (Sort of), Ministry of Plenty, Ghostwriter, Liquidation, and Heavy Water."
+        description="Catalog of Farallon releases led by Heavier Water, the upgraded re-release of Heavy Water with new songs, plus Revenge/Mercy, Live (Sort of), and more."
         canonical="/discography"
         type="music.album"
-        image={MINISTRY_OF_PLENTY_COVER_URL}
+        image={HEAVIER_WATER_COVER_URL}
         jsonLd={structuredData}
       />
       <div className="max-w-[1200px] mx-auto px-6">
@@ -52,11 +52,47 @@ const Discography: React.FC = () => {
             <div className="w-1 h-16 bg-gradient-to-b from-transparent via-cyan-500 to-transparent"></div>
           </div>
           <p className="text-text-muted-light dark:text-text-muted-dark text-lg max-w-xl font-light font-mono">
-             Catalog of releases.
+             Heavier Water leads the catalog, with the original Heavy Water era and other Farallon releases still close by.
           </p>
         </div>
 
         <div className="space-y-32">
+
+          {/* ITEM 0: HEAVIER WATER */}
+          <section className="relative group">
+             <div className="absolute -inset-6 bg-gradient-to-tr from-sky-400/25 via-cyan-500/10 to-blue-950/25 rounded-[3.5rem] blur-3xl opacity-80 group-hover:opacity-100 transition-opacity duration-1000"></div>
+             <div className="relative heavier-water-card glass-card bg-white/95 dark:bg-slate-950/80 rounded-[3rem] p-8 md:p-12 border border-sky-300/40 dark:border-sky-300/20 overflow-hidden shadow-2xl">
+                <div className="rain-layer rain-layer-slow opacity-30" aria-hidden="true"></div>
+                <div className="wave-layer opacity-40" aria-hidden="true"></div>
+                <div className="absolute top-0 right-0 p-4 z-10">
+                   <div className="flex items-center gap-2 px-4 py-2 bg-sky-500/10 rounded-full border border-sky-500/30">
+                      <Disc size={14} className="text-sky-500" />
+                      <span className="font-mono text-[10px] font-bold text-sky-600 dark:text-sky-300 tracking-widest uppercase">New Album</span>
+                   </div>
+                </div>
+
+                <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+                   <div className="w-full lg:w-5/12 max-w-md">
+                      <img src={HEAVIER_WATER_COVER_URL} alt="Heavier Water Album Cover" className="w-full rounded-[2rem] shadow-2xl border border-sky-200/50 dark:border-white/10 transition-all duration-700 hover:scale-[1.02]" />
+                   </div>
+                   <div className="flex-1 space-y-8 w-full">
+                      <div>
+                        <h2 className="text-5xl md:text-7xl font-bold font-display text-text-main-light dark:text-white mb-2 tracking-tighter">Heavier Water</h2>
+                        <div className="flex items-center gap-3 text-sky-500 dark:text-sky-300 font-mono text-sm tracking-widest uppercase">
+                          <Calendar size={16} />
+                          <span>Released 2026</span>
+                        </div>
+                      </div>
+                      <p className="text-text-muted-light dark:text-sky-100/80 leading-relaxed text-lg">
+                        A professionally expanded re-release of <em>Heavy Water</em>, pairing upgraded versions of the debut-era tracks with new songs that deepen Farallon&apos;s storm-lit sound.
+                      </p>
+                      <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/10 mt-6">
+                        <iframe data-testid="embed-iframe" style={{borderRadius: '12px'}} src={HEAVIER_WATER_SPOTIFY_EMBED_URL} width="100%" height="352" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Heavier Water Album Spotify Embed"></iframe>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </section>
 
           {/* ITEM 0: REVENGE/MERCY */}
           <section className="relative group">

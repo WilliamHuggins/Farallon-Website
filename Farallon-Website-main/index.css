@@ -198,3 +198,64 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/* Heavier Water campaign effects */
+.heavier-water-scene {
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.heavier-water-card {
+  isolation: isolate;
+}
+
+.rain-layer {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  z-index: 1;
+  background-image: repeating-linear-gradient(105deg, rgba(186, 230, 253, 0) 0 18px, rgba(186, 230, 253, 0.38) 19px 21px, rgba(186, 230, 253, 0) 22px 40px);
+  transform: rotate(7deg);
+  mix-blend-mode: screen;
+}
+
+.rain-layer-fast {
+  animation: rainFall 0.9s linear infinite;
+  opacity: 0.38;
+}
+
+.rain-layer-slow {
+  animation: rainFall 1.8s linear infinite;
+  opacity: 0.2;
+  filter: blur(1px);
+}
+
+.wave-layer {
+  position: absolute;
+  inset: auto -10% -4rem -10%;
+  height: 15rem;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(55% 70% at 50% 100%, rgba(14, 165, 233, 0.36), transparent 72%),
+    repeating-radial-gradient(ellipse at 50% 100%, rgba(186, 230, 253, 0.32) 0 2px, transparent 3px 18px);
+  animation: waveDrift 8s ease-in-out infinite alternate;
+  opacity: 0.75;
+}
+
+@keyframes rainFall {
+  from { background-position: 0 0; }
+  to { background-position: -80px 180px; }
+}
+
+@keyframes waveDrift {
+  from { transform: translateX(-2%) translateY(0) scale(1.02); }
+  to { transform: translateX(2%) translateY(-0.75rem) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rain-layer,
+  .wave-layer {
+    animation: none;
+  }
+}
