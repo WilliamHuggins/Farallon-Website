@@ -117,6 +117,8 @@ export const GHOSTWRITER_COVER_URL = "https://i.postimg.cc/Jh8Y3p9w/Untitled_des
 export const SPANISH_ALBUM_COVER_URL = "https://i.postimg.cc/W1ZX3ryp/Untitled-design-(2).png";
 export const LIQUIDATION_COVER_URL = "https://i.postimg.cc/vZGS2z8r/Untitled-design-(5).png";
 export const MINISTRY_OF_PLENTY_COVER_URL = "https://i.postimg.cc/RVpwS3L9/Untitled-design-(1).png";
+export const HEAVIER_WATER_COVER_URL = "https://i.postimg.cc/gJjbNnwP/Heavier-Water-Album-Cover.png";
+export const HEAVIER_WATER_SPOTIFY_EMBED_URL = "https://open.spotify.com/embed/album/1fKackUi8g3ijlpCehfjiB?utm_source=generator&si=6a16d9c4f3144c31";
 
 export const GALLERY_IMAGES = [
   { id: 1, url: "https://i.postimg.cc/05D7KPvz/Golden-Gate-Bridge.png", caption: "SECTOR_01 // GOLDEN_GATE_BRIDGE", alt: "Golden Gate Bridge in Fog" },
