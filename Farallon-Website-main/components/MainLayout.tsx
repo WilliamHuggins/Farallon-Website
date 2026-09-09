@@ -35,7 +35,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen flex flex-col">
       {/* Fixed Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass-nav h-20 transition-all duration-300">
+      <nav className={`fixed top-0 left-0 right-0 z-50 glass-nav h-20 transition-all duration-300 ${isActive('/') ? 'latency-nav' : ''}`} aria-label="Primary navigation">
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
           
           {/* Logo / Home Link */}
@@ -106,6 +106,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 text-text-main-light dark:text-white"
+              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
