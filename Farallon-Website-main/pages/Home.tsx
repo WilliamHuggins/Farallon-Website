@@ -2,26 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowDown, ArrowRight, ExternalLink, Pause, Play, Sparkles } from 'lucide-react';
 import SEO from '../components/SEO';
-import { LATENCY_COVER_URL, LATENCY_SPOTIFY_URL } from '../constants';
-
-const tracks = [
-  ['Southbound Static', ''],
-  ['Liquidation', 'Everything But Me Remix'],
-  ['Keep Running', 'Head Start Remix'],
-  ['Beta Test', 'Garden of Errors Remix'],
-  ['Parallel Lives', 'Fault Current Remix'],
-  ['We Have Always Been at War', 'Designated Rage Remix'],
-  ['Midnight Meridian', 'Latency Remix'],
-  ['God Complex', 'Made in Your Image Remix'],
-  ['Exit Interview', ''],
-  ['Unscripted', ''],
-  ['Cut the Frequency', ''],
-  ['Receiver', 'Carrier Wave Remix'],
-  ['First Ferry', ''],
-  ['A Thousand Tiny Yesses', 'Closer by Degrees Remix'],
-  ['Latency', ''],
-  ['Southbound Static', 'Missed Exit Remix'],
-];
+import { LATENCY_COVER_URL, LATENCY_SPOTIFY_URL, LATENCY_TRACKS } from '../constants';
 
 const Home: React.FC = () => {
   const [atmospherePaused, setAtmospherePaused] = useState(false);
@@ -51,7 +32,7 @@ const Home: React.FC = () => {
     byArtist: { '@type': 'MusicGroup', name: 'Farallon' },
     recordLabel: { '@type': 'Organization', name: 'Farallon AI Project' },
     url: LATENCY_SPOTIFY_URL,
-    track: tracks.map(([name, remix], index) => ({
+    track: LATENCY_TRACKS.map(([name, remix], index) => ({
       '@type': 'MusicRecording',
       position: index + 1,
       name: remix ? `${name} (${remix})` : name,
@@ -161,7 +142,7 @@ const Home: React.FC = () => {
             <p>LATENCY<br /><span>Farallon · 2026</span></p>
           </div>
           <ol className="latency-track-list">
-            {tracks.map(([title, remix], index) => (
+            {LATENCY_TRACKS.map(([title, remix], index) => (
               <li key={`${title}-${index}`}>
                 <span className="latency-track-number">{String(index + 1).padStart(2, '0')}</span>
                 <div><span className="latency-track-title">{title}</span>{remix && <span className="latency-track-remix">{remix}</span>}</div>

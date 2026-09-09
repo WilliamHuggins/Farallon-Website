@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { translations } from '../translations';
-import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, MINISTRY_OF_PLENTY_TRACK_LIST, HEAVIER_WATER_COVER_URL, HEAVIER_WATER_SPOTIFY_EMBED_URL } from '../constants';
+import { ALBUM_COVER_URL, OFFLINE_SESSION_COVER_URL, GHOSTWRITER_COVER_URL, LATEST_SINGLE_COVER_URL, SPANISH_ALBUM_COVER_URL, LIQUIDATION_COVER_URL, MINISTRY_OF_PLENTY_COVER_URL, MINISTRY_OF_PLENTY_TRACK_LIST, HEAVIER_WATER_COVER_URL, HEAVIER_WATER_SPOTIFY_EMBED_URL, LATENCY_COVER_URL, LATENCY_SPOTIFY_URL, LATENCY_TRACKS } from '../constants';
 import { Calendar, Mic2, Music, Zap, Disc, ChevronDown, ChevronUp } from 'lucide-react';
 import SEO from '../components/SEO';
 import TrackItem from '../components/TrackItem';
@@ -10,6 +10,7 @@ import TrackItem from '../components/TrackItem';
 
 const Discography: React.FC = () => {
   const t = translations['en'];
+  const [showTracksLatency, setShowTracksLatency] = useState(false);
   const [showTracksMinistry, setShowTracksMinistry] = useState(false);
 
   useEffect(() => {
@@ -19,25 +20,31 @@ const Discography: React.FC = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "MusicAlbum",
-    "name": "Heavier Water",
+    "name": "Latency",
     "byArtist": {
       "@type": "MusicGroup",
       "name": "Farallon"
     },
-    "datePublished": "2026",
-    "image": HEAVIER_WATER_COVER_URL,
-    "numTracks": 0,
-    "track": []
+    "datePublished": "2026-09-08",
+    "image": LATENCY_COVER_URL,
+    "numTracks": 16,
+    "recordLabel": "Farallon AI Project",
+    "url": LATENCY_SPOTIFY_URL,
+    "track": LATENCY_TRACKS.map(([title, remix], index) => ({
+      "@type": "MusicRecording",
+      "position": index + 1,
+      "name": remix ? `${title} (${remix})` : title
+    }))
   };
 
   return (
     <div className="min-h-screen py-24 bg-aurora dark:bg-black/80 transition-colors">
       <SEO 
         title="Discography - Farallon"
-        description="Catalog of Farallon releases led by Heavier Water, the upgraded re-release of Heavy Water with new songs, plus Revenge/Mercy, Live (Sort of), and more."
+        description="Explore Farallon’s discography, led by the new album Latency: sixteen tracks of new songs, returning material, and substantially reimagined remixes."
         canonical="/discography"
         type="music.album"
-        image={HEAVIER_WATER_COVER_URL}
+        image={LATENCY_COVER_URL}
         jsonLd={structuredData}
       />
       <div className="max-w-[1200px] mx-auto px-6">
@@ -52,11 +59,64 @@ const Discography: React.FC = () => {
             <div className="w-1 h-16 bg-gradient-to-b from-transparent via-cyan-500 to-transparent"></div>
           </div>
           <p className="text-text-muted-light dark:text-text-muted-dark text-lg max-w-xl font-light font-mono">
-             Heavier Water leads the catalog, with the original Heavy Water era and other Farallon releases still close by.
+             Latency leads the catalog, with sixteen tracks of new songs, returning material, and reimagined remixes.
           </p>
         </div>
 
         <div className="space-y-32">
+
+          {/* LATENCY — FEATURED ALBUM */}
+          <section className="relative group" aria-labelledby="latency-discography-title">
+            <div className="absolute -inset-6 bg-gradient-to-tr from-amber-300/20 via-slate-400/10 to-blue-950/30 rounded-[3.5rem] blur-3xl opacity-80 group-hover:opacity-100 transition-opacity duration-1000" aria-hidden="true"></div>
+            <div className="relative overflow-hidden rounded-[3rem] border border-amber-200/30 bg-[#070a0d] p-6 md:p-12 text-[#f1ede4] shadow-2xl">
+              <div className="absolute inset-0 opacity-20 bg-cover bg-center blur-2xl scale-110" style={{ backgroundImage: `url("${LATENCY_COVER_URL}")` }} aria-hidden="true"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#070a0d] via-[#070a0d]/95 to-[#0c1720]/80" aria-hidden="true"></div>
+              <div className="relative z-10 flex flex-col lg:flex-row gap-10 xl:gap-14 items-start">
+                <div className="w-full lg:w-5/12 max-w-md mx-auto lg:mx-0">
+                  <img src={LATENCY_COVER_URL} alt="Latency by Farallon album cover" width="800" height="800" className="w-full shadow-[0_30px_80px_rgba(0,0,0,.65)]" />
+                  <button
+                    type="button"
+                    onClick={() => setShowTracksLatency((shown) => !shown)}
+                    aria-expanded={showTracksLatency}
+                    aria-controls="latency-discography-tracks"
+                    className="w-full min-h-12 mt-5 border border-amber-200/30 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-amber-100 hover:bg-amber-200/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-100"
+                  >
+                    {showTracksLatency ? 'Hide track list' : 'View all 16 tracks'}
+                    {showTracksLatency ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                  </button>
+                </div>
+
+                <div className="flex-1 w-full">
+                  <div className="flex items-center gap-2 mb-5 text-amber-200">
+                    <Disc size={15} />
+                    <span className="text-[10px] font-bold tracking-[0.25em] uppercase">New album · Out now</span>
+                  </div>
+                  <h2 id="latency-discography-title" className="font-[Cormorant_Garamond] text-6xl md:text-8xl font-medium leading-none tracking-tighter">Latency</h2>
+                  <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4 text-xs uppercase tracking-[0.16em] text-amber-100/75">
+                    <span>September 8, 2026</span><span>16 tracks</span><span>Farallon AI Project</span>
+                  </div>
+                  <p className="mt-7 text-base md:text-lg leading-relaxed text-slate-300">New songs, returning material, and substantially reimagined remixes—sixteen tracks of desire, defiance, and late-night escape.</p>
+                  <div className="w-full mt-7 overflow-hidden rounded-xl border border-white/10 bg-black/30">
+                    <iframe data-testid="embed-iframe" title="Listen to Latency by Farallon on Spotify" style={{ borderRadius: '12px', border: 0 }} src="https://open.spotify.com/embed/album/1Mnw1kxb01Ez3J4PAhSUu1?utm_source=generator&si=4d98700adc2b4911" width="100%" height="352" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                  </div>
+                  <a href={LATENCY_SPOTIFY_URL} target="_blank" rel="noreferrer" className="inline-flex min-h-12 mt-5 items-center gap-2 border-b border-amber-200 pb-1 text-xs font-bold uppercase tracking-[0.16em] text-amber-100 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                    Open album on Spotify <Music size={16} />
+                  </a>
+                </div>
+              </div>
+
+              {showTracksLatency && (
+                <ol id="latency-discography-tracks" className="relative z-10 mt-10 grid grid-cols-1 md:grid-cols-2 border-t border-white/15">
+                  {LATENCY_TRACKS.map(([title, remix], index) => (
+                    <li key={`${title}-${index}`} className="grid grid-cols-[2.5rem_1fr] gap-2 py-4 md:px-4 border-b border-white/15 text-left">
+                      <span className="text-xs text-amber-200/60">{String(index + 1).padStart(2, '0')}</span>
+                      <span><span className="block font-[Cormorant_Garamond] text-xl leading-none">{title}</span>{remix && <span className="block mt-1.5 text-[10px] uppercase tracking-[0.13em] text-amber-200/75">{remix}</span>}</span>
+                    </li>
+                  ))}
+                </ol>
+              )}
+            </div>
+          </section>
 
           {/* ITEM 0: HEAVIER WATER */}
           <section className="relative group">
@@ -67,7 +127,7 @@ const Discography: React.FC = () => {
                 <div className="absolute top-0 right-0 p-4 z-10">
                    <div className="flex items-center gap-2 px-4 py-2 bg-sky-500/10 rounded-full border border-sky-500/30">
                       <Disc size={14} className="text-sky-500" />
-                      <span className="font-mono text-[10px] font-bold text-sky-600 dark:text-sky-300 tracking-widest uppercase">New Album</span>
+                      <span className="font-mono text-[10px] font-bold text-sky-600 dark:text-sky-300 tracking-widest uppercase">Studio Album</span>
                    </div>
                 </div>
 
