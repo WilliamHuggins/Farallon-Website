@@ -19,6 +19,7 @@ const SEO: React.FC<SEOProps> = ({
   jsonLd 
 }) => {
   const siteName = "Farallon";
+  const documentTitle = title.toLowerCase().includes(siteName.toLowerCase()) ? title : `${title} | ${siteName}`;
   const twitterHandle = "@farallonai";
   // Canonical host enforcement: www
   const baseUrl = "https://www.farallonai.com";
@@ -34,7 +35,7 @@ const SEO: React.FC<SEOProps> = ({
   return (
     <Helmet>
       {/* Standard Metadata */}
-      <title>{title} | {siteName}</title>
+      <title>{documentTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
 
